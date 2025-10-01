@@ -21,5 +21,5 @@ It includes both **manual test cases** and their corresponding **automated scrip
 
 ## 📩 Contact
 For inquiries or more details:  
-- **LinkedIn:** [your-linkedin-url]  
-- **Email:** [your-email]
+- **LinkedIn:** [www.linkedin.com/in/marta-czarnecka-40406878]  
+- **Email:** [martaczarneckaqa@gmail.com]
