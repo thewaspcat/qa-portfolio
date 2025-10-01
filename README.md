@@ -8,13 +8,11 @@ It includes both **manual test cases** and their corresponding **automated scrip
 ## 📖 Contents
 
 **Manual Test Cases** :
- 
-  Clear, structured test cases following industry-standard documentation practices.  
-  Each case is written to be execution-ready and demonstrates traceability for automation.  
+  - Clear, structured test cases following industry-standard documentation practices.  
+  - Each case is written to be execution-ready and demonstrates traceability for automation.  
 
 **Automated Test Scripts (Playwright + Pytest)**:
-
-  Automated equivalents of the manual cases, showing:
+   Automated equivalents of the manual cases, showing:
   - Test structure & organization  
   - Use of fixtures, selectors, and assertions  
   - Best practices for maintainability and readability
