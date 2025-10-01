@@ -12,7 +12,7 @@ It includes both **manual test cases** and their corresponding **automated scrip
   - Each case is written to be execution-ready and demonstrates traceability for automation.  
 
 **Automated Test Scripts (Playwright + Pytest)** demonstrating:
-  - Test structure & organization  
+  - Methodical test structure & organization  
   - Use of fixtures, selectors, and assertions  
   - Best practices for maintainability and readability
 
