@@ -19,7 +19,7 @@ For inquiries or more details, you can contact me via:
 
 
 
-## ⚠️ Disclaimer
+
 
 > This portfolio contains **sample work only**, based exclusively on a public demo application.  
 > No proprietary or NDA-protected material has been included.
