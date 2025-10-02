@@ -1,4 +1,4 @@
-# QA Portfolio – Marta Czarnecka
+# QA Portfolio by Marta Czarnecka
 
 Welcome to my **Quality Assurance portfolio**, which showcases my skills in both manual test case design and test automation in Python.
 
