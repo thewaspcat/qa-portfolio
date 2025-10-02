@@ -1,7 +1,3 @@
----
-layout: default
----
-
 ```python
 
 import pytest
