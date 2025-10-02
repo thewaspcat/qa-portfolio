@@ -1,7 +1,7 @@
 # QA Portfolio – Test Cases & Test Scripts
 
 This repository showcases my QA portfolio with a focus on **test design** and **automation skills**.  
-It includes both **manual test cases** and their corresponding **automated scripts** in Python.
+It includes samples of **manual test cases** and their corresponding **automated scripts** in Python.
 
 ---
 
