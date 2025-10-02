@@ -1,4 +1,0 @@
-# /docs/_config.yml
-markdown: kramdown
-kramdown:
-  syntax_highlighter: rouge
