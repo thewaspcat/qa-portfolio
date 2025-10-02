@@ -15,3 +15,9 @@ The software under test is a **mock e-commerce website**: [automationexercise.co
 For inquiries or more details, you can contact me via:  
 - [**LinkedIn**](www.linkedin.com/in/marta-czarnecka-40406878) 
 - [**Email**](martaczarneckaqa@gmail.com)
+
+---
+## ⚠️ Disclaimer
+
+> This portfolio contains **sample work only**, based on a public demo application.  
+> No proprietary or NDA-protected material has been included.
