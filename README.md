@@ -20,6 +20,6 @@ It includes both **manual test cases** and their corresponding **automated scrip
 
 ## 📩 Contact
 
-For inquiries or more details:  
+For inquiries or more details, feel free to reach out to me via:  
 - [**LinkedIn**](www.linkedin.com/in/marta-czarnecka-40406878) 
 - [**Email**](martaczarneckaqa@gmail.com)
