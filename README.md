@@ -1,5 +1,6 @@
 # QA Portfolio – created by Marta Czarnecka
 
+
 ---
 
 This repository contains my **QA portfolio**, showcasing both **manual test case design** and **automation with Python, Pytest, and Playwright**.  
@@ -10,6 +11,7 @@ The software under test is a **mock e-commerce website**: [automationexercise.co
 
 ---
 
+
 ## 📩 Contact details
 
 For inquiries or more details, you can contact me via:  
@@ -17,7 +19,10 @@ For inquiries or more details, you can contact me via:
 - [**Email**](martaczarneckaqa@gmail.com)
 
 ---
+
+
+
 ## ⚠️ Disclaimer
 
-> This portfolio contains **sample work only**, based on a public demo application.  
+> This portfolio contains **sample work only**, based exclusively on a public demo application.  
 > No proprietary or NDA-protected material has been included.
