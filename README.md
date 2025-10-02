@@ -1,20 +1,12 @@
-# QA Portfolio – Test Cases & Test Scripts
-
-This repository showcases my QA portfolio with a focus on **test design** and **automation skills**.  
-It includes samples of **manual test cases** and their corresponding **automated scripts** in Python.
+# QA Portfolio – created by Marta Czarnecka
 
 ---
 
-## 📖 Contents
+This repository contains my **QA portfolio**, showcasing both **manual test case design** and **automation with Python, Pytest, and Playwright**.  
 
-**Manual Test Cases** :
-  - Clear, structured test cases following industry-standard documentation practices.  
-  - Each case is written to be execution-ready and demonstrates traceability for automation.  
+The software under test is a **mock e-commerce website**: [automationexercise.com](https://www.automationexercise.com/).  
 
-**Automated Test Scripts (Playwright + Pytest)** demonstrating:
-  - Methodical test structure & organization  
-  - Use of fixtures, selectors, and assertions  
-  - Best practices for maintainability and readability
+➡️ **View full portfolio website here:** [GitHub Pages Link](https://<your-username>.github.io/qa-portfolio/)
 
 ---
 
