@@ -6,4 +6,4 @@ This repository contains my **QA portfolio**, showcasing both **manual test case
 
 The software under test is a **mock e-commerce website**: [automationexercise.com](https://www.automationexercise.com/).  
 
-➡️ **View full portfolio website here:** [QA Portfolio Sample](https://thewaspcat.github.io/qa-portfolio-sample/)
+➡️ **View the website with selected test samples here:** [QA Portfolio Sample](https://thewaspcat.github.io/qa-portfolio-sample/)
