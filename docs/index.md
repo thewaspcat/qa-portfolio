@@ -7,7 +7,7 @@ This portfolio demonstrates:
 - Methodical approach to structuring test cases
 - Compliance with the official international requirements for software testing documentation (ISO/IEC 29119/ISTQB), **enhanced** with details for automation readiness)
 - Full alignment between manual test cases and automated test scripts for maximum traceability.
-- Industry-standard practices for test design, execution and maintainability.
+- Industry-standard practices for test design, execution and maintainance.
 
 ---
 
