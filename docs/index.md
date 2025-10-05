@@ -1,10 +1,10 @@
 # QA Portfolio by Marta Czarnecka
 
-Welcome to my **Quality Assurance portfolio**, which showcases my skills in both manual test case design and test automation in Python.
+Welcome to my **Quality Assurance portfolio**, which showcases both my konwledge in manual test case design and my skills in test automation.
 
 
 This portfolio demonstrates:
-- Methodical test case structures (Jira-style documentation, enhanced with details for automation readiness)
+- Methodical test case structures in compliance with the official international requirements for software testing documentation (ISO/IEC 29119/ISTQB), **enhanced** with details for automation readiness)
 - Automated test scripts aligned with manual test cases for traceability.
 - Industry-standard practices for test design, execution and maintainability.
 
