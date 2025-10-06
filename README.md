@@ -2,7 +2,7 @@
 
 
 
-This repository contains my **QA portfolio**, showcasing both **manual test case design** and **automation with Python, Pytest,** and **Playwright**.  
+This repository contains my **QA portfolio**, demonstrating both my knowledge in **manual test case design** and my skills in test **automation with Python, Pytest,** and **Playwright**.  
 
 The software under test is a **mock e-commerce website**: [automationexercise.com](https://www.automationexercise.com/).  
 
