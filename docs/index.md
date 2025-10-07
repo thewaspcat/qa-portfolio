@@ -1,13 +1,13 @@
 # QA Portfolio by Marta Czarnecka
 
-Welcome to my **Quality Assurance portfolio**, which showcases both my konwledge in manual software testing and my skills in test automation.
+Welcome to my **Quality Assurance portfolio**, which purpose is to showcase both my konwledge in manual software testing and my skills in test automation.
 
 
 This portfolio demonstrates:
 - Methodical approach to structuring test cases
-- Compliance with the official international requirements for software testing documentation (ISO/IEC 29119/ISTQB), **enhanced** with details for automation readiness)
+- Compliance with the official international requirements for software testing documentation (ISO/IEC 29119/ISTQB), <br> **enhanced** with details for automation readiness)
 - Full alignment between manual test cases and automated test scripts for maximum traceability.
-- Industry-standard practices for test design, execution and maintainance.
+- Industry-standard practices for test design, test execution and test maintainance.
 
 ---
 
@@ -34,7 +34,7 @@ The software under test is a mock e-commerce website: [Automation Exercise](http
 
 ## 📩 Contact details
 
-For inquiries, please feel free to reach out:  
+For inquiries, feel free to reach out via:  
 
 - [**LinkedIn**](www.linkedin.com/in/marta-czarnecka-40406878) 
 - [**Email**](martaczarneckaqa@gmail.com)
