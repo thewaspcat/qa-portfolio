@@ -1,19 +1,16 @@
-
-# Valid Login with Correct Credentials
+# **Valid Login with Correct Credentials**
 
 ## 1. Test Case Information
 - **Test Case ID:** TC_UI_LOGIN_001  
 - **Title:** Valid Login with Correct Credentials  
 - **Objective:** Ensure that a user can successfully log in with valid credentials.  
 - **Requirement Reference:** REQ-AUTH-001  
-- **Test Type:** Manual / Functional
+- **Test Type:** Functional  
+- **Execution Type:** Manual  
 - **Test Level:** System (UI)  
 - **Priority:** High  
 - **Severity:** Critical  
 - **Module:** Login / Authentication  
-- **Created By:** Marta Czarnecka  
-- **Created Date:** 09.09.2025  
-- **Last Updated:** 16.09.2025  
 
 ---
 
@@ -52,51 +49,63 @@
 
 | Step # | Action | Locator / Selector | Expected Result |
 |--------|--------|--------------------|-----------------|
-| 1 | Navigate to the login page | N/A | Login page loads successfully with the heading **“Login to your account”**. |
-| 2 | Enter valid email in the **Email Address** field | `input type="email" data-qa="login-email"` | Email is entered. |
-| 3 | Enter valid password in the **Password** field | `input type="password" data-qa="login-password"` | Password is entered. |
-| 4 | Click the **Login** button | `button data-qa="login-button"` | User is redirected to the dashboard. |
-| 5 | Verify dashboard UI elements are displayed | N/A | Dashboard is visible with navigation menu, “Logged in as [username]” label, and logout button. |
-| 6 | Confirm page source contains required HTML elements (see Appendix) | Browser → View Page Source | All expected elements are present. |
+| 1 | Navigate to the login page | N/A | Login page loads successfully with the heading **“Login to your account.”** |
+| 2 | Enter valid email in the **Email Address** field | `input[data-qa="login-email"]` | Email is entered successfully. |
+| 3 | Enter valid password in the **Password** field | `input[data-qa="login-password"]` | Password is entered successfully. |
+| 4 | Click the **Login** button | `button[data-qa="login-button"]` | User is redirected to the dashboard. |
+| 5 | Verify dashboard UI elements are displayed | N/A | Dashboard displays navigation menu, “Logged in as [username]” label, and logout button. |
+| 6 | Confirm that required HTML elements exist in the page source (see Appendix) | Browser → View Page Source | Expected elements are present. |
 
 ---
 
 ## 6. Expected Results
-- User is successfully logged in with valid credentials  
-- System redirects to dashboard  
-- Dashboard displays UI elements: navigation, “Logged in as [username]”, logout button  
-- A valid session is created  
-- Page source contains required elements as listed in Appendix  
+- User is successfully logged in with valid credentials.  
+- System redirects to the dashboard.  
+- Dashboard displays essential UI elements: navigation, “Logged in as [username]”, and logout button.  
+- A valid user session is created and maintained.  
 
 ---
 
 ## 7. Actual Results
-(To be filled after execution.)  
+*(To be filled after execution.)*  
 
 ---
 
 ## 8. Status
-- **Pass:** User is redirected to dasboard, logged in state confirmed, UI elements visible  
-- **Fail:** User is not redirected, dashboard does not display correctly, or session is not created  
+- **Pass:** User is redirected to dashboard, logged-in state confirmed, UI elements visible.  
+- **Fail:** User is not redirected, dashboard does not display correctly, or session is not created.  
 
 ---
 
 ## 9. Postconditions
-- User remains logged in with an active session  
+- User remains logged in with an active session.  
 
 ---
 
 ## 10. Notes
-- Test can be repeated with multiple valid user accounts  
-- Logout functionality is validated in a separate test case  
+- Test can be repeated with multiple valid user accounts.  
+- Logout functionality is validated in a separate test case.  
 
 ---
 
-## Appendix: Page Source Reference
+## 11. Automation Readiness
+- **Automation Candidate:** Yes  
+- **Target Framework:** Playwright / Selenium (as per team standard)  
+- **Automation Priority:** High  
+- **Automated Step Reference:** Step 6 – HTML element validation  
+- **Script Reference:** `test_login_valid_credentials.py` (or equivalent)  
+- **Automation Notes:** Step 6 can be automated using assertions that verify presence of defined locators.  
 
-| Element        | Locator / Selector |
-|----------------|---------------------|
-| Email field    | `input[data-qa="login-email"]` |
-| Password field | `input[data-qa="login-password"]` |
-| Login button   | `button[data-qa="login-button"]` |
+---
+
+## Appendix: Element Locator Reference
+
+| Element                    | Purpose                                  | Locator Type | Locator / Selector |
+|----------------------------|------------------------------------------|---------------|--------------------|
+| Email field                | Input for user’s login email             | CSS           | `input[data-qa="login-email"]` |
+| Password field             | Input for user’s login password          | CSS           | `input[data-qa="login-password"]` |
+| Login button               | Button to submit login credentials       | CSS           | `button[data-qa="login-button"]` |
+| Navigation menu            | Main navigation after login               | CSS           | `div[class="navbar"]` |
+| Logged-in username label   | Displays “Logged in as [username]”       | CSS           | ``a[href="/profile"]` |
+| Logout button              | Button to log out of the session          | CSS           | `a[href="/logout"]` |
 
