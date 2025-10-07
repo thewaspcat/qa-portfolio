@@ -10,7 +10,10 @@
 - **Test Level:** System (UI)  
 - **Priority:** High  
 - **Severity:** Critical  
-- **Module:** Login / Authentication  
+- **Module:** Login / Authentication
+- **Created by**: Marta Czarnecka
+- **Created on**: 08.09.2025
+- **Last Updated**: 14.09.2025
 
 ---
 
