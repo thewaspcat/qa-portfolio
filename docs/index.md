@@ -1,6 +1,6 @@
 # QA Portfolio by Marta Czarnecka
 
-Welcome to my **Quality Assurance portfolio**, which purpose is to showcase both my konwledge in manual software testing and my skills in test automation.
+Welcome to my **Quality Assurance portfolio**, which showcases both my konwledge in manual software testing and my skills in test automation.
 
 
 This portfolio demonstrates:
