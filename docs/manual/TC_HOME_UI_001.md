@@ -11,7 +11,7 @@
 - **Severity:** Medium  
 - **Module:** Homepage  
 - **Created By:** Marta Czarnecka  
-- **Created Date:** 08.09.2025  
+- **Created on::** 08.09.2025  
 - **Last Updated:** 14.09.2025  
 
 ---
