@@ -3,16 +3,16 @@
 ## 1. Test Case Information
 - **Test Case ID:** TC_FUNC_HOME_001  
 - **Title:** Homepage – Core Functionalities (Category, Brands & Featured Items)  
-- **Test Objective:** Ensure that the homepage loads correctly and displays the **Category section** (with categories and subcategories), the **Brands section** (with brand names and product counts), and the **Featured Items** grid with expected elements.  
+- **Test Objective:** Validate that the homepage correctly displays the **Category section** (with categories and subcategories), the **Brands section** (with brand names and product counts), and the **Featured Items** grid including product details.  
 - **Requirement Reference:** REQ-WEB-HOME-002  
 - **Test Type:** Manual / Functional  
-- **Test Level:** System (UI)
+- **Test Level:** System (UI)  
 - **Priority:** Critical  
 - **Severity:** High  
 - **Module:** Homepage  
 - **Created By:** Marta Czarnecka  
-- **Created Date:** 03.09.2025  
-- **Last Updated:** 13.09.2025  
+- **Created On:** 03.09.2025  
+- **Last Updated:** 15.10.2025  
 
 ---
 
@@ -23,17 +23,17 @@
 - **Test URL:** https://www.automationexercise.com  
 
 **Dependencies:**  
-- Stable internet connection  
-- Test environment accessible and online  
-- User is logged out (no active session)  
+- Stable internet connection.  
+- Application environment accessible and online.  
+- User is logged out (no active session).  
 
 ---
 
 ## 3. Preconditions
-- Chrome browser (latest stable version) is installed and functional  
-- Browser cache and cookies are cleared prior to execution  
-- Application server is up and responding to requests (homepage reachable)  
-- User is logged out (no active session)  
+- Chrome browser (latest stable version) is installed and functional.  
+- Browser cache and cookies are cleared prior to execution.  
+- Application server is up and responding to requests (homepage reachable).  
+- User is logged out (no active session).  
 
 ---
 
@@ -53,14 +53,14 @@
 | Step # | Action | Locator / Selector | Expected Result |
 |--------|--------|--------------------|-----------------|
 | 1 | Open homepage | N/A | Homepage loads successfully; sidebar and Featured Items section are visible without noticeable delay. |
-| 2 | Verify category section presence | `.left-sidebar` | Category section is visible on the left with “CATEGORY” heading. |
-| 3 | Verify main categories are listed (Women, Men, Kids) | `.left-sidebar a[href="#Women"]`, `.left-sidebar a[href="#Men"]`, `.left-sidebar a[href="#Kids"]` | Links for Women, Men, and Kids are visible. |
-| 4 | Verify subcategories under each main category | `.left-sidebar ul li a` | Expected subcategories are visible under Women (Dress, Tops, Saree), Men (Tshirts, Jeans), Kids (Dress, Tops & Shirts). |
-| 5 | Verify brands section presence | `.brands_products` | Brands section is visible with multiple entries and product counts (e.g., “(6) Polo”). |
-| 6 | Verify Featured Items grid section presence | `.features_items` | “FEATURES ITEMS” heading is visible, followed by a product grid. |
-| 7 | Verify at least one product is listed | `.features_items .col-sm-4` | At least one product card is displayed. |
-| 8 | Verify product details in grid | `.features_items h2` (price), `.features_items p` (name), `.features_items img` (image) | Each product card includes: (a) product name text not empty, (b) price displayed in numeric + currency format, (c) image loaded with non-empty `src` and `alt`. |
-| 9 | Validate page source contains required elements | Browser → Right Click → View Page Source | Elements `<div class="left-sidebar">`, `<div class="brands_products">`, and `<div class="features_items">` exist in the source. |
+| 2 | Check category section presence | `.left-sidebar` | Category section is visible on the left with heading “CATEGORY”. |
+| 3 | Check main categories are listed (Women, Men, Kids) | `.left-sidebar a[href="#Women"]`, `.left-sidebar a[href="#Men"]`, `.left-sidebar a[href="#Kids"]` | Links for Women, Men, and Kids are visible. |
+| 4 | Check subcategories under each main category | `.left-sidebar ul li a` | Expected subcategories are visible under Women (Dress, Tops, Saree), Men (Tshirts, Jeans), Kids (Dress, Tops & Shirts). |
+| 5 | Check brands section presence | `.brands_products` | Brands section is visible with multiple entries and product counts (e.g., “(6) Polo”). |
+| 6 | Check Featured Items grid section presence | `.features_items` | Section heading “FEATURES ITEMS” is visible, followed by a product grid. |
+| 7 | Check at least one product is listed | `.features_items .col-sm-4` | At least one product card is displayed. |
+| 8 | Check product details in grid | `.features_items h2` (price), `.features_items p` (name), `.features_items img` (image) | Each product card includes: (a) product name text not empty, (b) price displayed in numeric + currency format, (c) image loaded with non-empty `src` and `alt`. |
+| 9 | Open page source and confirm required HTML elements exist | Browser → Right Click → View Page Source | Elements `<div class="left-sidebar">`, `<div class="brands_products">`, and `<div class="features_items">` exist in the source. |
 
 ---
 
@@ -70,8 +70,8 @@
 - Featured Items section is visible with heading “FEATURES ITEMS.”  
 - Product grid contains product cards with:  
   - Product name (non-empty text)  
-  - Product price (valid format)  
-  - Product image (with valid `src` and non-empty `alt`)  
+  - Product price (valid numeric + currency format)  
+  - Product image (valid `src` and non-empty `alt`)  
 - All required HTML elements are confirmed in the page source.  
 
 ---
@@ -94,44 +94,19 @@
 ---
 
 ## 10. Notes
-- This test case covers *structural and content presence* only.  
-- Performance validation (e.g., load time ≤5 seconds) is out of scope for manual testing and should be covered by automated performance tests.  
+- This test case validates *structural and content presence* only.  
+- Performance validation (e.g., load time ≤5 seconds) is out of scope for manual testing and will be covered by automated performance tests.  
 - Functional checks such as “Add to Cart,” “Wishlist,” or navigation to Product Details are covered in separate dedicated test cases.  
 
 ---
 
-## Appendix – Page Source Verification
+## Appendix – Element References
 
-**Category Section:**  
-```html
-<div class="left-sidebar">
-  <h2>Category</h2>
-  <a href="#Women">Women</a>
-  <ul class="nav nav-stacked">...</ul>
-</div>
-```
-
-**Brands Section:**  
-```html
-<div class="brands_products">
-  <h2>Brands</h2>
-  <ul class="nav nav-pills nav-stacked">
-    <li><a href=""> <span class="pull-right">(6)</span>Polo</a></li>
-    ...
-  </ul>
-</div>
-```
-
-**Featured Items Grid:**  
-```html
-<div class="features_items">
-  <h2 class="title text-center">Features Items</h2>
-  <div class="col-sm-4">
-    <div class="product-image-wrapper">
-      <img src="blue-top.jpg" alt="Blue Top">
-      <h2>$50</h2>
-      <p>Blue Top</p>
-    </div>
-  </div>
-</div>
-```
+| Section | Locator / Selector | Description |
+|----------|--------------------|--------------|
+| Category Section | `div.left-sidebar` | Container for all category links |
+| Brands Section | `div.brands_products` | Container for brand list with counts |
+| Featured Items Section | `div.features_items` | Container for product grid |
+| Product Name | `.features_items p` | Product title text |
+| Product Price | `.features_items h2` | Product price element |
+| Product Image | `.features_items img` | Product thumbnail with `src` and `alt` attributes |
