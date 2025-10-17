@@ -1,8 +1,8 @@
-# **Homepage UI Validation**
+# **Homepage UI Layout and Components Display**
 
 ## 1. Test Case Information
 - **Test Case ID:** TC_UI_HOME_001  
-- **Title:** Homepage UI Validation  
+- **Title:** Homepage UI Layout and Components Display 
 - **Objective:** Validate that the homepage UI loads correctly with logo, navigation bar, main sections, and footer as per page structure.  
 - **Requirement Reference:** REQ-WEB-HOME-004  
 - **Test Type:** Functional  
