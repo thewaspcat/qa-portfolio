@@ -1,0 +1,20 @@
+[
+  {
+    "base_url": "https://www.automationexercise.com/",
+    "expected_title": "Automation Exercise",
+    "expected_links": {
+      "Home": "/",
+      "Products": "/products",
+      "Cart": "/view_cart",
+      "Signup / Login": "/login",
+      "Test Cases": "/test_cases",
+      "API Testing": "/api_testing",
+      "Video Tutorials": "/video_tutorials",
+      "Contact us": "/contact_us"
+    },
+    "sections": [
+      "Features Items",
+      "Recommended Items"
+    ]
+  }
+]
