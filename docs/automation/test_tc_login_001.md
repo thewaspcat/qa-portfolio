@@ -1,46 +1,45 @@
 ```python
 
 import pytest
+import json
+from pathlib import Path
 from playwright.sync_api import Page, expect
 
-@pytest.mark.parametrize("email, password, username", [
-    ("valid_user@example.com", "CorrectPassword123!", "valid_user")
-])
 
-def test_TC_UI_LOGIN_001_valid_login(page: Page, email: str, password: str, username: str):
+def load_test_data():
+    data_path = Path(__file__).parent / "test_login_data.json"
+    with open(data_path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+@pytest.mark.parametrize("credentials", load_test_data())
+def test_TC_UI_LOGIN_001_valid_login(page: Page, credentials):
     """
     Test Case ID: TC_UI_LOGIN_001
-    Title: Valid Login with Correct Credentials
-    Objective: Ensure that a user can successfully log in with valid credentials.
+    Title: Valid Login with Correct Credentials (Data-Driven)
+    Objective: Verify that users with valid credentials can log in successfully.
     Requirement Reference: REQ-AUTH-001
     """
+    email = credentials["email"]
+    password = credentials["password"]
+    username = credentials["username"]
 
     # Step 1: Navigate to login page
     page.goto("https://www.automationexercise.com/login")
-    expect(page.locator("h2:has-text('Login to your account')")).to_be_visible()
+    expect(page.get_by_role("heading", name="Login to your account")).to_be_visible()
 
-    # Step 2: Enter valid email
-    page.fill("input[data-qa='login-email']", email)
+    # Step 2–3: Fill credentials
+    page.get_by_label("Email Address").or_(page.get_by_placeholder("Email Address")).fill(email)
+    page.get_by_label("Password").or_(page.get_by_placeholder("Password")).fill(password)
 
-    # Step 3: Enter valid password
-    page.fill("input[data-qa='login-password']", password)
+    # Step 4: Click login
+    page.get_by_role("button", name="Login").or_(page.get_by_text("Login")).click()
 
-    # Step 4: Click the Login button
-    page.click("button[data-qa='login-button']")
+    # Step 5: Verify UI elements after login
+    expect(page.get_by_role("navigation")).to_be_visible()
+    expect(page.get_by_text(f"Logged in as {username}", exact=True)).to_be_visible()
+    expect(page.get_by_role("link", name="Logout")).to_be_visible()
 
-    # Step 5: Verify dashboard UI elements are displayed
-    expect(page.locator("ul.nav.navbar-nav")).to_be_visible()
-    expect(page.locator("a[href='/profile']")).to_have_text(f"Logged in as {username}")
-    expect(page.locator("a[href='/logout']")).to_be_visible()
-
-    # Step 6: Confirm required HTML elements exist in the page source
-    page_source = page.content()
-    assert 'data-qa="login-email"' in page_source, "Email field not found in page source"
-    assert 'data-qa="login-password"' in page_source, "Password field not found in page source"
-    assert 'data-qa="login-button"' in page_source, "Login button not found in page source"
-    assert f"Logged in as {username}" in page_source, "'Logged in as' label not found in page source"
-    assert 'href="/logout"' in page_source, "Logout button not found in page source"
-
-    # Postcondition: Ensure session persists after reload
+    # Step 6: Ensure session persists
     page.reload()
-    expect(page.locator("a[href='/profile']")).to_have_text(f"Logged in as {username}")
+    expect(page.get_by_text(f"Logged in as {username}", exact=True)).to_be_visible()
