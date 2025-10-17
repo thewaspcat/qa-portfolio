@@ -3,7 +3,7 @@
 ## 1. Test Case Information
 - **Test Case ID:** TC_UI_HOME_001  
 - **Title:** Homepage UI Structure and Elements  
-- **Objective:** Validate that the homepage UI loads correctly with logo, navigation bar, main sections, and footer as per page source.  
+- **Objective:** Validate that the homepage UI loads correctly with logo, navigation bar, main sections, and footer as per page structure.  
 - **Requirement Reference:** REQ-WEB-HOME-004  
 - **Test Type:** Functional  
 - **Execution Type:** Manual  
@@ -13,7 +13,7 @@
 - **Module:** Homepage  
 - **Created by:** Marta Czarnecka  
 - **Created on:** 08.09.2025  
-- **Last Updated:** 14.09.2025  
+- **Last Updated:** 17.10.2025  
 
 ---
 
@@ -60,7 +60,6 @@
 | 6 | Verify “Features Items” section | `div.features_items` | Section is visible with the header “Features Items.” |
 | 7 | Verify “Recommended Items” section | `div.recommended_items` | Section is visible with the header “Recommended Items.” (May require scrolling.) |
 | 8 | Verify footer presence | `footer#footer` | Footer is visible at the bottom, containing branding and social icons. |
-| 9 | Open page source and confirm required HTML elements exist | Browser → View Page Source | Elements listed in the Appendix are present in the source. |
 
 ---
 
@@ -70,7 +69,7 @@
 - Navigation bar displays all 8 links with correct texts and valid `href` values.  
 - “Features Items” and “Recommended Items” sections appear in the correct order.  
 - Footer is displayed at the bottom with expected branding and social elements.  
-- All required HTML elements exist in the page source.  
+- All required elements exist and are visible in the DOM.  
 
 ---
 
@@ -95,8 +94,7 @@
 - Verification of link texts and section headers is **case-sensitive** as per design specifications.  
 - The “Recommended Items” section may require scrolling to view.  
 - Functional behavior of navigation links and logo redirects is covered in separate test cases.  
-- Performance and console log validation are out of scope for this test.  
-- If navigation structure or labels change, this test case must be updated accordingly.  
+- Performance and console log validation are out of scope for this test.    
 
 ---
 
@@ -104,9 +102,9 @@
 - **Automation Candidate:** Yes  
 - **Target Framework:** Playwright / Selenium (as per team standard)  
 - **Automation Priority:** Medium  
-- **Automated Step Reference:** Step 9 – Page source element validation  
-- **Script Reference:** `test_homepage_ui_elements.py` (or equivalent)  
-- **Automation Notes:** Element existence and attributes can be validated using automated assertions on defined locators.  
+- **Automated Step Reference:** Step 2–8 – DOM element validation  
+- **Script Reference:** `test_tc_home_ui.py`  
+- **Automation Notes:** Element existence and attributes are validated through DOM-based checks using automated assertions on defined locators.  
 
 ---
 
