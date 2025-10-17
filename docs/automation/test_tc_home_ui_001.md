@@ -14,10 +14,10 @@ def load_homepage_data():
 
 
 @pytest.mark.parametrize("test_data", load_homepage_data())
-def test_TC_UI_HOME_001_homepage_ui_verification(page: Page, test_data):
+def test_tc_ui_home_001_homepage_ui(page: Page, test_data):
     """
     Test Case ID: TC_UI_HOME_001
-    Title: Homepage UI Validation
+    Title: Homepage UI Layout and Components Display
     Objective: Validate that all key UI components and navigation links are displayed correctly on the homepage.
     Requirement Reference: REQ-UI-001
     """
