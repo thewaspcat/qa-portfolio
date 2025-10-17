@@ -92,7 +92,7 @@
 ---
 
 ## 11. Automation Readiness
-- **Automation Candidate:** ✅ Yes  
+- **Automation Candidate:** Yes  
 - **Framework:** Playwright  
 - **Test Data Source:** `test_login_data.json`  
 - **Automation Priority:** High  
