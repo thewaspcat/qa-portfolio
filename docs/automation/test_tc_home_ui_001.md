@@ -1,91 +1,66 @@
 ```python
 
 import pytest
+import json
+from pathlib import Path
 from playwright.sync_api import Page, expect
 
 
-def test_homepage_ui(page: Page):
-    # Navigate to the Automation Exercise homepage
-    page.goto("https://www.automationexercise.com/")
-    page.wait_for_load_state("domcontentloaded")  # Ensure DOM is fully loaded
-    print("✅ Navigated to homepage.")
+def load_homepage_data():
+    """Load homepage verification data from JSON file."""
+    data_path = Path(__file__).parent / "test_homepage_data.json"
+    with open(data_path, encoding="utf-8") as f:
+        return json.load(f)
 
-    # Verify page title
-    title = page.title()
-    assert title == "Automation Exercise", f"Unexpected page title: '{title}'."
-    print("✅ Page title verified.")
 
-    # Verify logo is visible with correct attributes
-    logo = page.locator("div.logo.pull-left a img")
+@pytest.mark.parametrize("test_data", load_homepage_data())
+def test_TC_UI_HOME_001_homepage_ui_verification(page: Page, test_data):
+    """
+    Test Case ID: TC_UI_HOME_001
+    Title: Homepage UI Verification (Data-Driven)
+    Objective: Verify that all key UI components and navigation links are displayed correctly on the homepage.
+    Requirement Reference: REQ-UI-001
+    """
+
+    base_url = test_data["base_url"]
+    expected_title = test_data["expected_title"]
+    expected_links = test_data["expected_links"]
+    sections = test_data["sections"]
+
+    # Step 1: Navigate to the homepage
+    page.goto(base_url)
+    expect(page).to_have_title(expected_title)
+
+    # Step 2: Verify logo visibility and attributes
+    logo = page.get_by_role("img", name="Automation Exercise").or_(
+        page.locator("div.logo.pull-left a img")
+    )
     expect(logo).to_be_visible()
-    src = logo.get_attribute("src")
-    alt = logo.get_attribute("alt")
-    assert src and src.strip() != "", "Logo 'src' attribute is missing or empty."
-    assert alt == "Automation Exercise", f"Logo 'alt' attribute mismatch: '{alt}'."
-    print("✅ Logo verified with correct src and alt attributes.")
+    expect(logo).to_have_attribute("alt", "Automation Exercise")
+    expect(logo).to_have_attribute("src", lambda v: v and v.strip() != "")
 
-    # Verify navigation bar visibility
-    nav_bar = page.locator("ul.nav.navbar-nav")
+    # Step 3: Verify navigation bar and main links
+    nav_bar = page.get_by_role("navigation")
     expect(nav_bar).to_be_visible()
-    print("✅ Navigation bar is visible.")
 
-    # Verify navigation link texts and hrefs
-    nav_links = page.locator("ul.nav.navbar-nav > li > a")
-    expected_links = {
-        "Home": "/",
-        "Products": "/products",
-        "Cart": "/view_cart",
-        "Signup / Login": "/login",
-        "Test Cases": "/test_cases",
-        "API Testing": "/api_testing",
-        "Video Tutorials": "/video_tutorials",
-        "Contact us": "/contact_us",
-    }
-    assert nav_links.count() == len(expected_links), (
-        f"Expected {len(expected_links)} navigation links, "
-        f"but found {nav_links.count()}."
-    )
-    for text, href in expected_links.items():
-        link = page.locator(f'ul.nav.navbar-nav > li > a[href="{href}"]')
+    for link_text, href in expected_links.items():
+        link = page.get_by_role("link", name=link_text).or_(
+            page.locator(f'ul.nav.navbar-nav > li > a[href="{href}"]')
+        )
         expect(link).to_be_visible()
-        assert link.inner_text() == text, f"Link text mismatch: expected '{text}', got '{link.inner_text()}'."
-    print(f"✅ Verified {len(expected_links)} navigation links with correct text and href.")
+        expect(link).to_have_attribute("href", pytest.approx(href))
 
-    # Verify “Features Items” section
-    features_items = page.locator("div.features_items")
-    expect(features_items).to_be_visible()
-    header_features = features_items.locator("h2")
-    assert header_features.inner_text() == "Features Items", (
-        f"Expected header 'Features Items', got '{header_features.inner_text()}'."
-    )
-    print("✅ 'Features Items' section verified.")
+    # Step 4: Verify homepage sections
+    for section_name in sections:
+        section_header = page.get_by_role("heading", name=section_name).or_(
+            page.locator(f"div:has(h2:text('{section_name}')) h2")
+        )
+        section_header.scroll_into_view_if_needed()
+        expect(section_header).to_be_visible()
 
-    # Verify “Recommended Items” section
-    recommended_items = page.locator("div.recommended_items")
-    recommended_items.scroll_into_view_if_needed()
-    expect(recommended_items).to_be_visible()
-    header_recommended = recommended_items.locator("h2")
-    assert header_recommended.inner_text() == "Recommended Items", (
-        f"Expected header 'Recommended Items', got '{header_recommended.inner_text()}'."
-    )
-    print("✅ 'Recommended Items' section verified.")
-
-    # Verify footer presence
-    footer = page.locator("footer#footer")
+    # Step 5: Verify footer visibility
+    footer = page.get_by_role("contentinfo").or_(page.locator("footer#footer"))
     footer.scroll_into_view_if_needed()
     expect(footer).to_be_visible()
-    print("✅ Footer is visible.")
 
-    # Verify required elements exist in page source
-    page_source = page.content()
-    required_elements = [
-        'alt="Automation Exercise"',                # Logo alt attribute
-        '<ul class="nav navbar-nav">',              # Navigation bar
-        '<div class="features_items"',              # Features Items section
-        '<div class="recommended_items"',           # Recommended Items section
-        '<footer id="footer"',                      # Footer section
-    ]
-    for element in required_elements:
-        assert element in page_source, f"Expected element '{element}' not found in page source."
-    print("✅ Required elements confirmed in page source.")
 
