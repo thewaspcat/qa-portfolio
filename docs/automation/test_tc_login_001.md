@@ -13,11 +13,11 @@ def load_test_data():
 
 
 @pytest.mark.parametrize("credentials", load_test_data())
-def test_TC_UI_LOGIN_001_valid_login(page: Page, credentials):
+def test_tc_ui_login_001_valid_login(page: Page, credentials):
     """
     Test Case ID: TC_UI_LOGIN_001
-    Title: Valid Login with Correct Credentials (Data-Driven)
-    Objective: Verify that users with valid credentials can log in successfully.
+    Title: Login Page Functionality – Valid Credentials
+    Objective: Confirm that users with valid credentials can log in successfully.
     Requirement Reference: REQ-AUTH-001
     """
     email = credentials["email"]
