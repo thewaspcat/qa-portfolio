@@ -1,4 +1,4 @@
-# **Valid Login with Correct Credentials (Data-Driven)**
+# **Login Page Functionality – Valid Credential**
 
 ## 1. Test Case Information
 - **Test Case ID:** TC_UI_LOGIN_001  
