@@ -17,8 +17,8 @@ def load_homepage_data():
 def test_TC_UI_HOME_001_homepage_ui_verification(page: Page, test_data):
     """
     Test Case ID: TC_UI_HOME_001
-    Title: Homepage UI Verification (Data-Driven)
-    Objective: Verify that all key UI components and navigation links are displayed correctly on the homepage.
+    Title: Homepage UI Validation (Data-Driven)
+    Objective: Validate that all key UI components and navigation links are displayed correctly on the homepage.
     Requirement Reference: REQ-UI-001
     """
 
