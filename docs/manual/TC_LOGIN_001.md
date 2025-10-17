@@ -2,8 +2,8 @@
 
 ## 1. Test Case Information
 - **Test Case ID:** TC_UI_LOGIN_001  
-- **Title:** Valid Login with Correct Credentials (Data-Driven)  
-- **Objective:** Verify that users with valid credentials can log in successfully and session persists after reload.  
+- **Title:** Login Page Functionality – Valid Credentials  
+- **Objective:** Confirm that users with valid credentials can log in successfully and session persists after reload.  
 - **Requirement Reference:** REQ-AUTH-001  
 - **Test Type:** Functional  
 - **Execution Type:** Manual / Automated  
