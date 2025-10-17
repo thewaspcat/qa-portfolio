@@ -96,7 +96,7 @@
 - **Framework:** Playwright  
 - **Test Data Source:** `test_login_data.json`  
 - **Automation Priority:** High  
-- **Script Reference:** `test_TC_UI_LOGIN_001_valid_login.py`  
+- **Script Reference:** `test_tc_ui_login_001.py`  
 - **Automation Notes:** Uses Playwright locators (`get_by_label`, `get_by_role`, `get_by_text`) for accessibility and maintainability.  
 
 ---
