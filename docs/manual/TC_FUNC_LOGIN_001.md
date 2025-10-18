@@ -1,4 +1,4 @@
-# **Login Page Functionality – Valid Credential**
+# **Login Page Functionality – Valid Credentials**
 
 ## 1. Test Case Information
 - **Test Case ID:** TC_UI_LOGIN_001  
@@ -39,7 +39,7 @@
 
 ---
 
-## 4. Test Data (from JSON file)
+## 4. Test Data (Example)
 
 | Field | Description | Example Value |
 |--------|-------------|----------------|
