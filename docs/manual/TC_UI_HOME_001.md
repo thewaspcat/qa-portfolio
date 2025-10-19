@@ -3,7 +3,7 @@
 ## 1. Test Case Information
 - **Test Case ID:** TC_UI_HOME_001  
 - **Title:** Homepage UI Layout and Components Display 
-- **Objective:** Validate that the homepage UI loads correctly and displays all key UI components with correct structure, attributes, and content.   
+- **Objective:** Validate that the homepage UI loads seamlessly and displays all key UI components with correct structure, attributes, and content.   
 - **Requirement Reference:** REQ-WEB-HOME-004  
 - **Test Type:** Functional  
 - **Execution Type:** Manual  
