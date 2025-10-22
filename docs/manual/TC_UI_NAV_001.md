@@ -93,8 +93,9 @@
 - Functional testing of forms (login/contact) covered in separate cases.  
 - Broken link verification to be repeated during regression testing.  
 - **Automation Note**: The automation scripts are split due to differences in behavior for internal versus external links.
-**Script 1**: Validates the first 7 internal navigation links (Home → Contact us).
-**Script 2**: Validates the external link (Video Tutorials) opening in a new browser tab (YouTube).
+-   Script 1: Validates the first 7 internal navigation links (Home → Contact us).
+-   Script 2: Validates the external link (Video Tutorials) opening in a new browser tab (YouTube).
+
 ---
 
 ## 11. Automation Readiness  
