@@ -22,6 +22,7 @@ The software under test is a mock e-commerce website: [Automation Exercise](http
 - [Homepage UI Layout and Components Display](manual/TC_UI_HOME_001.md)
 - [Homepage – Core Functionalities](manual/TC_FUNC_HOME_001.md)
 - [Login Page Functionality – Valid Credentials](manual/TC_UI_LOGIN_001.md)
+- [Homepage Navigation Menu Functionality](manual/TC_UI_NAV_001.md)
 
 ---
 
