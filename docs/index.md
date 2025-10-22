@@ -16,9 +16,9 @@ The software under test is a mock e-commerce website: [Automation Exercise](http
 ---
 
 ## Manual Test Cases:
-- [Homepage UI Structure and Elements](manual/TC_HOME_UI_001.md)
+- [Homepage UI Layout and Components Display](manual/TC_UI_HOME_001.md)
 - [Homepage – Core Functionalities](manual/TC_FUNC_HOME_001.md)
-- [Login Flow](manual/TC_LOGIN_001.md)
+- [Login Page Functionality – Valid Credentials](manual/TC_FUNC_LOGIN_001.md)
 
 ---
 
@@ -26,9 +26,9 @@ The software under test is a mock e-commerce website: [Automation Exercise](http
 
 > Click the links to view the Python scripts on GitHub with syntax highlighting.
 
-- [Homepage UI Structure and Elements](https://github.com/thewaspcat/qa-portfolio-sample/blob/main/docs/automation/test_tc_home_ui_001.md)
-- [Homepage – Core Functionalities](https://github.com/thewaspcat/qa-portfolio-sample/blob/main/docs/automation/test_tc_func_home_001.md)
-- [Login Flow](https://github.com/thewaspcat/qa-portfolio-sample/blob/main/docs/automation/test_tc_login_001.md)
+- [Homepage UI Structure and Elements](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_home_001.md))
+- [Homepage – Core Functionalities](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_func_home_001.md)
+- [Login Flow](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/docs/automation/docs/automation/test_tc_func_login_001.md)
 
 ---
 
