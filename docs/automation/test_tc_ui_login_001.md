@@ -15,7 +15,7 @@ def load_test_data():
 @pytest.mark.parametrize("credentials", load_test_data())
 def test_tc_ui_login_001_valid_login(page: Page, credentials):
     """
-    Test Case ID: TC_FUNC_LOGIN_001
+    Test Case ID: TC_UI_LOGIN_001
     Title: Login Page Functionality – Valid Credentials
     Objective: Confirm that users with valid credentials can log in successfully and session persists after reload.
     Requirement Reference: REQ-AUTH-001
