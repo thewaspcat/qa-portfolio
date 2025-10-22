@@ -1,4 +1,6 @@
-# QA Portfolio by Marta Czarnecka
+# QA Portfolio by Marta Czarnecka <br>
+
+---
 
 Welcome to my **Quality Assurance portfolio**, which showcases my knowledge about manual software testing as well as my experience in test automation.
 
@@ -16,6 +18,7 @@ The software under test is a mock e-commerce website: [Automation Exercise](http
 ---
 
 ## Manual Test Cases:
+
 - [Homepage UI Layout and Components Display](manual/TC_UI_HOME_001.md)
 - [Homepage – Core Functionalities](manual/TC_FUNC_HOME_001.md)
 - [Login Page Functionality – Valid Credentials](manual/TC_FUNC_LOGIN_001.md)
