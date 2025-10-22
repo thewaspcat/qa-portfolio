@@ -5,7 +5,7 @@ Welcome to my **Quality Assurance portfolio**, which showcases my knowledge abou
 
 This portfolio demonstrates:
 - Methodical approach to structuring test cases
-- Compliance with the official international requirements for software testing documentation <br> (ISO/IEC/IEEE 29119-3) and ISTQB®- standards, **enhanced** with details for automation readiness
+- Compliance with the official international requirements for software testing documentation <br> (ISO/IEC/IEEE 29119-3) and ISTQB® standards, **enhanced** with details for automation readiness
 - 1:1 mapping between manual test cases and automated test scripts for maximum traceability.
 - Industry-standard practices for test design, test execution and test maintainance.
 
