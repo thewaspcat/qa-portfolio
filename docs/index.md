@@ -26,9 +26,9 @@ The software under test is a mock e-commerce website: [Automation Exercise](http
 
 > Click the links to view the Python scripts on GitHub with syntax highlighting.
 
-- [Homepage UI Structure and Elements](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_home_001.md))
+- [Homepage UI Layout and Components Display](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_home_001.md))
 - [Homepage – Core Functionalities](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_func_home_001.md)
-- [Login Flow](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/docs/automation/docs/automation/test_tc_func_login_001.md)
+- [Login Page Functionality – Valid Credentials](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/docs/automation/docs/automation/test_tc_func_login_001.md)
 
 ---
 
