@@ -21,7 +21,7 @@ The software under test is a mock e-commerce website: [Automation Exercise](http
 
 - [Homepage UI Layout and Components Display](manual/TC_UI_HOME_001.md)
 - [Homepage – Core Functionalities](manual/TC_FUNC_HOME_001.md)
-- [Login Page Functionality – Valid Credentials](manual/TC_FUNC_LOGIN_001.md)
+- [Login Page Functionality – Valid Credentials](manual/TC_UI_LOGIN_001.md)
 
 ---
 
@@ -31,7 +31,7 @@ The software under test is a mock e-commerce website: [Automation Exercise](http
 
 - [Homepage UI Layout and Components Display](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_home_001.md)
 - [Homepage – Core Functionalities](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_func_home_001.md)
-- [Login Page Functionality – Valid Credentials](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_func_login_001.md)
+- [Login Page Functionality – Valid Credentials](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_login_001.md)
 
 ---
 
