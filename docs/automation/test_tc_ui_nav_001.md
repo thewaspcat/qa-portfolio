@@ -15,8 +15,8 @@ from playwright.sync_api import Page, expect
 def test_tc_ui_nav_001_navigation_links(page: Page, link_text: str, expected_url: str):
     """
     Test Case ID: TC_UI_NAV_001
-    Title: Homepage Navigation Menu Links – Functionality Verification
-    Objective: Confirm that each navigation menu link on the homepage redirects to the correct page and displays the corresponding content.
+    Title: Homepage Navigation Menu Functionality
+    Objective: Validate that each navigation menu link on the homepage redirects to the correct page and displays the corresponding content.
     Requirement Reference: REQ-UI-NAV-001
     """
 
