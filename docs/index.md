@@ -20,8 +20,9 @@ The software under test is a mock e-commerce website: [Automation Exercise](http
 ## Manual Test Cases:
 
 - [Homepage UI Layout and Components Display](manual/TC_UI_HOME_001.md)
-- [Homepage – Core Functionalities](manual/TC_FUNC_HOME_001.md)
+ 
 - [Login Page Functionality – Valid Credentials](manual/TC_UI_LOGIN_001.md)
+  
 - [Homepage Navigation Menu Functionality](manual/TC_UI_NAV_001.md)
 
 ---
@@ -31,8 +32,10 @@ The software under test is a mock e-commerce website: [Automation Exercise](http
 > Click the links to view the Python scripts on GitHub with syntax highlighting.
 
 - [Homepage UI Layout and Components Display](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_home_001.md)
-- [Homepage – Core Functionalities](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_func_home_001.md)
+
 - [Login Page Functionality – Valid Credentials](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_login_001.md)
+
+- [Homepage Navigation Menu Functionality](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_nav_001.md)
 
 ---
 
