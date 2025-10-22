@@ -35,8 +35,10 @@ The software under test is a mock e-commerce website: [Automation Exercise](http
 
 - [Login Page Functionality – Valid Credentials](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_login_001.md)
 
-- [Homepage Navigation Menu Functionality](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_nav_001.md)
+- [Homepage Navigation Menu Functionality part 1](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_nav_001.md)
 
+- [Homepage Navigation Menu Functionality part2 (Video Tutorials)](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_nav_001_video_tutorials.md)
+  
 ---
 
 ## 📩 Contact details
