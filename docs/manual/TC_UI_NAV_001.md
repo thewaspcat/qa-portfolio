@@ -59,7 +59,7 @@
 | 6 | Click **Signup / Login** link | `ul.nav.navbar-nav > li > a[href="/login"]` | Redirects to `/login`; email and password fields visible. |
 | 7 | Click **Test Cases** link | `ul.nav.navbar-nav > li > a[href="/test_cases"]` | Redirects to `/test_cases`; list of test cases visible. |
 | 8 | Click **API Testing** link | `ul.nav.navbar-nav > li > a[href="/api_list"]` | Redirects to `/api_list`; API endpoint list visible. |
-| 9 | Click **Video Tutorials** link | `ul.nav.navbar-nav > li > a[href="https://www.youtube.com/c/AutomationExercise"]` | Opens YouTube channel in new tab. |
+| 9 | Click **Video Tutorials** link | `ul.nav.navbar-nav > li > a[href="https://www.youtube.com/c/AutomationExercise"]` | Opens YouTube channel in new tab, validated in separate automation script. |
 | 10 | Click **Contact Us** link | `ul.nav.navbar-nav > li > a[href="/contact_us"]` | Redirects to `/contact_us`; form with fields Name, Email, Subject, Message, Submit visible. |
 
 ---
@@ -92,7 +92,9 @@
 - Validate both **link text** and **href attributes** (case-sensitive).  
 - Functional testing of forms (login/contact) covered in separate cases.  
 - Broken link verification to be repeated during regression testing.  
-
+- **Automation Note**: The automation scripts are split due to differences in behavior for internal versus external links.
+**Script 1**: Validates the first 7 internal navigation links (Home → Contact us).
+**Script 2**: Validates the external link (Video Tutorials) opening in a new browser tab (YouTube).
 ---
 
 ## 11. Automation Readiness  
@@ -100,7 +102,7 @@
 - **Framework:** Playwright  
 - **Test Data Source:** Inline link definitions or JSON data file  
 - **Automation Priority:** Medium  
-- **Script Reference:** `test_tc_ui_nav_001.py`  
+- **Script Reference:** `test_tc_ui_nav_001.py and test_tc_ui_nav_001_video_tutorials.py`  
 - **Automation Notes:** Each link click and redirection validated using Playwright’s `page.url()` and `expect(page).to_have_url()` assertions.  
 
 ---
