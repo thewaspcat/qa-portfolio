@@ -45,5 +45,5 @@ The software under test is a mock e-commerce website: [Automation Exercise](http
 
 For inquiries, feel free to reach out via:  
 
-- **LinkedIn**: www.linkedin.com/in/marta-czarnecka-40406878
+- **LinkedIn**: www.linkedin.com/in/marta-czarnecka-
 - **Email**: martaczarneckaqa@gmail.com
