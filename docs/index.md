@@ -2,18 +2,18 @@
 
 ---
 
-Welcome to my **Quality Assurance portfolio**, which showcases my knowledge about manual software testing as well as my experience in test automation.
+Welcome to my **Quality Assurance portfolio**, which showcases my knowledge about manual software testing as well as my experience in test automation and defect reporting.
 
 
 This portfolio demonstrates:
 - Methodical approach to structuring test cases
 - Compliance with the official international requirements for software testing documentation <br> (ISO/IEC/IEEE 29119-3) and ISTQB® standards, **enhanced** with details for automation readiness
 - 1:1 mapping between manual test cases and automated test scripts for maximum traceability.
-- Industry-standard practices for test design, test execution and test maintenance.
+- Industry-standard practices for test design, test automation and bug reporting.
 
 ---
 
-The software under test is a mock e-commerce website: [Automation Exercise](https://www.automationexercise.com/) .
+The software under test is a public demo e-commerce website: [Automation Exercise](https://www.automationexercise.com/) .
 
 ---
 
@@ -37,8 +37,13 @@ The software under test is a mock e-commerce website: [Automation Exercise](http
 
 - [Homepage Navigation Menu Functionality part 1](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_nav_001.md)
 
-- [Homepage Navigation Menu Functionality part2 (Video Tutorials)](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_nav_001_video_tutorials.md)
-  
+- [Homepage Navigation Menu Functionality part2 (Video Tutorials)](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_nav_001_video_tutorials.md)  
+
+---
+
+## Defect reporting
+
+
 ---
 
 ## 📩 Contact details
