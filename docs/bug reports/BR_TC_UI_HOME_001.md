@@ -1,4 +1,4 @@
-# Bug Report: Incorrect Headline Text in Featured Items Section on Homepage
+# Bug Report: Homepage - Incorrect Headline Text in Featured Items Section
 
 
 ## Related Test Case
