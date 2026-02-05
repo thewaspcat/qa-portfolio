@@ -32,13 +32,13 @@ The software under test is a public demo e-commerce website: [Automation Exercis
 
 These are CRUD-focused API test cases executed manually in Postman against the public Automation Exercise API (positive behavior verification).
 
-- [Get All Products List](REST API/TC_API_CRUD_001.md)
+- [Get All Products List](crud/TC_API_CRUD_001.md)
   
-- [POST To All Products List](REST API/TC_API_CRUD_002.md)
+- [POST To All Products List](crud/TC_API_CRUD_002.md)
  
-- [PUT To All Brands List](REST API/TC_API_CRUD_003.md)
+- [PUT To All Brands List](crud/TC_API_CRUD_003.md)
  
-- [Delete User Account](REST API/TC_API_CRUD_004.md)
+- [Delete User Account](crud/TC_API_CRUD_004.md)
 
 ---
 
@@ -58,7 +58,7 @@ These are CRUD-focused API test cases executed manually in Postman against the p
 
 ## Defect reporting
 
-- [Bug Report: Homepage - Incorrect Headline Text in Featured Items Section](bug reports/BR_TC_UI_HOME_001.md)
+- [Bug Report: Homepage - Incorrect Headline Text in Featured Items Section](bugs/BR_TC_UI_HOME_001.md)
   
 ---
 
