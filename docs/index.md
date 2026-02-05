@@ -7,8 +7,8 @@ All manual test cases, including Postman-aligned API tests, are structurally Jir
 
 This portfolio demonstrates:
 
-- Methodical approach to structuring test cases;
-- Compliance with the official international requirements for software testing documentation (ISO/IEC/IEEE 29119-3) and ISTQB® standards, **enhanced** with details for automation readiness;
+- Methodical approach to structuring test artifacts;
+- Test design compliant with the official international requirements (ISO/IEC/IEEE 29119-3 and ISTQB® standards) for software testing documentation , **enhanced** with details for automation readiness;
 - 1:1 mapping between manual test cases and automated test scripts for maximum traceability;
 - Industry-standard practices for test design, test automation, bug reporting, and manual REST API testing (CRUD operations).
 
