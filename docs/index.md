@@ -20,7 +20,7 @@ The software under test is a public demo e-commerce website: [Automation Exercis
 ## Manual Test Cases:
 
 
-### UI (Web Application)
+### Frontend (Web UI):
 
 - [Homepage UI Layout and Components Display](manual/TC_UI_HOME_001.md)
  
@@ -28,17 +28,17 @@ The software under test is a public demo e-commerce website: [Automation Exercis
   
 - [Homepage Navigation Menu Functionality](manual/TC_UI_NAV_001.md)
 
-### REST API (Postman)
+### Backend (REST API):
 
 These are CRUD-focused API test cases executed manually in Postman against the public Automation Exercise API (positive behavior verification).
 
-- [Get All Products List](crud/TC_API_CRUD_001.md)
+- [GET All Products List](crud/TC_API_CRUD_001.md)
   
-- [POST To All Products List](crud/TC_API_CRUD_002.md)
+- [POST to All Products List](crud/TC_API_CRUD_002.md)
  
-- [PUT To All Brands List](crud/TC_API_CRUD_003.md)
+- [PUT to All Brands List](crud/TC_API_CRUD_003.md)
  
-- [Delete User Account](crud/TC_API_CRUD_004.md)
+- [DELETE User Account](crud/TC_API_CRUD_004.md)
 
 ---
 
