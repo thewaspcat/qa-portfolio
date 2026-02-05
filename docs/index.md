@@ -2,8 +2,8 @@
 
 ---
 
-Welcome to my **Quality Assurance portfolio**, which showcases my skills in manual software testing — with **UI and CRUD (REST API)** test cases as selected deliverables — as well as my experience in test automation and defect reporting.  
-All manual test cases, including Postman API tests, are structurally Jira/Xray-ready — they can be easily imported or linked to Jira work items in Xray.
+Welcome to my **Quality Assurance portfolio**, which showcases my skills in manual software testing of frontend and backend components - with **UI and CRUD (REST API)** test cases as selected deliverables — as well as my experience in test automation and defect reporting.  
+All manual test cases, including Postman-aligned API tests, are structurally Jira/Xray-ready — they can be easily imported or linked to Jira work items in Xray.
 
 This portfolio demonstrates:
 - Methodical approach to structuring test cases;
