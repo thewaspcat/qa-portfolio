@@ -30,7 +30,7 @@ The software under test is a public demo e-commerce website: [Automation Exercis
 
 ### Backend (REST API):
 
-These are CRUD-focused API test cases executed manually in Postman against the public Automation Exercise API (positive behavior verification).
+These are CRUD-focused API test cases for manual test execution in Postman against the public Automation Exercise API (positive behavior verification).
 
 - [GET All Products List](crud/TC_API_CRUD_001.md)
   
