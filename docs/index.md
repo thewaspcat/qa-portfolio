@@ -43,7 +43,8 @@ The software under test is a public demo e-commerce website: [Automation Exercis
 
 ## Defect reporting
 
-
+- [Bug Report: Homepage - Incorrect Headline Text in Featured Items Section](bug reports/BR_TC_UI_HOME_001.md)
+  
 ---
 
 ## 📩 Contact details
