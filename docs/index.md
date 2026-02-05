@@ -6,14 +6,15 @@ Welcome to my **Quality Assurance portfolio**, which showcases my skills in manu
 All manual test cases, including Postman-aligned API tests, are structurally Jira/Xray-ready — they can be easily imported or linked to Jira work items in Xray.
 
 This portfolio demonstrates:
+
 - Methodical approach to structuring test cases;
-- Compliance with the official international requirements for software testing documentation <br> (ISO/IEC/IEEE 29119-3) and ISTQB® standards, **enhanced** with details for automation readiness;
+- Compliance with the official international requirements for software testing documentation (ISO/IEC/IEEE 29119-3) and ISTQB® standards, **enhanced** with details for automation readiness;
 - 1:1 mapping between manual test cases and automated test scripts for maximum traceability;
-- Industry-standard practices for test design, test automation, bug reporting and manual REST API testing (CRUD operations).
+- Industry-standard practices for test design, test automation, bug reporting, and manual REST API testing (CRUD operations).
 
 ---
 
-The software under test is a public demo e-commerce website: [Automation Exercise](https://www.automationexercise.com/) .
+The software under test is a public demo e-commerce website: [Automation Exercise](https://www.automationexercise.com/).
 
 ---
 
@@ -34,9 +35,9 @@ These are CRUD-focused API test cases for manual test execution in Postman again
 
 - [GET All Products List](crud/TC_API_CRUD_001.md)
   
-- [POST to All Products List](crud/TC_API_CRUD_002.md)
+- [POST a new Product to All Products List](crud/TC_API_CRUD_002.md)
  
-- [PUT to All Brands List](crud/TC_API_CRUD_003.md)
+- [PUT an update to All Brands List](crud/TC_API_CRUD_003.md)
  
 - [DELETE User Account](crud/TC_API_CRUD_004.md)
 
@@ -52,7 +53,7 @@ These are CRUD-focused API test cases for manual test execution in Postman again
 
 - [Homepage Navigation Menu Functionality part 1](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_nav_001.md)
 
-- [Homepage Navigation Menu Functionality part2 (Video Tutorials)](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_nav_001_video_tutorials.md)  
+- [Homepage Navigation Menu Functionality part 2 (Video Tutorials)](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_nav_001_video_tutorials.md)  
 
 ---
 
