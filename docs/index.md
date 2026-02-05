@@ -2,14 +2,14 @@
 
 ---
 
-Welcome to my **Quality Assurance portfolio**, which showcases my knowledge about manual software testing as well as my experience in test automation and defect reporting.
-
+Welcome to my **Quality Assurance portfolio**, which showcases my skills in manual software testing — with **UI and CRUD (REST API)** test cases as selected deliverables — as well as my experience in test automation and defect reporting.  
+All manual test cases, including Postman API tests, are structurally Jira/Xray-ready — they can be easily imported or linked to Jira work items in Xray.
 
 This portfolio demonstrates:
-- Methodical approach to structuring test cases
-- Compliance with the official international requirements for software testing documentation <br> (ISO/IEC/IEEE 29119-3) and ISTQB® standards, **enhanced** with details for automation readiness
-- 1:1 mapping between manual test cases and automated test scripts for maximum traceability.
-- Industry-standard practices for test design, test automation and bug reporting.
+- Methodical approach to structuring test cases;
+- Compliance with the official international requirements for software testing documentation <br> (ISO/IEC/IEEE 29119-3) and ISTQB® standards, **enhanced** with details for automation readiness;
+- 1:1 mapping between manual test cases and automated test scripts for maximum traceability;
+- Industry-standard practices for test design, test automation, bug reporting and manual REST API testing (CRUD operations).
 
 ---
 
@@ -19,11 +19,26 @@ The software under test is a public demo e-commerce website: [Automation Exercis
 
 ## Manual Test Cases:
 
+
+### UI (Web Application)
+
 - [Homepage UI Layout and Components Display](manual/TC_UI_HOME_001.md)
  
 - [Login Page Functionality – Valid Credentials](manual/TC_UI_LOGIN_001.md)
   
 - [Homepage Navigation Menu Functionality](manual/TC_UI_NAV_001.md)
+
+### REST API (Postman)
+
+These are CRUD-focused API test cases executed manually in Postman against the public Automation Exercise API (positive behavior verification).
+
+- [Get All Products List](REST API/TC_API_CRUD_001.md)
+  
+- [POST To All Products List](REST API/TC_API_CRUD_002.md)
+ 
+- [PUT To All Brands List](REST API/TC_API_CRUD_003.md)
+ 
+- [Delete User Account](REST API/TC_API_CRUD_004.md)
 
 ---
 
