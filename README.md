@@ -9,4 +9,4 @@ This repository contains my **QA portfolio**, demonstrating:
 
 The software under test is a public **demo e-commerce website**: [automationexercise.com](https://www.automationexercise.com/).  
 
-➡️ **View the website with selected test samples here:** [QA Portfolio](https://thewaspcat.github.io/qa-portfolio/)
+➡️ **View the selected test samples here:** [QA Portfolio](https://thewaspcat.github.io/qa-portfolio/)
