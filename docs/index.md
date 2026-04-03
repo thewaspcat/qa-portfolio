@@ -2,10 +2,10 @@
 
 ---
 
-Welcome to my **Quality Assurance portfolio**, that showcases my expertise in manual and automated software testing for both frontend and backend components. 
-It also demonstrates my methodical approach to structuring test artifacts, compliance with international QA standards (ISO/IEC/IEEE 29119-3 and ISTQB®), and the seamless integration of manual and automated testing practices to ensure reliable, high-quality software.
+Welcome to my **Quality Assurance portfolio**, which showcases my expertise in manual and automated software testing for both frontend and backend components.  
+The portfolio demonstrates my methodical approach to structuring test artifacts, compliance with international QA standards (ISO/IEC/IEEE 29119-3 and ISTQB®), and the seamless integration of manual and automated testing practices to ensure reliable, high-quality software.
 
-The portfolio highlights UI and CRUD (REST API) test cases as selected deliverables, along with automation scripts and defect reporting.
+UI and CRUD (REST API) test cases act as selected deliverables, along with automation scripts and defect reporting.  
 All manual test cases, including Postman-aligned API tests, are structurally Jira/Xray-ready and can be directly linked or imported to Xray work items.
 
 ---
@@ -18,7 +18,8 @@ The software under test is a public demo e-commerce website: [Automation Exercis
 
 [Homepage UI Testing – End-to-End QA](case_studies/case_study_1.md) <- click to view
 
-The case study demonstrates a full QA workflow for the Automation Exercise public demo e-commerce site, combining manual UI and API test cases, defect reporting, and automation mapping. It highlights traceability from requirements → test design → execution → defect identification → automated validation.
+The case study demonstrates a full QA workflow for the Automation Exercise public demo e-commerce site, combining manual UI and API test cases, defect reporting, and automation mapping.  
+It highlights traceability from requirements → test design → execution → defect identification → automated validation.
 
 ---
 
@@ -82,7 +83,7 @@ These API test cases are designed for manual test execution in Postman against t
   
 ---
 
-### Next Steps
+## Next Steps
 
 Explore the QA workflow in a clear sequence: start with the featured case study to see the end-to-end process, then review the manual test cases, the defect reports, and finally the automation scripts.
 
@@ -94,7 +95,7 @@ This sequence shows the full story—from the workflow overview to the detailed 
 
 ---
 
-### 📩 Contact details
+## 📩 Contact details
 
 For inquiries, feel free to reach out via:  
 
