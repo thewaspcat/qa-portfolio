@@ -1,112 +1,114 @@
-# Case Study: Homepage UI Testing (Automation Exercise)
+# Case Study: Homepage Functional Testing (Automation Exercise)
 
-## Project overview
-This case study documents end-to-end QA for the homepage of the Automation Exercise demo e-commerce site. It consolidates manual test design, execution evidence, defect reporting, and automation mapping into a single, traceable workflow.
+## Project Overview.
 
-## Product under test
+This case study documents functional QA of the Automation Exercise demo e-commerce site across three scenarios: homepage UI validation, navigation behavior, and login functionality.  
+It links manual test cases, execution results, defect reporting, and Playwright automation into a single traceable workflow.
+
+## Product Under Test
+
 - **Application:** Automation Exercise (public demo e-commerce)
-- **Area:** Homepage UI
+- **Areas:** Homepage UI, Navigation, Login
 - **Requirement:** REQ-WEB-HOME-004 (Homepage renders correctly with primary navigation and key sections)
-- **Test case:** [TC_UI_HOME_001](https://thewaspcat.github.io/qa-portfolio/manual/TC_UI_HOME_001.html)
-- **Test type:** Functional (UI)
 - **Execution:** Manual + Automated (Playwright)
 
+---
+
 ## Objective
-Verify that the homepage loads successfully and displays all critical UI components with correct labels, structure, and visibility.
+Validate that core user-facing functionality works correctly by verifying UI structure, navigation behavior, and login functionality.
+
+---
+
+## Test Coverage
+The application is validated through three complementary test cases:
+
+- **TC_UI_HOME_001 – UI Structure & Visibility**
+  - Page load, title, logo, navigation, sections, footer
+
+- **TC_NAV_HOME_002 – Navigation Behavior**
+  - Navigation links route correctly and are functional
+
+- **TC_AUTH_LOGIN_003 – Login Functionality**
+  - User can access login page and perform authentication-related checks
+
+Each test targets a distinct functional area while contributing to overall system validation.
+
+---
 
 ## Scope
-### In scope
-- Page load and title
-- Logo presence and attributes
-- Main navigation visibility and links
-- Featured Items section
-- Recommended Items section
-- Footer visibility
 
-### Out of scope
-- Navigation click-through behavior
-- Authentication flows
+### In Scope
+- Homepage rendering and structure
+- Navigation presence and behavior
+- Login page accessibility and functionality
+- Core UI components and visibility
+
+### Out of Scope
 - Product detail flows
-- API behavior
+- Backend/API validation
 - Performance and security testing
 
-## Risk-based focus
-Highest-risk checks prioritized:
-- Page load failure (blocks all usage)
-- Missing navigation (blocks user movement)
-- Missing core sections (breaks usability)
+---
 
-Lower-risk but relevant:
-- Text accuracy and UI labeling
+## Test Strategy
 
-## Test design
-The test case uses DOM-based verification points that are stable and automation-friendly:
-- Page title assertion
-- Logo visibility and attributes
-- Navigation container and link validation
-- Section headers (Featured, Recommended)
-- Footer presence
+- **UI integrity risk** → TC_UI_HOME_001  
+- **Navigation failure risk** → TC_NAV_HOME_002  
+- **Authentication risk** → TC_AUTH_LOGIN_003  
 
-Each step is mapped to a clear expected outcome, enabling both manual verification and automated assertions.
+Testing focuses on validating critical entry points and core user actions.
 
-## Traceability
-| Requirement | Test Case | Result | Defect |
-|------------|----------|--------|--------|
-| Homepage loads correctly | [TC_UI_HOME_001](https://thewaspcat.github.io/qa-portfolio/manual/TC_UI_HOME_001.html) | PASS | — |
-| Featured section label correct | [TC_UI_HOME_001](https://thewaspcat.github.io/qa-portfolio/manual/TC_UI_HOME_001.html) | FAIL | [BUG-001](https://thewaspcat.github.io/qa-portfolio/defects/) |
+---
 
-## Manual execution
+## Test Design
+All test cases use DOM-based verification points designed for:
+- Stability
+- Repeatability
+- Automation compatibility
+
+Validation includes:
+- Page title assertions
+- Element visibility checks
+- Navigation link validation
+- Login form validation
+- Section and component verification
+
+---
+
+## Manual Execution
+
 **Environment:**
-- Browser: Chrome 121
-- OS: Windows 11
-- Resolution: 1920x1080
-- Network: Standard broadband
+- Browser: Chrome 121  
+- OS: Windows 11  
+- Resolution: 1920x1080  
+- Network: Standard broadband  
 
-**Execution date:** 2026-03-30
+**Execution Date:** 2026-03-30
 
-### Steps and results
-1. Open homepage URL  
-   → Page loads successfully
+### Execution Summary
 
-2. Verify page title  
-   → "Automation Exercise" displayed (PASS)
+| Test Case | Area | Result |
+|----------|------|--------|
+| TC_UI_HOME_001 | UI Structure | PASS / 1 FAIL |
+| TC_NAV_HOME_002 | Navigation | PASS |
+| TC_AUTH_LOGIN_003 | Login | PASS |
 
-3. Verify logo  
-   → Logo visible, correct alt text (PASS)
+---
 
-4. Verify navigation bar  
-   → Navigation visible with expected links (PASS)
+## Defect Report
 
-5. Validate navigation links (text + href)  
-   → All links present and correctly labeled (PASS)
+**ID:** BUG-001  
+**Title:** Incorrect headline text in Featured Items section  
 
-6. Verify Featured Items section  
-   → Section visible but label incorrect (FAIL)
+### Steps to Reproduce
+1. Open homepage  
+2. Locate Featured Items section  
 
-7. Verify Recommended Items section  
-   → Section visible and correctly labeled (PASS)
+### Expected Result
+"Featured Items"
 
-8. Verify footer  
-   → Footer visible (PASS)
-
-## Execution summary
-- Total checks: 8
-- Passed: 7
-- Failed: 1
-
-## Defect report
-**ID:** [BUG-001](https://thewaspcat.github.io/qa-portfolio/defects/)  
-**Title:** Incorrect headline text in Featured Items section
-
-### Steps to reproduce
-1. Open homepage
-2. Locate Featured Items section
-
-### Expected result
-Section title displays: **Featured Items**
-
-### Actual result
-Section title displays: **Features Items**
+### Actual Result
+"Features Items"
 
 ### Severity
 Low
@@ -117,25 +119,45 @@ Medium
 ### Impact
 Does not block functionality but reduces UI quality and professionalism.
 
-## Automation mapping
-The test case is implemented in Playwright and mirrors the manual flow:
+---
 
-- Page load assertion  
+## Traceability
+
+| Requirement | Test Case | Coverage Area | Result | Defect |
+|------------|----------|--------------|--------|--------|
+| REQ-WEB-HOME-004 | TC_UI_HOME_001 | UI Structure | PASS/FAIL | BUG-001 |
+| REQ-WEB-HOME-004 | TC_NAV_HOME_002 | Navigation | PASS | — |
+| REQ-WEB-HOME-004 | TC_AUTH_LOGIN_003 | Login | PASS | — |
+
+---
+
+## Automation Mapping
+All test cases are implemented in Playwright and mirror manual execution:
+
+- Page load assertions  
 - Locator-based UI checks  
-- Text validation  
+- Navigation validation  
+- Login form validation  
 
-**Implementation:** https://github.com/thewaspcat/qa-portfolio (Playwright tests directory)
+Automation uses reusable selectors and structured test data to support maintainability.
 
-## QA outcome
-This test confirms that:
-- Core homepage functionality is stable
-- UI structure is intact
-- Minor content defects are present
+---
 
-## Key takeaways
-- Manual test design successfully identified a real UI issue
-- The same test can be reused for automation with minimal changes
-- Even simple UI validation provides value when executed systematically
+## QA Outcome
+- Core homepage functionality is stable  
+- Navigation is functional and consistent  
+- Login functionality is accessible and working  
+- One minor UI defect identified  
 
-## Final assessment
-The homepage is functionally stable and usable. One minor UI defect was identified that should be corrected to improve presentation quality. The test case is suitable for inclusion in a regression suite and demonstrates a complete QA workflow from requirement to defect.
+---
+
+## Key Takeaways
+- Multiple test scenarios improve coverage across functional areas  
+- Manual tests translate directly into automation  
+- Functional + authentication coverage increases realism  
+- Structured traceability strengthens QA credibility  
+
+---
+
+## Final Assessment
+The application is functionally stable across homepage, navigation, and login scenarios. The test suite demonstrates structured QA coverage, traceability, and automation alignment, making it suitable for regression testing and portfolio presentation.
