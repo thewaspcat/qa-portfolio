@@ -2,24 +2,28 @@
 
 ---
 
-Welcome to my **Quality Assurance portfolio**, which showcases my expertise in manual and automated software testing for both frontend and backend components.  
-The portfolio demonstrates my methodical approach to structuring test artifacts, compliance with international QA standards (ISO/IEC/IEEE 29119-3 and ISTQB®), and the seamless integration of manual and automated testing practices to ensure reliable, high-quality software.
+Welcome to my Quality Assurance portfolio, which presents a collection of manual and automated testing artifacts across frontend and backend scenarios, compliant with international QA standards (ISO/IEC/IEEE 29119-3 and ISTQB®).
 
-UI and CRUD (REST API) test cases act as selected deliverables, along with automation scripts and defect reporting.  
-All manual test cases, including Postman-aligned API tests, are structurally Jira/Xray-ready and can be directly linked or imported to Xray work items.
+The selected deliverables include UI test cases, REST API checks, defect reporting, and automation scripts, to showcase a comprehensive approach to testing, with clear test structure, traceability, and reproducible execution.
+
+The test artifacts are organized in a Jira/Xray-style format and can be directly linked or imported to Xray work items.
 
 ---
 
-The software under test is a public demo e-commerce website: [Automation Exercise](https://www.automationexercise.com/).
+## Software Under Test
+
+The software under test is [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website used here as a stable environment for demonstrating QA workflows.
 
 ---
 
 ## Section 1: Featured Case Study
 
-[Homepage UI Testing – End-to-End QA](case_studies/case_study_1.md) <- click to view
+[Homepage Functional Testing](case_studies/case_study_1.md) <- click to view
 
-The case study demonstrates a full QA workflow for the Automation Exercise public demo e-commerce site, combining manual UI and API test cases, defect reporting, and automation mapping.  
-It highlights traceability from requirements → test design → execution → defect identification → automated validation.
+This case study presents a focused functional QA workflow for the Automation Exercise demo site.  
+It addresses homepage UI validation, navigation behavior, and basic login page verification, integrating manual execution, defect reporting, and Playwright automation into a single traceable flow.
+
+It demonstrates how a defined requirement can be translated into targeted test scenarios while maintaining traceability across testing stages.
 
 ---
 
@@ -65,7 +69,7 @@ These API test cases are designed for manual test execution in Postman against t
 
 ### Automated Test Scripts (Python + Pytest + Playwright):
 
-> Click the links to view scripts on GitHub with syntax highlighting.
+> Click the links to view the scripts on GitHub with syntax highlighting.
 
 - [Homepage UI Layout and Components Display](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_home_001.md)
 
@@ -85,13 +89,13 @@ These API test cases are designed for manual test execution in Postman against t
 
 ## Next Steps
 
-Explore the QA workflow in a clear sequence: start with the featured case study to see the end-to-end process, then review the manual test cases, the defect reports, and finally the automation scripts.
+Explore the QA workflow in a clear sequence: start with the featured case study , then review the manual test cases, the defect report, and finally the automation scripts.
 
 You can navigate the portfolio in this order:
 
 Featured Case Study → Manual Test Cases → Defect Reports → Automation Scripts
 
-This sequence shows the full story—from the workflow overview to the detailed test cases, the defects uncovered, and the automation that reinforces manual testing.
+This sequence shows the full story—from the workflow overview to the detailed test cases, the defect uncovered, and the automation that reinforces manual testing.
 
 ---
 
