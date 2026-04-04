@@ -29,14 +29,11 @@ It demonstrates how a defined requirement can be translated into targeted test s
 
 ## Section 2: Skills Demonstrated
 
-- Manual Testing
-  Frontend UI verification and backend API CRUD testing using Postman
-- API Testing
-  Positive behavior verification of CRUD operations: GET, POST, PUT, DELETE
-- Automation (Python + Pytest + Playwright)
-  Automated test scripts linked 1:1 to manual test cases for maximum traceability
-- Defect Reporting
-  Industry-standard bug documentation including reproduction steps, expected vs actual results, severity, and impact
+🔹 Manual Testing: Frontend UI verification and backend testing using Postman (CRUD API: GET, POST, PUT, DELETE)
+
+🔹 Automation (Python + Pytest + Playwright): Automated test scripts mapped 1:1 to manual test cases for traceability
+
+🔹 Defect Reporting: Bug documentation with reproduction steps, expected vs. actual results, severity, and impact
 
 ---
 
