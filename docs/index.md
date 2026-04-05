@@ -10,34 +10,35 @@ The test artifacts are organized in a Jira/Xray-style format and can be directly
 
 ---
 
-## Software Under Test
+### Software Under Test
 
 The software under test is [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website used here as a stable environment for demonstrating QA workflows.
 
 ---
 
-## Section 1: Featured Case Study
+### Section 1: Featured Test Summary Report
 
-[Homepage Functional Testing](case_studies/case_study_1.md) <- click to view
+[Homepage Entry Flow Coverage](case_studies/case_study_1.md) <- click to view
 
-This case study presents a focused functional QA workflow for the Automation Exercise demo site.  
-It addresses homepage UI validation, navigation behavior, and basic login page verification, integrating manual execution, defect reporting, and Playwright automation into a single traceable flow.
+This test summary report presents a focused functional QA evaluation of the homepage entry flow for the Automation Exercise demo site.
+It covers homepage UI layout and component display, navigation menu functionality, and login page behavior using valid credentials, with execution results and defect tracking consolidated into a single traceable document.
 
-It demonstrates how a defined requirement can be translated into targeted test scenarios while maintaining traceability across testing stages.
+It demonstrates how defined coverage areas are validated through structured test execution while maintaining traceability between scope, test cases, and outcomes.
+
 
 ---
 
-## Section 2: Skills Demonstrated
+### Section 2: Skills Demonstrated
 
 🔹 Manual Testing: Frontend UI verification and backend testing using Postman (CRUD API: GET, POST, PUT, DELETE)
 
-🔹 Automation (Python + Pytest + Playwright): Automated test scripts mapped 1:1 to manual test cases for traceability
-
 🔹 Defect Reporting: Bug documentation with reproduction steps, expected vs. actual results, severity, and impact
+
+🔹 Automation (Python + Pytest + Playwright): Automated test scripts mapped 1:1 to manual test cases for traceability
 
 ---
 
-## Section 3: Supporting Artifacts
+### Section 3: Supporting Artifacts
 
 ### Manual Test Cases:
 
@@ -48,7 +49,6 @@ It demonstrates how a defined requirement can be translated into targeted test s
 - [Login Page Functionality – Valid Credentials](manual/TC_UI_LOGIN_001.md) <- click to view
   
 - [Homepage Navigation Menu Functionality](manual/TC_UI_NAV_001.md) <- click to view
-
 
 #### Backend (REST API):
 
@@ -62,6 +62,12 @@ These API test cases are designed for manual test execution in Postman against t
  
 - [DELETE User Account](crud/TC_API_CRUD_004.md) <- click to view
 
+---
+
+### Defect reporting
+
+- [BUG-001: Homepage - Incorrect Headline Text in Featured Items Section](bugs/BR_TC_UI_HOME_001.md) <- click to view
+  
 ---
 
 ### Automated Test Scripts (Python + Pytest + Playwright):
@@ -78,13 +84,7 @@ These API test cases are designed for manual test execution in Postman against t
 
 ---
 
-### Defect reporting
-
-- [BUG-001: Homepage - Incorrect Headline Text in Featured Items Section](bugs/BR_TC_UI_HOME_001.md) <- click to view
-  
----
-
-## Next Steps
+### Next Steps
 
 Explore the QA workflow in a clear sequence: start with the featured case study , then review the manual test cases, the defect report, and finally the automation scripts.
 
@@ -96,7 +96,7 @@ This sequence shows the full story—from the workflow overview to the detailed 
 
 ---
 
-## 📩 Contact details
+### 📩 Contact details
 
 For inquiries, feel free to reach out via:  
 
