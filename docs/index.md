@@ -86,13 +86,18 @@ These API test cases are designed for manual test execution in Postman against t
 
 ### Next Steps
 
-Explore the QA workflow in a clear sequence: start with the featured case study , then review the manual test cases, the defect report, and finally the automation scripts.
+Navigate the QA artifacts in the following order:
 
-You can navigate the portfolio in this order:
+Test Summary Report → Manual Test Cases → Defect Reports → Automation Scripts
 
-Featured Case Study → Manual Test Cases → Defect Reports → Automation Scripts
+This sequence reflects the structure of the documented testing work:
 
-This sequence shows the full story—from the workflow overview to the detailed test cases, the defect uncovered, and the automation that reinforces manual testing.
+🔹the Test Summary Report defines scope and presents execution results
+🔹the Manual Test Cases detail the individual validations performed
+🔹the Defect Report captures the identified issue
+🔹the Automation Scripts implement repeatable checks for selected scenarios
+
+Each stage is traceable to the same homepage entry flow coverage.
 
 ---
 
