@@ -1,69 +1,199 @@
-# TC_API_CRUD_001 – GET All Products List (GET /api/productsList)
+# TC_API_GET_PRODUCTS_001 --- Retrieve Products List (Valid Request, Contract-Compliant)
 
-**Objective:**  
-Validate that the API returns the complete list of products with correct structure and status code.
+## 1. Objective
 
-**Test Type / Level:** Functional / API  
-**Priority / Severity:** High / Major  
+Verify that the `GET /products` endpoint returns a
+**contract-compliant**, **deterministic**, and **validated** response,
+including: - Correct HTTP semantics - Header compliance - Schema
+validation - Data integrity and consistency
 
----
+------------------------------------------------------------------------
 
-## 1. Environment & Dependencies
-- Base URL: `https://automationexercise.com/api`
-- Postman environment variable: `{{baseUrl}} = https://automationexercise.com/api`
-- Collection: **Automation Exercise – Product API**
-- Authorization: None required
+## 2. Test Classification
 
----
+  -----------------------------------------------------------------------
+  Attribute                                    Value
+  -------------------------------------------- --------------------------
+  Test Type                                    Functional (Positive)
 
-## 2. Preconditions
-- The server is online and accessible.
-- Product data is available in the backend database.
+  Test Level                                   API / Integration
 
----
+  Test Design Technique                        Specification-based
+                                               (Black-box), Contract
+                                               Testing
 
-## 3. Test Data
-**Request**  
-- **Method:** `GET`  
-- **Endpoint:** `{{baseUrl}}/productsList`
+  Priority                                     High
 
-**Headers:**  
-- `Content-Type: application/json`
+  Severity                                     Critical
+  -----------------------------------------------------------------------
 
----
+------------------------------------------------------------------------
 
-## 4. Test Steps
-1. Open **Get All Products List** request in Postman.  
-2. Ensure the environment variable `{{baseUrl}}` is set.  
-3. Click **Send** to perform the GET request.  
-4. Observe the response code and body.
+## 3. Traceability
 
----
+  Artifact           Reference
+  ------------------ --------------------------
+  Requirement ID     API-PROD-GET-001
+  Endpoint           `/api/products`
+  API Contract       OpenAPI v3 / JSON Schema
+  Contract Version   v1.0
 
-## 5. Expected Results
-- HTTP **200 OK** returned.  
-- Response body includes:
-  - `responseCode: 200`
-  - `products` array containing multiple product objects.
-- Each product object includes `id`, `name`, `price`, and `brand`.
+------------------------------------------------------------------------
 
----
+## 4. Environment & Configuration
 
-## 6. Actual Results
-*(To be filled after execution; attach Postman screenshot)*
+  Parameter        Value
+  ---------------- --------------------------------------------------
+  Base URL         https://automationexercise.com/api
+  Endpoint         /products
+  Method           GET
+  Protocol         HTTPS
+  Authentication   Not required
+  Tooling          Automated test framework + JSON Schema validator
 
----
+------------------------------------------------------------------------
 
-## 7. Status
+## 5. Preconditions
+
+One must be satisfied: - Mocked dataset (preferred) - Controlled test
+environment with stable data - Contract-stable environment
+
+Additionally: - API reachable - TLS handshake succeeds
+
+------------------------------------------------------------------------
+
+## 6. Test Data
+
+  Attribute   Value
+  ----------- --------------------------
+  Method      GET
+  Headers     Accept: application/json
+  Body        None
+
+------------------------------------------------------------------------
+
+## 7. Test Steps
+
+1.  Send GET request to `/products`
+2.  Capture:
+    -   Status code
+    -   Headers
+    -   Body
+    -   Response time
+
+------------------------------------------------------------------------
+
+## 8. Expected Results
+
+### 8.1 HTTP Status
+
+-   MUST be `200 OK`
+
+### 8.2 Response Time
+
+-   SHOULD meet SLA: p95 ≤ 1000 ms (environment-dependent)
+
+### 8.3 Headers
+
+-   `Content-Type` MUST match: `application/json(; charset=UTF-8)?`
+
+### 8.4 Body Format
+
+-   Valid JSON
+-   UTF-8 encoded
+-   Root object present
+
+------------------------------------------------------------------------
+
+## 8.5 Schema Validation
+
+``` json
+{
+  "type": "object",
+  "required": ["products"],
+  "properties": {
+    "products": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "price", "brand"],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "price": {
+            "oneOf": [
+              {
+                "type": "string",
+                "pattern": "^[0-9]+(\.[0-9]{1,2})?$"
+              },
+              {
+                "type": "number",
+                "minimum": 0
+              }
+            ]
+          },
+          "brand": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+------------------------------------------------------------------------
+
+## 8.6 Data Integrity
+
+For each product: - All required fields present - No null values - `id`
+unique within response - Strings trimmed and non-empty - `price` valid
+per schema
+
+------------------------------------------------------------------------
+
+## 8.7 Determinism
+
+Under controlled dataset: - Repeated calls return identical responses
+
+------------------------------------------------------------------------
+
+## 8.8 Negative Assertions
+
+-   No malformed objects
+-   No empty objects
+-   No structural violations
+
+------------------------------------------------------------------------
+
+## 9. Actual Results
+
+(To be filled during execution)
+
+------------------------------------------------------------------------
+
+## 10. Status
+
 Pass / Fail
 
----
+------------------------------------------------------------------------
 
-## 8. Postconditions
-- None.
+## 11. Postconditions
 
----
+-   No system state change
 
-## 9. Notes
-- This endpoint is read-only.
-- Ensure the API response time is under 1s for optimal performance.
+------------------------------------------------------------------------
+
+## 12. Notes
+
+-   Designed for automation
+-   Supports forward-compatible schema evolution
+-   Performance and security covered separately
