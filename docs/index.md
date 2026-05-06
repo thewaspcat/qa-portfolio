@@ -27,7 +27,7 @@ The software under test is [Automation Exercise](https://www.automationexercise.
 
 ### Section 1: Featured Test Summary Report
 
-[Homepage Entry Flow Coverage](case_studies/case_study_1.md) <- click to view
+[Homepage Entry Flow Coverage](reports/test_summary_report.md) <- click to view
 
 This test summary report presents a focused functional QA evaluation of the homepage entry flow for the Automation Exercise demo site.
 It covers homepage UI layout and component display, navigation menu functionality, and login page behavior using valid credentials, with execution results and defect tracking consolidated into a single traceable document.
@@ -38,9 +38,9 @@ It demonstrates how defined coverage areas are validated through structured test
 
 ### Section 2: Supporting Artifacts
 
-### Manual Test Cases:
+### Manual Test Cases
 
-#### Frontend (Web UI):
+#### Frontend (Web UI)
 
 - [Homepage UI Layout and Components Display](manual/TC_UI_HOME_001.md) <- click to view
  
@@ -48,7 +48,7 @@ It demonstrates how defined coverage areas are validated through structured test
   
 - [Homepage Navigation Menu Functionality](manual/TC_UI_NAV_001.md) <- click to view
 
-#### Backend (REST API):
+#### Backend (REST API)
 
 These API test cases are designed for manual test execution in Postman against the public Automation Exercise API.
 
@@ -68,7 +68,7 @@ These API test cases are designed for manual test execution in Postman against t
   
 ---
 
-### Automated Test Scripts (Python + Pytest + Playwright):
+### Automated Test Scripts (Python + Pytest + Playwright)
 
 > Click the links to view the scripts on GitHub with syntax highlighting.
 
