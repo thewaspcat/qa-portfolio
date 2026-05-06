@@ -2,9 +2,10 @@
 
 ---
 
-Welcome to my Quality Assurance portfolio! 
+Welcome to my Quality Assurance Portfolio! 
 
-The portfolio presents a collection of manual and automated testing artifacts across frontend and backend scenarios, compliant with international QA standards (ISO/IEC/IEEE 29119-3 and ISTQB®). The selected deliverables are organized in a Jira/Xray-style format and can be directly linked or imported to industry-standard test management tools.
+The portfolio presents a collection of manual and automated testing artifacts across frontend and backend scenarios, compliant with international QA standards (ISO/IEC/IEEE 29119-3 and ISTQB®). 
+The selected deliverables are organized in a Jira/Xray-style format and can be directly linked or imported to industry-standard test management tools.
 
 The purpose of the portfolio is to showcase skills in the following areas:
 
@@ -90,11 +91,12 @@ Test Summary Report → Manual Test Cases → Defect Reports → Automation Scri
 This sequence reflects the structure of the documented testing work:
 
 🔹the Test Summary Report defines scope and presents execution results
-🔹the Manual Test Cases detail the individual validations performed
-🔹the Defect Report captures the identified issue
-🔹the Automation Scripts implement repeatable checks for selected scenarios
 
-Each stage is traceable to the same homepage entry flow coverage.
+🔹the Manual Test Cases detail the individual validations performed
+
+🔹the Defect Report captures the identified issue
+
+🔹the Automation Scripts implement repeatable checks for selected scenarios
 
 ---
 
