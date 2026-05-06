@@ -2,11 +2,19 @@
 
 ---
 
-Welcome to my Quality Assurance portfolio, which presents a collection of manual and automated testing artifacts across frontend and backend scenarios, compliant with international QA standards (ISO/IEC/IEEE 29119-3 and ISTQB®).
+Welcome to my Quality Assurance portfolio! 
 
-The selected deliverables include UI test cases, REST API checks, defect reporting, and automation scripts, to showcase a comprehensive approach to testing, with clear test structure, traceability, and reproducible execution.
+The portfolio presents a collection of manual and automated testing artifacts across frontend and backend scenarios, compliant with international QA standards (ISO/IEC/IEEE 29119-3 and ISTQB®). The selected deliverables are organized in a Jira/Xray-style format and can be directly linked or imported to industry-standard test management tools.
 
-The test artifacts are organized in a Jira/Xray-style format and can be directly linked or imported to Xray work items.
+The purpose of the portfolio is to showcase skills in the following areas:
+
+🔹 Manual Testing: Frontend UI validation and backend API testing using Postman (CRUD operations: GET, POST, PUT, DELETE)
+
+🔹 Defect Reporting: Bug documentation with reproduction steps, expected vs. actual results, severity, and impact
+
+🔹 Automation (Python + Pytest + Playwright): Automated test scripts mapped one-to-one with manual test cases for traceability
+
+🔹 Git Version Control: Use of command-line interfaces (PowerShell and Bash) to publish and maintain the portfolio repository on GitHub.
 
 ---
 
@@ -25,20 +33,9 @@ It covers homepage UI layout and component display, navigation menu functionalit
 
 It demonstrates how defined coverage areas are validated through structured test execution while maintaining traceability between scope, test cases, and outcomes.
 
-
 ---
 
-### Section 2: Skills Demonstrated
-
-🔹 Manual Testing: Frontend UI verification and backend testing using Postman (CRUD API: GET, POST, PUT, DELETE)
-
-🔹 Defect Reporting: Bug documentation with reproduction steps, expected vs. actual results, severity, and impact
-
-🔹 Automation (Python + Pytest + Playwright): Automated test scripts mapped 1:1 to manual test cases for traceability
-
----
-
-### Section 3: Supporting Artifacts
+### Section 2: Supporting Artifacts
 
 ### Manual Test Cases:
 
