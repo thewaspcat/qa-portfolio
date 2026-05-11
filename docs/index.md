@@ -29,7 +29,7 @@ The software under test is [Automation Exercise](https://www.automationexercise.
 
 [Homepage Entry Flow Coverage](reports/test_summary_report.md) <- click to view
 
-This test summary report presents a focused functional QA evaluation of the homepage entry flow for the Automation Exercise demo site.
+This test summary report presents a focused functional QA evaluation of the homepage entry flow for the Automation Exercise website.
 It covers homepage UI layout and component display, navigation menu functionality, and login page behavior using valid credentials, with execution results and defect tracking consolidated into a single traceable document.
 
 It demonstrates how defined coverage areas are validated through structured test execution while maintaining traceability between scope, test cases, and outcomes.

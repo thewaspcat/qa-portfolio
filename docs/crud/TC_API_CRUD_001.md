@@ -1,82 +1,84 @@
 # TC_API_GET_PRODUCTS_001 — Retrieve Products List
 
-## 1. Objective
+## 1. Test Case Information
 
-Validate that the GET [/api/productsList](https://automationexercise.com/api/productsList) endpoint returns a successful response with a valid JSON structure containing a list of products.
+- **Test Case ID:** TC_API_GET_PRODUCTS_001
+- **Title:** Retrieve Products List
+- **Requirement Refrence:** REQ-API-PRODUCTS-001
+- **API Endpoint:** /api/productsList
+- **HTTP Method:** GET
+- **Base URL:** https://automationexercise.com
+- **Priority:** High
+- **Test Type:** Functional (Positive)
+- **Test Level:** API / Integration
 
----
 
-## 2. Test Classification
+## 2. Objective
 
-- Test Type: Functional (Positive)
-- Test Level: API
-- Priority: High
+Validate that the `GET /api/productsList` endpoint returns a successful response with product data in a JSON format.
 
----
 
-## 4. Preconditions
+## 3. Preconditions
 
 - API server is reachable
+- No authentication is required for this endpoint
 
----
 
-## 5. Test Data
+## 4. Request Details
 
-Base URL: <https://automationexercise.com>
+### Request URL
 
-Request:
+https://automationexercise.com/api/productsList
 
-- Method: GET
-- Endpoint: /api/productsList
-- Headers: Accept: application/json
+### Headers
 
----
+| Key | Value |
+|---|---|
+| Accept | application/json |
+
+### Query Parameters / Path Parameters
+
+- None
+
+### Request Body
+
+- Not applicable
+
 
 ## 5. Test Steps
 
-1. Send GET request to /api/productsList
-2. Capture response:
+| Step # | Action |
+|---|---|
+| 1 | Send a `GET` request to `https://automationexercise.com/api/productsList` |
+| 2 | Capture the HTTP status code, response headers, and response body |
+| 3 | Validate the response body structure and product fields |
 
-Status code
-Headers
-Response body
-
----
 
 ## 6. Expected Results
 
-### 6.1 Status Code
+- The endpoint returns **HTTP 200 OK**
+- The response header `Content-Type` contains `application/json`
+- The response body is valid JSON
+- The root object contains:
+  - `responseCode` = `200`
+  - `products` as an array
+- Each product object contains valid values for:
+  - `id` present and numeric
+  - `name` present and non-empty
+  - `price` present
+  - `brand` present and non-empty
 
-- 200 OK
 
-### 6.2 Response Headers
+## 7. Postconditions
 
-- Content-Type contains application/json
+- No data is modified by this request
+- API state remains unchanged
 
-### 6.3 Response Body
 
-- Response is valid JSON
-- Root object contains:
-  - responseCode = 200
-  - products (array)
-
-### 6.4 Product Object Validation
-
-For each product:
-
-- id is present and numeric
-- name is present and non-empty
-- price is present (string format allowed)
-- brand is present and non-empty
-
----
-
-## 7. Actual Result
+## 8. Actual Results
 
 (To be filled during execution)
 
----
-
-## 8. Status
+## 9. Status
 
 Pass / Fail
