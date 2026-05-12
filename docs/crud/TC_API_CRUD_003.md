@@ -1,75 +1,77 @@
-# TC_API_CRUD_003 – PUT To All Brands List (PUT /api/brandsList)
+# TC_API_CRUD_003 — PUT To Brands List
 
-**Objective:**  
-Verify that sending a PUT request to `/brandsList` returns the correct “Method Not Allowed” response (expected positive behavior).
+## 1. Test Case Information
 
-**Test Type / Level:** Functional / API  
-**Priority / Severity:** Medium / Minor  
+- **Test Case ID:** TC_API_CRUD_003
+- **Title:** PUT To Brands List
+- **Requirement Reference:** REQ-API-BRANDS-003
+- **API Endpoint:** /api/brandsList
+- **HTTP Method:** PUT
+- **Base URL:** https://automationexercise.com
+- **Priority:** Medium
+- **Test Type:** Functional (Negative)
+- **Test Level:** API / Integration
 
----
+## 2. Objective
 
-## 1. Environment & Dependencies
-- Base URL: `https://automationexercise.com/api`
-- Postman environment variable: `{{baseUrl}} = https://automationexercise.com/api`
-- Collection: **Automation Exercise – Brand API**
-- Authorization: None required
+Validate that the `PUT /api/brandsList` endpoint returns the expected method-not-allowed response when the PUT method is used.
 
----
+## 3. Preconditions
 
-## 2. Preconditions
-- API is online.
-- Request method is set to PUT.
+- API server is reachable
+- No authentication is required for this endpoint
+- The request method is set to `PUT`
 
----
+## 4. Request Details
 
-## 3. Test Data
-**Request**  
-- **Method:** `PUT`  
-- **Endpoint:** `{{baseUrl}}/brandsList`  
-- **Headers:**  
-  - `Content-Type: application/json`  
-- **Body:**
+### Request URL
+
+https://automationexercise.com/api/brandsList
+
+### Headers
+
+| Key | Value |
+|---|---|
+| Accept | application/json |
+| Content-Type | application/json |
+
+### Query Parameters / Path Parameters
+
+- None
+
+### Request Body
+
 ```json
 {
   "brand": "SampleBrand"
 }
 ```
 
----
+## 5. Test Steps
 
-## 4. Test Steps
-1. Open **PUT To Brands List** request in Postman.  
-2. Confirm method is PUT.  
-3. Click **Send** and review response.
+| Step # | Action |
+|---|---|
+| 1 | Send a `PUT` request to `https://automationexercise.com/api/brandsList` |
+| 2 | Capture the HTTP status code, response headers, and response body |
+| 3 | Validate the response body and confirm that the method is not supported |
 
----
+## 6. Expected Results
 
-## 5. Expected Results
-- HTTP **405 Method Not Allowed** returned.  
-- Response body includes:
-  ```json
-  {
-    "responseCode": 405,
-    "message": "This request method is not supported."
-  }
-  ```
+- The endpoint returns **HTTP 405 Method Not Allowed**
+- The response body is valid JSON
+- The root object contains:
+  - `responseCode` = `405`
+  - `message` = `"This request method is not supported."`
 
----
+## 7. Postconditions
 
-## 6. Actual Results
-*(To be filled after execution; attach screenshot of Postman response)*
+- No data is created or modified
+- API state remains unchanged
 
----
+## 8. Actual Results
 
-## 7. Status
+(To be filled during execution)
+
+## 9. Status
+
 Pass / Fail
-
----
-
-## 8. Postconditions
-- None.
-
----
-
-## 9. Notes
-- Confirms API adherence to correct HTTP verb handling.

@@ -4,7 +4,7 @@
 
 Welcome to my Quality Assurance Portfolio! 
 
-The portfolio presents a collection of manual and automated testing artifacts across frontend and backend scenarios, compliant with international QA standards (ISO/IEC/IEEE 29119-3 and ISTQB®). 
+The portfolio presents a collection of manual and automated testing artifacts across frontend and backend scenarios, compliant with international QA standards (ISO/IEC/IEEE 29119-3 and ISTQB®).
 The selected deliverables are organized in a Jira/Xray-style format and can be directly linked or imported to industry-standard test management tools.
 
 The purpose of the portfolio is to showcase skills in the following areas:

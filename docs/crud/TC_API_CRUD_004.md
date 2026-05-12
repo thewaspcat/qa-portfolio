@@ -1,75 +1,80 @@
-# TC_API_CRUD_004 – Delete User Account (DELETE /api/deleteAccount)
+# TC_API_CRUD_004 — Delete User Account
 
-**Objective:**  
-Verify that an existing user account can be deleted successfully via DELETE request with valid credentials.
+## 1. Test Case Information
 
-**Test Type / Level:** Functional / API  
-**Priority / Severity:** High / Major  
+- **Test Case ID:** TC_API_CRUD_004
+- **Title:** Delete User Account
+- **Requirement Reference:** REQ-API-USER-004
+- **API Endpoint:** /api/deleteAccount
+- **HTTP Method:** DELETE
+- **Base URL:** https://automationexercise.com
+- **Priority:** High
+- **Test Type:** Functional (Positive)
+- **Test Level:** API / Integration
 
----
+## 2. Objective
 
-## 1. Environment & Dependencies
-- Base URL: `https://automationexercise.com/api`
-- Postman environment variable: `{{baseUrl}} = https://automationexercise.com/api`
-- Collection: **Automation Exercise – User API**
-- Authorization: None required
+Validate that an existing user account can be deleted successfully using the `DELETE /api/deleteAccount` endpoint with valid credentials.
 
----
+## 3. Preconditions
 
-## 2. Preconditions
-- A valid user account exists.
-- Email and password of that user are known.
+- API server is reachable
+- No authentication is required for this endpoint
+- A valid user account exists
+- The email and password of that user account are known
 
----
+## 4. Request Details
 
-## 3. Test Data
-**Request**  
-- **Method:** `DELETE`  
-- **Endpoint:** `{{baseUrl}}/deleteAccount`  
-- **Headers:**  
-  - `Content-Type: application/x-www-form-urlencoded`  
-- **Body (form-data or x-www-form-urlencoded):**
-  - `email`: `testuser@example.com`
-  - `password`: `Test123!`
+### Request URL
 
----
+https://automationexercise.com/api/deleteAccount
 
-## 4. Test Steps
-1. Open **Delete User Account** request in Postman.  
-2. Select method `DELETE`.  
-3. Add body parameters (email, password).  
-4. Send the request.  
-5. Observe the response code and message.
+### Headers
 
----
+| Key | Value |
+|---|---|
+| Accept | application/json |
+| Content-Type | application/x-www-form-urlencoded |
 
-## 5. Expected Results
-- HTTP **200 OK** returned.  
-- Response body:
-  ```json
-  {
-    "responseCode": 200,
-    "message": "Account deleted!"
-  }
-  ```
-- Account should be permanently removed.
+### Query Parameters / Path Parameters
 
----
+- None
 
-## 6. Actual Results
-*(To be filled after execution; attach Postman screenshot)*
+### Request Body
 
----
+```json
+{
+  "email": "testuser@example.com",
+  "password": "Test123!"
+}
+```
 
-## 7. Status
+## 5. Test Steps
+
+| Step # | Action |
+|---|---|
+| 1 | Send a `DELETE` request to `https://automationexercise.com/api/deleteAccount` with valid credentials |
+| 2 | Capture the HTTP status code, response headers, and response body |
+| 3 | Validate the response body and confirm that the account is deleted successfully |
+
+## 6. Expected Results
+
+- The endpoint returns **HTTP 200 OK**
+- The response body is valid JSON
+- The root object contains:
+  - `responseCode` = `200`
+  - `message` = `"Account deleted!"`
+- The user account is permanently removed and can no longer be used for login
+
+## 7. Postconditions
+
+- The user account is deleted
+- The deleted account cannot be used for login
+
+## 8. Actual Results
+
+(To be filled during execution)
+
+## 9. Status
+
 Pass / Fail
-
----
-
-## 8. Postconditions
-- Account deleted; cannot be used for login.
-
----
-
-## 9. Notes
-- If rerun, expect “Account not found” message.

@@ -1,34 +1,46 @@
-# TC_API_CRUD_002 – POST To All Products List (POST /api/productsList)
+# TC_API_CRUD_002 — POST To Products List
 
-**Objective:**  
-Verify that sending a POST request to `/productsList` returns the correct “Method Not Allowed” response (expected positive behavior).
+## 1. Test Case Information
 
-**Test Type / Level:** Functional / API  
-**Priority / Severity:** Medium / Minor  
+- **Test Case ID:** TC_API_CRUD_002
+- **Title:** POST To Products List
+- **Requirement Reference:** REQ-API-PRODUCTS-002
+- **API Endpoint:** /api/productsList
+- **HTTP Method:** POST
+- **Base URL:** https://automationexercise.com
+- **Priority:** Medium
+- **Test Type:** Functional (Negative)
+- **Test Level:** API / Integration
 
----
+## 2. Objective
 
-## 1. Environment & Dependencies
-- Base URL: `https://automationexercise.com/api`
-- Postman environment variable: `{{baseUrl}} = https://automationexercise.com/api`
-- Collection: **Automation Exercise – Product API**
-- Authorization: None required
+Validate that the `POST /api/productsList` endpoint returns the expected method-not-allowed response when the POST method is used.
 
----
+## 3. Preconditions
 
-## 2. Preconditions
-- API is online.
-- Request method is set to POST.
+- API server is reachable
+- No authentication is required for this endpoint
+- The request method is set to `POST`
 
----
+## 4. Request Details
 
-## 3. Test Data
-**Request**  
-- **Method:** `POST`  
-- **Endpoint:** `{{baseUrl}}/productsList`
-- **Headers:**  
-  - `Content-Type: application/json`  
-- **Body:**
+### Request URL
+
+https://automationexercise.com/api/productsList
+
+### Headers
+
+| Key | Value |
+|---|---|
+| Accept | application/json |
+| Content-Type | application/json |
+
+### Query Parameters / Path Parameters
+
+- None
+
+### Request Body
+
 ```json
 {
   "name": "Invalid Product",
@@ -36,42 +48,31 @@ Verify that sending a POST request to `/productsList` returns the correct “Met
 }
 ```
 
----
+## 5. Test Steps
 
-## 4. Test Steps
-1. In Postman, open **POST To Products List** request.  
-2. Verify that the method is set to POST.  
-3. Click **Send** and observe response.
+| Step # | Action |
+|---|---|
+| 1 | Send a `POST` request to `https://automationexercise.com/api/productsList` |
+| 2 | Capture the HTTP status code, response headers, and response body |
+| 3 | Validate the response body and confirm that the method is not supported |
 
----
+## 6. Expected Results
 
-## 5. Expected Results
-- HTTP **405 Method Not Allowed** returned.  
-- Response body includes:
-  ```json
-  {
-    "responseCode": 405,
-    "message": "This request method is not supported."
-  }
-  ```
-- This is the correct expected positive result.
+- The endpoint returns **HTTP 405 Method Not Allowed**
+- The response body is valid JSON
+- The root object contains:
+  - `responseCode` = `405`
+  - `message` = `"This request method is not supported."`
 
----
+## 7. Postconditions
 
-## 6. Actual Results
-*(To be filled after execution; attach Postman response screenshot)*
+- No data is created or modified
+- API state remains unchanged
 
----
+## 8. Actual Results
 
-## 7. Status
+(To be filled during execution)
+
+## 9. Status
+
 Pass / Fail
-
----
-
-## 8. Postconditions
-- None (no data created).
-
----
-
-## 9. Notes
-- This test validates proper API method enforcement.
