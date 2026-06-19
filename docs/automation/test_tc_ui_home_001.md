@@ -48,7 +48,7 @@ def test_tc_ui_home_001_homepage_ui(page: Page, test_data):
             page.locator(f'ul.nav.navbar-nav > li > a[href="{href}"]')
         )
         expect(link).to_be_visible()
-        expect(link).to_have_attribute("href", pytest.approx(href))
+        expect(link).to_have_attribute("href", re.compile(rf".*{re.escape(href)}$"))
 
     # Step 4: Verify homepage sections
     for section_name in sections:
