@@ -8,12 +8,12 @@
       "Cart": "/view_cart",
       "Signup / Login": "/login",
       "Test Cases": "/test_cases",
-      "API Testing": "/api_testing",
-      "Video Tutorials": "/video_tutorials",
+      "API Testing": "/api_list",
+      "Video Tutorials": "https://www.youtube.com/c/AutomationExercise",
       "Contact us": "/contact_us"
     },
     "sections": [
-      "Features Items",
+      "Featured Items",
       "Recommended Items"
     ]
   }
