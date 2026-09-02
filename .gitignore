@@ -1,0 +1,35 @@
+# Python virtual environment
+.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# pytest cache
+.pytest_cache/
+
+# Coverage reports
+.coverage
+.coverage.*
+htmlcov/
+
+# Test reports / temporary files
+*.log
+*.tmp
+
+# Environment variables / local secrets
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# PyCharm / IntelliJ
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini

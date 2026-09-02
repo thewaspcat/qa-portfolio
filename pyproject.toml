@@ -1,0 +1,24 @@
+[project]
+name = "clean-demo-repo"
+version = "0.1.0"
+description = "QA automation project using Python, pytest, and Playwright"
+readme = "README.md"
+authors = [
+    { name = "Marta Czarnecka", email = "martaczarneckaqa@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+     "playwright>=1.55",
+    "pytest>=8.4",
+    "pytest-playwright>=0.7",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["docs/automation/tests"]
+pythonpath = ["docs/automation"]
+addopts = "--strict-markers"
+
+[build-system]
+requires = ["uv_build>=0.12.6,<0.13.0"]
+build-backend = "uv_build"
+

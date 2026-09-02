@@ -1,0 +1,7 @@
+{
+  "login_url": "https://www.automationexercise.com/login",
+  "email_env": "AUTOMATION_EXERCISE_EMAIL",
+  "password_env": "AUTOMATION_EXERCISE_PASSWORD",
+  "username_env": "AUTOMATION_EXERCISE_USERNAME",
+  "expected_text": "Logged in as"
+}
