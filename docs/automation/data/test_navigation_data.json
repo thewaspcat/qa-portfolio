@@ -1,0 +1,16 @@
+{
+  "links": [
+    {"name": "Home", "href": "/", "external": false},
+    {"name": "Products", "href": "/products", "external": false},
+    {"name": "Cart", "href": "/view_cart", "external": false},
+    {"name": "Signup / Login", "href": "/login", "external": false},
+    {"name": "Test Cases", "href": "/test_cases", "external": false},
+    {"name": "API Testing", "href": "/api_list", "external": false},
+    {
+      "name": "Video Tutorials",
+      "href": "https://www.youtube.com/c/AutomationExercise",
+      "external": true
+    },
+    {"name": "Contact us", "href": "/contact_us", "external": false}
+  ]
+}

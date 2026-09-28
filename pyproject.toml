@@ -1,5 +1,5 @@
 [project]
-name = "clean-demo-repo"
+name = "portfolio"
 version = "0.1.0"
 description = "QA automation project using Python, pytest, and Playwright"
 readme = "README.md"
@@ -21,4 +21,3 @@ addopts = "--strict-markers"
 [build-system]
 requires = ["uv_build>=0.12.6,<0.13.0"]
 build-backend = "uv_build"
-

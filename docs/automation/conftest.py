@@ -1,7 +1,8 @@
 import json
 import os
+import re
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterator
 
 import pytest
 from playwright.sync_api import Page
@@ -11,6 +12,7 @@ from pages.login_page import LoginPage
 
 
 DATA_DIR = Path(__file__).parent / "data"
+EVIDENCE_DIR = Path(__file__).parent / "test-results" / "screenshots"
 
 
 def load_json(filename: str) -> dict[str, Any]:
@@ -29,6 +31,12 @@ def homepage_data() -> dict[str, Any]:
 
 
 @pytest.fixture
+def navigation_data() -> dict[str, Any]:
+    """Provide homepage navigation expectations."""
+    return load_json("test_navigation_data.json")
+
+
+@pytest.fixture
 def home_page(page: Page, homepage_data: dict[str, Any]) -> HomePage:
     """Provide a HomePage configured with the test homepage URL."""
     return HomePage(page, homepage_data["home_url"])
@@ -38,6 +46,16 @@ def home_page(page: Page, homepage_data: dict[str, Any]) -> HomePage:
 def login_page(page: Page, login_data: dict[str, Any]) -> LoginPage:
     """Provide a LoginPage configured with the login URL."""
     return LoginPage(page, login_data["login_url"])
+
+
+@pytest.fixture
+def login_session(login_page: LoginPage) -> Iterator[LoginPage]:
+    """Provide a login page and end an authenticated session during teardown."""
+    yield login_page
+
+    if login_page.is_authenticated():
+        login_page.logout()
+        login_page.assert_logged_out()
 
 
 @pytest.fixture
@@ -59,3 +77,27 @@ def login_data() -> dict[str, Any]:
     if username_env:
         data["username"] = os.getenv(username_env)
     return data
+
+
+@pytest.hookimpl(hookwrapper=True)
+def pytest_runtest_makereport(item: pytest.Item, call: pytest.CallInfo[None]):
+    """Capture evidence immediately after each test body completes."""
+    outcome = yield
+    report = outcome.get_result()
+    if report.when != "call":
+        return
+
+    page = getattr(item, "_evidence_page", None)
+    if page is None or page.is_closed():
+        return
+
+    EVIDENCE_DIR.mkdir(parents=True, exist_ok=True)
+    filename = re.sub(r"[^A-Za-z0-9_.-]+", "_", item.nodeid).strip("_")
+    page.screenshot(path=EVIDENCE_DIR / f"{filename}.png", full_page=True)
+
+
+@pytest.fixture(autouse=True)
+def capture_screenshot_evidence(request: pytest.FixtureRequest, page: Page) -> Iterator[None]:
+    """Make the test page available to the execution-report hook."""
+    request.node._evidence_page = page
+    yield

@@ -20,6 +20,9 @@ class LoginPage:
     def assert_loaded(self, expected_url: str) -> None:
         """Verify that the login page is loaded."""
         expect(self.page).to_have_url(expected_url)
+        expect(
+            self.page.get_by_role("heading", name="Login to your account", exact=True)
+        ).to_be_visible()
         expect(self.email_input).to_be_visible()
         expect(self.password_input).to_be_visible()
         expect(self.login_button).to_be_visible()
@@ -46,3 +49,23 @@ class LoginPage:
             expect(
                 self.page.get_by_text(username, exact=True)
             ).to_be_visible()
+
+    def reload_and_assert_authenticated(
+        self,
+        expected_text: str,
+        username: str | None = None,
+    ) -> None:
+        self.page.reload()
+        self.assert_logged_in(expected_text, username)
+
+    def is_authenticated(self) -> bool:
+        """Return whether the authenticated Logout control is visible."""
+        return self.logout_link.is_visible()
+
+    def logout(self) -> None:
+        """End the authenticated session."""
+        self.logout_link.click()
+
+    def assert_logged_out(self) -> None:
+        """Verify that logout returns the user to the login page."""
+        self.assert_loaded(self.url)

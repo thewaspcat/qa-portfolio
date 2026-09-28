@@ -35,4 +35,12 @@ jobs:
 
       - name: Run automated tests
         working-directory: docs/automation
-        run: uv run --no-sync pytest tests -q
+        run: uv run --no-sync pytest tests -q --output test-results
+
+      - name: Upload automated test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-evidence
+          path: docs/automation/test-results/
+          if-no-files-found: warn

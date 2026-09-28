@@ -1,4 +1,8 @@
 {
   "home_url": "https://www.automationexercise.com/",
-  "expected_title": "Automation Exercise"
+  "expected_title": "Automation Exercise",
+  "sections": [
+    "Featured Items",
+    "Recommended Items"
+  ]
 }
