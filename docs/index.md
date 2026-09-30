@@ -1,120 +1,57 @@
-# QA Portfolio by Marta Czarnecka <br>
+# QA Portfolio by Marta Czarnecka
 
----
+<style>
+.markdown-body h2 {
+  font-size: 1.25em;
+}
+</style>
 
-Welcome to my Quality Assurance Portfolio! 
+Welcome to my Quality Assurance Portfolio.
 
-The portfolio presents a collection of manual and automated testing artifacts across frontend and backend scenarios, compliant with international QA standards (ISO/IEC/IEEE 29119-3 and ISTQB®). <br>
-The selected deliverables are organized in a Jira/Xray-style format and can be directly linked or imported to industry-standard test management tools. <br>
-The portfolio also includes GitHub Actions implementation to demonstrate continuous integration for automated test execution in a reproducible cloud environment.
+This portfolio presents selected manual and automated web UI testing work for [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website. It demonstrates how test design, execution, defect reporting, and automation contribute to a traceable quality assurance process.
 
-The purpose of the portfolio is to showcase skills in the following areas:
+The deliverables use a Jira/Xray-style structure and draw on ISO/IEC/IEEE 29119-3 and ISTQB® testing principles.
 
-🔹 Manual Testing: Frontend UI validation and backend API testing using Postman (CRUD operations: GET, POST, PUT, DELETE)
+The portfolio showcases:
 
-🔹 Defect Reporting: Bug documentation with reproduction steps, expected vs. actual results, severity, and impact
-
-🔹 Automation (Python + Pytest + Playwright): Automated test scripts mapped one-to-one with manual test cases for traceability
-
-🔹 Git Version Control: Use of command-line interfaces (PowerShell and Bash) to publish and maintain the portfolio repository on GitHub
-
-🔹 GitHub Actions (CI): Automated execution of test suites in GitHub-hosted runners to validate changes through continuous integration.
-
----
+* **Manual testing:** Structured web UI test cases with defined scope, steps, and expected results.
+* **Defect reporting:** A documented finding with reproduction steps, expected and actual results, severity, and impact.
+* **Automation:** Python, pytest, and Playwright checks mapped to the manual test cases for traceability.
+* **Git version control:** Portfolio artifacts maintained and published through a GitHub repository.
+* **Continuous integration:** Automated test execution through GitHub Actions on pushes and pull requests.
 
 ## Software Under Test
 
-The software under test is [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website used here as a stable environment for demonstrating QA workflows.
+Automation Exercise serves as the test environment for the featured work. The selected scope covers core homepage content, valid user authentication, and website navigation.
 
----
+## Featured Test Coverage
 
-## Section 1: Featured Test Summary Report
+* **Homepage:** Evaluates the presentation and availability of key page components against defined expectations.
+* **Authentication:** Validates access with approved credentials and continuity of the authenticated session.
+* **Navigation:** Verifies the structure and behavior of the main menu across its configured destinations.
 
-[Homepage Entry Flow Coverage](reports/test_summary_report.md) <- click to view
+The [Traceability Matrix](automation/TRACEABILITY.md) connects each requirement with its manual test case, automated checks, test data, execution records, and any related defect.
 
-This test summary report presents a focused functional QA evaluation of the homepage entry flow for the Automation Exercise website. 
-It covers homepage UI layout and component display, navigation menu functionality, and login page behavior using valid credentials, with execution results and defect tracking consolidated into a single traceable document. 
-It also demonstrates how defined coverage areas are validated through structured test execution while maintaining traceability between scope, test cases, and outcomes.
+## Automation Approach
 
----
+The automated suite uses the Page Object Model to organize UI locators and interactions in dedicated page classes. Tests focus on the scenarios and expected outcomes, with explicit Playwright assertions used for verification.
 
-## Section 2: Supporting Artifacts
+**Data-driven testing** supplies URLs and expected values from JSON files. Pytest parameterization runs the internal navigation check for each configured link. Reusable fixtures load test data, provide page objects, obtain login credentials from environment variables, and clean up the authenticated session.
 
-### Test Cases
+GitHub Actions runs the suite with Chromium. The test setup captures screenshots, and the workflow uploads the test results as evidence.
 
-#### Frontend (Web UI) 
+## Supporting Artifacts
 
-- [Homepage UI Layout and Components Display](manual/TC_UI_HOME_001.md) 
- 
-- [Login Page Functionality – Valid Credentials](manual/TC_UI_LOGIN_001.md) 
-  
-- [Homepage Navigation Menu Functionality](manual/TC_UI_NAV_001.md) 
+* [Manual Test Cases](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/manual)
+* [Test-Case Execution Records](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/manual/results)
+* [Automated Execution Records](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/automation/results)
+* [Defect Reporting](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/manual/bugs)
+* [Automated Test Scripts](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/automation/tests)
+* [Continuous Integration Workflow](https://github.com/thewaspcat/qa-portfolio/blob/main/.github/workflows/tests.yml)
 
-#### Backend (REST API)
+## Contact Details
 
-These API test cases are designed for test execution in Postman against the public Automation Exercise API.
+For inquiries, feel free to reach out via:
 
-- [POST To Create/Register User Account](crud/TC_API_CRUD_001_Create_Register_User_Account.md) 
-  
-- [Duplicate User Account Creation Prevented](crud/TC_API_CRUD_002_Duplicate_Prevented.md) 
- 
-- [DELETE User Account](crud/TC_API_CRUD_003_Delete_User_Account.md) 
-
----
-
-### Defect reporting
-
-- [BUG-001: Homepage - Incorrect Headline Text in Featured Items Section](bugs/BR_TC_UI_HOME_001.md) 
-  
----
-
-### Automated Test Scripts (Python + Pytest + Playwright)
-
-> Click the links to view the scripts on GitHub with syntax highlighting.
-
-- [Homepage UI Layout and Components Display](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_home_001.md)
-
-- [Login Page Functionality – Valid Credentials](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_login_001.md)
-
-- [Homepage Navigation Menu Functionality part 1](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_nav_001.md)
-
-- [Homepage Navigation Menu Functionality part 2 (Video Tutorials)](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/test_tc_ui_nav_001_video_tutorials.md)  
-
----
-
-### Continuous Integration (GitHub Actions)
-
-The repository includes GitHub Actions workflows that execute the automated test suite on GitHub-hosted runners.  
-This demonstrates continuous integration by validating selected scenarios in a reproducible cloud environment and extending the portfolio’s manual and automated coverage into an automated delivery pipeline.
-
-- [CI Workflow Overview](CI/ci.md)
-- [GitHub Actions Workflow Configuration](CI/workflow_file.yml)
-
----
-
-## Next Steps
-
-Navigate the QA artifacts in the following order:
-
-Test Summary Report → Manual Test Cases → Defect Reports → Automation Scripts → GitHub Actions
-
-This sequence reflects the structure of the documented testing work:
-
-🔹the Test Summary Report defines scope and presents execution results
-
-🔹the Manual Test Cases detail the individual validations performed
-
-🔹the Defect Report captures the identified issue
-
-🔹the Automation Scripts implement repeatable checks for selected scenarios
-
-🔹the GitHub Actions workflows execute the automated tests in a continuous integration environment.
-
----
-
-## 📩 Contact details
-
-For inquiries, feel free to reach out via:  
-
-- **LinkedIn**: www.linkedin.com/in/marta-czarnecka-
-- **Email**: martaczarneckaqa@gmail.com
+* **LinkedIn:** [Marta Czarnecka](https://www.linkedin.com/in/marta-czarnecka-)
+* **Email:** [martaczarneckaqa@gmail.com](mailto:martaczarneckaqa@gmail.com)
