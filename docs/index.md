@@ -6,6 +6,7 @@
 }
 </style>
 
+
 Welcome to my Quality Assurance Portfolio.
 
 This portfolio presents selected manual and automated web UI testing work for [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website. It demonstrates how test design, execution, defect reporting, and automation contribute to a traceable quality assurance process.
@@ -20,9 +21,12 @@ The portfolio showcases:
 * **Git version control:** Portfolio artifacts maintained and published through a GitHub repository.
 * **Continuous integration:** Automated test execution through GitHub Actions on pushes and pull requests.
 
+
 ## Software Under Test
 
-Automation Exercise serves as the test environment for the featured work. The selected scope covers core homepage content, valid user authentication, and website navigation.
+Automation Exercise serves as the test environment for the featured work. 
+The selected scope covers core homepage content, valid user authentication, and website navigation.
+
 
 ## Featured Test Coverage
 
@@ -32,6 +36,7 @@ Automation Exercise serves as the test environment for the featured work. The se
 
 The [Traceability Matrix](automation/TRACEABILITY.md) connects each requirement with its manual test case, automated checks, test data, execution records, and any related defect.
 
+
 ## Automation Approach
 
 The automated suite uses the Page Object Model to organize UI locators and interactions in dedicated page classes. Tests focus on the scenarios and expected outcomes, with explicit Playwright assertions used for verification.
@@ -39,6 +44,7 @@ The automated suite uses the Page Object Model to organize UI locators and inter
 **Data-driven testing** supplies URLs and expected values from JSON files. Pytest parameterization runs the internal navigation check for each configured link. Reusable fixtures load test data, provide page objects, obtain login credentials from environment variables, and clean up the authenticated session.
 
 GitHub Actions runs the suite with Chromium. The test setup captures screenshots, and the workflow uploads the test results as evidence.
+
 
 ## Supporting Artifacts
 
@@ -48,6 +54,7 @@ GitHub Actions runs the suite with Chromium. The test setup captures screenshots
 * [Defect Reporting](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/manual/bugs)
 * [Automated Test Scripts](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/automation/tests)
 * [Continuous Integration Workflow](https://github.com/thewaspcat/qa-portfolio/blob/main/.github/workflows/tests.yml)
+
 
 ## Contact Details
 
