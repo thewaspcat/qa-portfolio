@@ -16,6 +16,7 @@ The selected deliverables use a Jira/Xray-style structure and draw on ISO/IEC/IE
 The portfolio showcases:
 
 * **Manual testing:** Structured web UI and REST API test cases with defined scope, steps, and expected results.
+* **API testing:** Postman-ready account API scenarios cover creation, duplicate-registration prevention, retrieval, and deletion.
 * **Defect reporting:** A documented finding with reproduction steps, expected and actual results, severity, and impact.
 * **Automation:** Python, pytest, and Playwright checks mapped to the manual test cases for traceability.
 * **Git version control:** Portfolio artifacts maintained and published through a GitHub repository.
@@ -41,9 +42,9 @@ The [Traceability Matrix](automation/TRACEABILITY.md) records the available rela
 
 The automated suite uses the Page Object Model to organize UI locators and interactions in dedicated page classes.  Tests focus on the scenarios and expected outcomes, with explicit Playwright assertions used for verification.
 
-**Data-driven testing** supplies URLs and expected values from JSON files. Pytest parameterization runs the internal navigation check for each configured link.  Reusable fixtures load test data, provide page objects, obtain login credentials from environment variables, and clean up the authenticated session.
+**Data-driven testing** supplies URLs and expected values from JSON files.  Pytest parameterization runs the internal navigation check for each configured link.  Reusable fixtures load test data, provide page objects, obtain login credentials from environment variables, and clean up the authenticated session.
 
-GitHub Actions runs the web UI suite with Chromium. The test setup captures screenshots, and the workflow uploads the test results as evidence.
+GitHub Actions runs the web UI suite with Chromium.  The test setup captures screenshots, and the workflow uploads the test results as evidence.
 
 
 ## Supporting Artifacts
@@ -100,7 +101,7 @@ GitHub Actions runs the web UI suite with Chromium. The test setup captures scre
 
 <details>
 <summary>Account API Test Cases</summary>
-<p>These specifications are designed for manual execution in Postman. They are automation candidates and are not part of the current GitHub Actions suite.</p>
+<p>These specifications are designed for manual execution in Postman.  They are automation candidates and are not part of the current GitHub Actions suite.</p>
 <ul>
   <li><a href="crud/TC_API_CRUD_001_Create_Register_User_Account.html">TC_API_CRUD_001 — Create/Register User Account</a></li>
   <li><a href="crud/TC_API_CRUD_002_Duplicate_Prevented.html">TC_API_CRUD_002 — Duplicate User Account Creation Prevented</a></li>
