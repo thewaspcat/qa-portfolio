@@ -4,8 +4,8 @@
 
 This repository contains my **QA portfolio**, demonstrating:
 
-  - my expertise in **manual test case design** <br>
-  - my skills in **test automation with Python, Pytest,** and **Playwright**.  
+  - my expertise in **manual web UI and REST API test case design** <br>
+  - my skills in **web UI test automation with Python, Pytest,** and **Playwright**.
 
 The software under test is a public **demo e-commerce website**: [automationexercise.com](https://www.automationexercise.com/).  
 

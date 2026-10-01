@@ -9,13 +9,13 @@
 
 Welcome to my Quality Assurance Portfolio.
 
-This portfolio presents selected manual and automated web UI testing work for [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website. It demonstrates how test design, execution, defect reporting, and automation contribute to a traceable quality assurance process.
+This portfolio presents selected manual web UI and REST API test cases, plus automated web UI testing work, for [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website.  It demonstrates how test design, execution, defect reporting, and automation contribute to a traceable quality assurance process.
 
-The deliverables use a Jira/Xray-style structure and draw on ISO/IEC/IEEE 29119-3 and ISTQB® testing principles.
+The selected deliverables use a Jira/Xray-style structure and draw on ISO/IEC/IEEE 29119-3 and ISTQB® testing principles.
 
 The portfolio showcases:
 
-* **Manual testing:** Structured web UI test cases with defined scope, steps, and expected results.
+* **Manual testing:** Structured web UI and REST API test cases with defined scope, steps, and expected results.
 * **Defect reporting:** A documented finding with reproduction steps, expected and actual results, severity, and impact.
 * **Automation:** Python, pytest, and Playwright checks mapped to the manual test cases for traceability.
 * **Git version control:** Portfolio artifacts maintained and published through a GitHub repository.
@@ -24,8 +24,7 @@ The portfolio showcases:
 
 ## Software Under Test
 
-Automation Exercise serves as the test environment for the featured work. 
-The selected scope covers core homepage content, valid user authentication, and website navigation.
+Automation Exercise serves as the test environment for the featured work.  The selected scope covers core homepage content, valid user authentication, website navigation, and account API creation, duplicate registration, retrieval, and deletion.
 
 
 ## Featured Test Coverage
@@ -33,17 +32,18 @@ The selected scope covers core homepage content, valid user authentication, and 
 * **Homepage:** Evaluates the presentation and availability of key page components against defined expectations.
 * **Authentication:** Validates access with approved credentials and continuity of the authenticated session.
 * **Navigation:** Verifies the structure and behavior of the main menu across its configured destinations.
+* **Account API:** Specifies a create → duplicate-registration check → delete sequence, with account retrieval used to verify the resulting state.
 
-The [Traceability Matrix](automation/TRACEABILITY.md) connects each requirement with its manual test case, automated checks, test data, execution records, and any related defect.
+The [Traceability Matrix](automation/TRACEABILITY.md) records the available relationships between requirements, test cases, test data, automation, execution records, and defects.
 
 
-## Automation Approach
+## Web UI Automation Approach
 
-The automated suite uses the Page Object Model to organize UI locators and interactions in dedicated page classes. Tests focus on the scenarios and expected outcomes, with explicit Playwright assertions used for verification.
+The automated suite uses the Page Object Model to organize UI locators and interactions in dedicated page classes.  Tests focus on the scenarios and expected outcomes, with explicit Playwright assertions used for verification.
 
-**Data-driven testing** supplies URLs and expected values from JSON files. Pytest parameterization runs the internal navigation check for each configured link. Reusable fixtures load test data, provide page objects, obtain login credentials from environment variables, and clean up the authenticated session.
+**Data-driven testing** supplies URLs and expected values from JSON files. Pytest parameterization runs the internal navigation check for each configured link.  Reusable fixtures load test data, provide page objects, obtain login credentials from environment variables, and clean up the authenticated session.
 
-GitHub Actions runs the suite with Chromium. The test setup captures screenshots, and the workflow uploads the test results as evidence.
+GitHub Actions runs the web UI suite with Chromium. The test setup captures screenshots, and the workflow uploads the test results as evidence.
 
 
 ## Supporting Artifacts
@@ -54,6 +54,14 @@ GitHub Actions runs the suite with Chromium. The test setup captures screenshots
 * [Defect Reporting](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/manual/bugs)
 * [Automated Test Scripts](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/automation/tests)
 * [Continuous Integration Workflow](https://github.com/thewaspcat/qa-portfolio/blob/main/.github/workflows/tests.yml)
+
+### Account API Test Cases
+
+These specifications are designed for manual execution in Postman. They are automation candidates and are not part of the current GitHub Actions suite.
+
+* [Create/Register User Account](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/crud/TC_API_CRUD_001_Create_Register_User_Account.md)
+* [Duplicate User Account Creation Prevented](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/crud/TC_API_CRUD_002_Duplicate_Prevented.md)
+* [Delete User Account](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/crud/TC_API_CRUD_003_Delete_User_Account.md)
 
 
 ## Contact Details

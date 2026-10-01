@@ -4,7 +4,7 @@ Manual documentation is split into two artifact types:
 
 ## Test case specifications
 
-The files in this directory define reusable test cases:
+The files in this directory define reusable web UI test cases. The account API cases in `docs/crud/` use the same specification structure:
 
 - preconditions;
 - inputs and test data;
@@ -16,7 +16,7 @@ They should not contain execution-specific pass/fail results.
 
 ## Execution results
 
-The files in `docs/manual/results/` record manual execution results:
+The files in `docs/manual/results/` record web UI manual execution results:
 
 - actual result;
 - pass, fail, skip, or expected-failure status;
