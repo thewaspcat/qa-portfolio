@@ -101,7 +101,7 @@ GitHub Actions runs the web UI suite with Chromium.  The test setup captures scr
 
 <details>
 <summary>Account API Test Cases</summary>
-<p>These specifications are designed for manual execution in Postman.  They are automation candidates and are not part of the current GitHub Actions suite.</p>
+<p>These specifications are designed for manual execution in Postman while being automation candidates.</p>
 <ul>
   <li><a href="crud/TC_API_CRUD_001_Create_Register_User_Account.html">TC_API_CRUD_001 — Create/Register User Account</a></li>
   <li><a href="crud/TC_API_CRUD_002_Duplicate_Prevented.html">TC_API_CRUD_002 — Duplicate User Account Creation Prevented</a></li>
