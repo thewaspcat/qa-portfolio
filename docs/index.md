@@ -48,20 +48,65 @@ GitHub Actions runs the web UI suite with Chromium. The test setup captures scre
 
 ## Supporting Artifacts
 
-* [Manual Test Cases](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/manual)
-* [Test-Case Execution Records](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/manual/results)
-* [Automated Execution Records](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/automation/results)
-* [Defect Reporting](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/manual/bugs)
-* [Automated Test Scripts](https://github.com/thewaspcat/qa-portfolio/tree/main/docs/automation/tests)
-* [Continuous Integration Workflow](https://github.com/thewaspcat/qa-portfolio/blob/main/.github/workflows/tests.yml)
+<details>
+<summary>Manual Test Cases</summary>
+<ul>
+  <li><a href="manual/TC_UI_HOME_001.html">TC_UI_HOME_001 — Homepage UI layout and components</a></li>
+  <li><a href="manual/TC_UI_LOGIN_001.html">TC_UI_LOGIN_001 — Valid user login</a></li>
+  <li><a href="manual/TC_UI_NAV_001.html">TC_UI_NAV_001 — Main navigation</a></li>
+</ul>
+</details>
 
-### Account API Test Cases
+<details>
+<summary>Test-Case Execution Records</summary>
+<ul>
+  <li><a href="manual/results/TC_UI_HOME_001_result.html">TC_UI_HOME_001 — Manual execution result</a></li>
+  <li><a href="manual/results/TC_UI_LOGIN_001_result.html">TC_UI_LOGIN_001 — Manual execution result</a></li>
+  <li><a href="manual/results/TC_UI_NAV_001_result.html">TC_UI_NAV_001 — Manual execution result</a></li>
+</ul>
+</details>
 
-These specifications are designed for manual execution in Postman. They are automation candidates and are not part of the current GitHub Actions suite.
+<details>
+<summary>Automated Execution Records</summary>
+<ul>
+  <li><a href="automation/results/TC_UI_HOME_001_result.html">TC_UI_HOME_001 — Automated execution result</a></li>
+  <li><a href="automation/results/TC_UI_LOGIN_001_result.html">TC_UI_LOGIN_001 — Automated execution result</a></li>
+  <li><a href="automation/results/TC_UI_NAV_001_result.html">TC_UI_NAV_001 — Automated execution result</a></li>
+</ul>
+</details>
 
-* [Create/Register User Account](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/crud/TC_API_CRUD_001_Create_Register_User_Account.md)
-* [Duplicate User Account Creation Prevented](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/crud/TC_API_CRUD_002_Duplicate_Prevented.md)
-* [Delete User Account](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/crud/TC_API_CRUD_003_Delete_User_Account.md)
+<details>
+<summary>Defect Reporting</summary>
+<ul>
+  <li><a href="manual/bugs/BR_TC_UI_HOME_001.html">BR_TC_UI_HOME_001 — Featured Items heading</a></li>
+</ul>
+</details>
+
+<details>
+<summary>Automated Test Scripts</summary>
+<ul>
+  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/tests/test_tc_ui_home_001.py">TC_UI_HOME_001 — Homepage checks</a></li>
+  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/tests/test_tc_ui_login_001.py">TC_UI_LOGIN_001 — Login checks</a></li>
+  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/tests/test_tc_ui_nav_001.py">TC_UI_NAV_001 — Navigation checks</a></li>
+</ul>
+</details>
+
+<details>
+<summary>Continuous Integration Workflow</summary>
+<ul>
+  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/.github/workflows/tests.yml">GitHub Actions test workflow</a></li>
+</ul>
+</details>
+
+<details>
+<summary>Account API Test Cases</summary>
+<p>These specifications are designed for manual execution in Postman. They are automation candidates and are not part of the current GitHub Actions suite.</p>
+<ul>
+  <li><a href="crud/TC_API_CRUD_001_Create_Register_User_Account.html">TC_API_CRUD_001 — Create/Register User Account</a></li>
+  <li><a href="crud/TC_API_CRUD_002_Duplicate_Prevented.html">TC_API_CRUD_002 — Duplicate User Account Creation Prevented</a></li>
+  <li><a href="crud/TC_API_CRUD_003_Delete_User_Account.html">TC_API_CRUD_003 — Delete User Account</a></li>
+</ul>
+</details>
 
 
 ## Contact Details
