@@ -4,12 +4,17 @@
 .markdown-body h2 {
   font-size: 1.25em;
 }
+
+details > summary {
+  color: #0969da;
+}
 </style>
 
 
 Welcome to my Quality Assurance Portfolio.
 
-This portfolio presents selected manual web UI and REST API test cases, plus automated web UI testing work, for [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website.  It demonstrates how test design, execution, defect reporting, and automation contribute to a traceable quality assurance process.
+This portfolio presents selected manual web UI and REST API test cases, plus automated web UI testing work, for [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website.  
+It demonstrates how test design, execution, defect reporting, and automation contribute to a traceable quality assurance process.
 
 The selected deliverables use a Jira/Xray-style structure and draw on ISO/IEC/IEEE 29119-3 and ISTQB® testing principles.
 
@@ -25,7 +30,8 @@ The portfolio showcases:
 
 ## Software Under Test
 
-Automation Exercise serves as the test environment for the featured work.  The selected scope covers core homepage content, valid user authentication, website navigation, and account API creation, duplicate registration, retrieval, and deletion.
+Automation Exercise serves as the test environment for the featured work.  
+The selected scope covers core homepage content, valid user authentication, website navigation, and account API creation, duplicate registration, retrieval, and deletion.
 
 
 ## Featured Test Coverage
@@ -40,11 +46,15 @@ The [Traceability Matrix](automation/TRACEABILITY.md) records the available rela
 
 ## Web UI Automation Approach
 
-The automated suite uses the Page Object Model to organize UI locators and interactions in dedicated page classes.  Tests focus on the scenarios and expected outcomes, with explicit Playwright assertions used for verification.
+The automated suite uses the Page Object Model to organize UI locators and interactions in dedicated page classes.  
+Tests focus on the scenarios and expected outcomes, with explicit Playwright assertions used for verification.
 
-**Data-driven testing** supplies URLs and expected values from JSON files.  Pytest parameterization runs the internal navigation check for each configured link.  Reusable fixtures load test data, provide page objects, obtain login credentials from environment variables, and clean up the authenticated session.
+**Data-driven testing** supplies URLs and expected values from JSON files.  
+Pytest parameterization runs the internal navigation check for each configured link.  
+Reusable fixtures load test data, provide page objects, obtain login credentials from environment variables, and clean up the authenticated session.
 
-GitHub Actions runs the web UI suite with Chromium.  The test setup captures screenshots, and the workflow uploads the test results as evidence.
+GitHub Actions runs the web UI suite with Chromium.  
+The test setup captures screenshots, and the workflow uploads the test results as evidence.
 
 
 ## Supporting Artifacts
