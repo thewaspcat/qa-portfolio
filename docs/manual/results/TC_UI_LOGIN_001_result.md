@@ -6,7 +6,7 @@
 |---|---|
 | Execution date | 2026-09-25 |
 | Environment | Public Automation Exercise website |
-| Execution source | Automated test execution |
+| Execution source | Manual test execution |
 | Execution timestamp | 2026-09-25 11:04:50 |
 | Evidence | [Authenticated login screenshot](../evidence/TC_UI_LOGIN_001_login.png). |
 

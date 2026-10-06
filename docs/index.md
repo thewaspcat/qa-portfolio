@@ -62,7 +62,7 @@ GitHub Actions uploads the screenshots from the test-results directory as an art
 <details>
 <summary>Manual Test Cases</summary>
 <ul>
-  <li><a href="manual/TC_UI_HOME_001.html">TC_UI_HOME_001 — Homepage UI layout and components</a></li>
+  <li><a href="manual/TC_UI_HOME_001.html">TC_UI_HOME_001 — Homepage shell and key components</a></li>
   <li><a href="manual/TC_UI_LOGIN_001.html">TC_UI_LOGIN_001 — Valid user login</a></li>
   <li><a href="manual/TC_UI_NAV_001.html">TC_UI_NAV_001 — Main navigation</a></li>
 </ul>

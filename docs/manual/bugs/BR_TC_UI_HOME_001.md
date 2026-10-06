@@ -5,7 +5,7 @@
 | Field | Value |
 |---|---|
 | Bug ID | `BR_TC_UI_HOME_001` |
-| Evidence | [Published bug report](https://thewaspcat.github.io/qa-portfolio/bugs/BR_TC_UI_HOME_001.html) |
+| Evidence | [Homepage screenshot](../evidence/TC_UI_HOME_001_homepage.png) |
 
 ## Description
 

@@ -1,44 +1,46 @@
-# Homepage Navigation Menu Functionality
+# TC_UI_NAV_001 — Homepage navigation menu
 
-| Field | Value |
-|---|---|
-| Test case ID | `TC_UI_NAV_001` |
-| Title | Homepage navigation menu |
-| Objective | Verify navigation link order, labels, destinations, and behavior. |
-| Priority | Medium |
-| Severity | Major |
-| Module | Homepage → Navigation Bar |
+## 1. Test Case Information
 
-## Environment
+- **Test case ID:** `TC_UI_NAV_001`
+- **Title:** Homepage navigation menu
+- **Objective:** Verify navigation link order, labels, destinations, and behavior.
+- **Priority:** Medium
+- **Severity:** Major
+- **Module:** Homepage → Navigation Bar
 
-- Browser: Chrome, Firefox, or Edge, latest stable
-- Operating system: Windows / macOS / Linux
-- Test URL: `https://www.automationexercise.com/`
+## 2. Environment & Dependencies
 
-**Dependencies:**
+- **Browser:** Chrome, Firefox, or Edge, latest stable
+- **Operating system:** Windows / macOS / Linux
+- **Test URL:** `https://www.automationexercise.com/`
 
 - Stable internet connection
 - Application environment online and accessible
 - Consent UI handled if displayed
 
-## Preconditions
+## 3. Preconditions
 
 - Start with a clean browser context and no active user session.
 
-## Test Data
+## 4. Test Data
 
-Expected order:
+Expected menu links in order:
 
-1. Home
-2. Products
-3. Cart
-4. Signup / Login
-5. Test Cases
-6. API Testing
-7. Video Tutorials
-8. Contact us
+Internal `href` paths resolve against the origin of the Test URL.
 
-## Test Steps and Expected Results
+| Label | `href` |
+|---|---|
+| Home | `/` |
+| Products | `/products` |
+| Cart | `/view_cart` |
+| Signup / Login | `/login` |
+| Test Cases | `/test_cases` |
+| API Testing | `/api_list` |
+| Video Tutorials | `https://www.youtube.com/c/AutomationExercise` |
+| Contact us | `/contact_us` |
+
+## 5. Test Steps and Expected Results
 
 For steps 4–11, start each destination check from a fresh browser context at the homepage.
 
@@ -46,21 +48,21 @@ For steps 4–11, start each destination check from a fresh browser context at t
 |---|---|---|
 | 1 | Navigate to the homepage. | The homepage loads and the navigation menu is visible. |
 | 2 | Verify the navigation count and order. | Exactly eight links are displayed in the configured order. |
-| 3 | Verify link text and `href` values. | Each link has the expected visible label and configured destination. |
-| 4 | Select Home. | The user remains on the homepage. |
-| 5 | Select Products. | The user is redirected to `/products` and the destination page loads. |
-| 6 | Select Cart. | The user is redirected to `/view_cart` and the destination page loads. |
-| 7 | Select Signup / Login. | The user is redirected to `/login` and the login page loads. |
-| 8 | Select Test Cases. | The user is redirected to `/test_cases` and the destination page loads. |
-| 9 | Select API Testing. | The user is redirected to `/api_list` and the destination page loads. |
-| 10 | Select Video Tutorials. | The current browser tab navigates to the configured YouTube destination. A YouTube consent redirect may appear before the final destination. |
-| 11 | Select Contact us. | The user is redirected to `/contact_us`. |
+| 3 | Verify link text and `href` values. | Each link has the visible label and `href` specified in Test Data. |
+| 4 | Select Home. | The browser URL matches the Home destination in Test Data. |
+| 5 | Select Products. | The browser URL matches the Products destination in Test Data. |
+| 6 | Select Cart. | The browser URL matches the Cart destination in Test Data. |
+| 7 | Select Signup / Login. | The browser URL matches the Signup / Login destination in Test Data. |
+| 8 | Select Test Cases. | The browser URL matches the Test Cases destination in Test Data. |
+| 9 | Select API Testing. | The browser URL matches the API Testing destination in Test Data. |
+| 10 | Select Video Tutorials. | The current tab reaches the Video Tutorials URL in Test Data or its YouTube consent URL. |
+| 11 | Select Contact us. | The browser URL matches the Contact us destination in Test Data. |
 
-## Postconditions
+## 6. Postconditions
 
 The user remains logged out and the browser session can be closed safely.
 
-## Automation Readiness
+## 7. Automation Readiness
 
 - **Automation Candidate:** Yes
 - **Framework:** pytest with Playwright
