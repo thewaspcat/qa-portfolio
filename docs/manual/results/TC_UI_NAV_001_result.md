@@ -13,7 +13,8 @@
 
 ## 2. Actual result
 
-All eight links were present in the expected order. Each destination check passed:
+All eight links were present in the expected order.  
+Each destination check passed:
 
 | Link | Actual result | Status |
 |---|---|---|

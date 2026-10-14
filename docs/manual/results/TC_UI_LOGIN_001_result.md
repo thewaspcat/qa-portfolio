@@ -13,7 +13,8 @@
 
 ## 2. Actual result
 
-The login page loaded successfully. Valid credentials authenticated the user, the authenticated indicator and Logout control were visible, and the authenticated state remained active after page reload.
+The login page loaded successfully.  
+Valid credentials authenticated the user, the authenticated indicator and Logout control were visible, and the authenticated state remained active after page reload.
 
 ## 3. Status
 

@@ -29,38 +29,30 @@ The portfolio showcases:
 
 The test cases draw on ISO/IEC/IEEE 29119-3 and ISTQB® testing principles, and their structured format can be adapted for test management tools such as Jira with Xray or TestRail.
 
-## 2. Software Under Test
+## 2. Featured Test Coverage
 
-[Automation Exercise](https://www.automationexercise.com/) is the test environment for the featured work.
-The selected scope covers core homepage content, valid user authentication, main navigation, and account API.
-
-
-## 3. Featured Test Coverage
-
-* **Homepage:** Evaluates the presentation and availability of key page components against requirements.
-* **Authentication:** Validates access with approved credentials and continuity of the authenticated session.
+* **Homepage:** Verifies page loading and the visibility of key UI components.
+* **Authentication:** Verifies login with valid credentials and persistence of the authenticated session.
 * **Navigation:** Verifies the structure and behavior of the main menu across its configured destinations.
 * **Account API:** Specifies a create → duplicate-registration check → delete sequence, with account retrieval used to verify the resulting state.
 
 The [Traceability Matrix](automation/TRACEABILITY.md) records the available relationships between requirements, test cases, test data, automation, page objects, execution records, and defects.
 
 
-## 4. Web UI Automation Approach
+## 3. Web UI Automation Approach
 
 The automated suite uses the Page Object Model to organize UI locators and interactions in dedicated page classes.  
 Tests verify expected outcomes with Playwright assertions.
 
-JSON files supply URLs and expected values.
+JSON files supply URLs and expected values.  
 Pytest parameterization runs the internal navigation check for each configured link.  
 Reusable fixtures load test data, provide page objects, obtain login credentials from environment variables, and clean up the authenticated session.
 
-A pytest hook captures a screenshot after each test body.
+A pytest hook captures a screenshot after each test body.  
 GitHub Actions uploads the screenshots from the test-results directory as an artifact.
 
 
-## 5. Supporting Artifacts
-
-The <a href="manual/README.html">manual test documentation guide</a> explains the roles of specifications and execution records.
+## 4. Supporting Artifacts
 
 <details>
 <summary>Manual Test Cases</summary>
@@ -115,8 +107,8 @@ The <a href="manual/README.html">manual test documentation guide</a> explains th
   <li><a href="automation/data/test_homepage_data.json">Homepage test data</a></li>
   <li><a href="automation/data/test_login_data.json">Login test data</a></li>
   <li><a href="automation/data/test_navigation_data.json">Navigation test data</a></li>
-  <li><a href="automation/pages/home_page.py">Home page object</a></li>
-  <li><a href="automation/pages/login_page.py">Login page object</a></li>
+  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/pages/home_page.py">Home page object</a></li>
+  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/pages/login_page.py">Login page object</a></li>
 </ul>
 </details>
 
@@ -146,7 +138,7 @@ The <a href="manual/README.html">manual test documentation guide</a> explains th
 </details>
 
 
-## 6. Contact Details
+## 5. Contact Details
 
 For inquiries, feel free to reach out via:
 

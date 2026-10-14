@@ -13,7 +13,8 @@
 
 ## 2. Actual result
 
-The homepage shell and required components were available. The section heading displayed `Features Items` instead of `Featured Items`.
+The homepage shell and required components were available.  
+The section heading displayed `Features Items` instead of `Featured Items`.
 
 ## 3. Status
 

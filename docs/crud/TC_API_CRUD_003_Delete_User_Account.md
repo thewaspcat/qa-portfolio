@@ -32,7 +32,8 @@
 | email | `{{registeredEmail}}` |
 | password | `{{registeredPassword}}` |
 
-Both values refer to the account created by `TC_API_CRUD_001`. No separate account or hard-coded credentials are used.
+Both values refer to the account created by `TC_API_CRUD_001`.  
+No separate account or hard-coded credentials are used.
 
 ## 5. Test Steps and Expected Results
 
@@ -44,7 +45,8 @@ Both values refer to the account created by `TC_API_CRUD_001`. No separate accou
 
 ## 6. Postconditions
 
-The disposable account is no longer retrievable by email. If deletion does not succeed, the account remains a cleanup obligation for the test run.
+The disposable account is no longer retrievable by email.  
+If deletion does not succeed, the account remains a cleanup obligation for the test run.
 
 ## 7. Automation Readiness
 

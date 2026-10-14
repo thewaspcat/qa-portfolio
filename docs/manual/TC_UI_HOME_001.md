@@ -51,7 +51,7 @@ The browser session remains logged out and no application data is changed.
 - **Framework:** pytest with Playwright
 - **Test Data Source:** [`test_homepage_data.json`](../automation/data/test_homepage_data.json)
 - **Automation Priority:** High
-- **Script Reference:** [`test_tc_ui_home_001.py`](../automation/tests/test_tc_ui_home_001.py)
+- **Script Reference:** [`test_tc_ui_home_001.py`](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/tests/test_tc_ui_home_001.py)
 - **Automation Notes:**
-  - Uses [`HomePage`](../automation/pages/home_page.py) locators for homepage component validation.
+  - Uses [`HomePage`](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/pages/home_page.py) locators for homepage component validation.
   - Verifies title, logo attributes, section visibility, the Recommended Items heading and DOM order, and footer visibility.

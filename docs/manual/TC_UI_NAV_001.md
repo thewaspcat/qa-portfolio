@@ -68,7 +68,7 @@ The user remains logged out and the browser session can be closed safely.
 - **Framework:** pytest with Playwright
 - **Test Data Source:** [`test_navigation_data.json`](../automation/data/test_navigation_data.json)
 - **Automation Priority:** Medium
-- **Script Reference:** [`test_tc_ui_nav_001.py`](../automation/tests/test_tc_ui_nav_001.py)
+- **Script Reference:** [`test_tc_ui_nav_001.py`](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/tests/test_tc_ui_nav_001.py)
 - **Automation Notes:**
-  - Uses [`HomePage`](../automation/pages/home_page.py) locators for navigation structure and destination validation.
+  - Uses [`HomePage`](https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/pages/home_page.py) locators for navigation structure and destination validation.
   - Verifies link count, order, labels, `href` values, internal destinations, and same-tab Video Tutorials navigation.

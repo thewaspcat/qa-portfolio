@@ -26,7 +26,9 @@
 
 ## 4. Test Data
 
-The second registration uses the `registeredEmail` from the creation response handoff and different account details. The password shown here is a disposable test value; it is not used to authenticate the original account. The baseline GET stores the complete returned `user` object as JSON in the `crud002BaselineUser` collection variable.
+The second registration uses the `registeredEmail` from the creation response handoff and different account details.  
+The password shown here is a disposable test value; it is not used to authenticate the original account.  
+The baseline GET stores the complete returned `user` object as JSON in the `crud002BaselineUser` collection variable.
 
 | Field | Value |
 |---|---|
@@ -56,13 +58,18 @@ The second registration uses the `registeredEmail` from the creation response ha
 | 2 | Send `POST https://automationexercise.com/api/createAccount` with the Test Data fields as an `x-www-form-urlencoded` body. | HTTP status is `200`. The JSON body has `responseCode = 400` and `message = "Email already exists!"`. |
 | 3 | Repeat the GET request from step 1 and compare its `user` object with the saved baseline. | HTTP status is `200`, the JSON body has `responseCode = 200`, and the complete returned `user` object is deeply equal to `crud002BaselineUser`. |
 
-The API does not expose an account-count operation or the stored password through these requests. The rejection response and unchanged retrievable details are the observable checks for this case.
+The API does not expose an account-count operation or the stored password through these requests.  
+The rejection response and unchanged retrievable details are the observable checks for this case.
 
 ## 6. Postman Handoff
 
-Before the baseline GET, the pre-request script clears any stale `crud002BaselineUser`. The response script stores a new baseline only when HTTP status is `200`, the JSON body has `responseCode = 200`, and a valid `user` object has an email equal to `registeredEmail`.
+Before the baseline GET, the pre-request script clears any stale `crud002BaselineUser`.  
+The response script stores a new baseline only when HTTP status is `200`, the JSON body has `responseCode = 200`, and a valid `user` object has an email equal to `registeredEmail`.
 
-The duplicate POST is skipped when `registeredEmail` or `crud002BaselineUser` is missing. Its response script checks the HTTP status, JSON body, response code, and message. The final GET is skipped when `registeredEmail` or the saved baseline is invalid; its response script parses the baseline and checks deep equality with the complete returned `user` object. The final comparison can still run when the duplicate-response assertion fails, provided the baseline remains valid.
+The duplicate POST is skipped when `registeredEmail` or `crud002BaselineUser` is missing.  
+Its response script checks the HTTP status, JSON body, response code, and message.  
+The final GET is skipped when `registeredEmail` or the saved baseline is invalid; its response script parses the baseline and checks deep equality with the complete returned `user` object.  
+The final comparison can still run when the duplicate-response assertion fails, provided the baseline remains valid.
 
 ## 7. Postconditions
 

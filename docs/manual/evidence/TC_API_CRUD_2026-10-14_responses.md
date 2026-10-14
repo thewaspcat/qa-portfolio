@@ -4,7 +4,11 @@
 
 ## 2. API Responses
 
-Captured from the PowerShell `Invoke-WebRequest` execution against the public Automation Exercise API on 2026-10-14. Request bodies were sent as `application/x-www-form-urlencoded`. The disposable account email was `user_test_1791958100619@example.com`; passwords are omitted from this transcript. Times are UTC. All eight responses had HTTP status `200` and `Content-Type: text/html; charset=utf-8`.
+Captured from the PowerShell `Invoke-WebRequest` execution against the public Automation Exercise API on 2026-10-14.  
+Request bodies were sent as `application/x-www-form-urlencoded`.  
+The disposable account email was `user_test_1791958100619@example.com`; passwords are omitted from this transcript.  
+Times are UTC.  
+All eight responses had HTTP status `200` and `Content-Type: text/html; charset=utf-8`.
 
 Execution records: [`TC_API_CRUD_001`](../results/TC_API_CRUD_001_result.md), [`TC_API_CRUD_002`](../results/TC_API_CRUD_002_result.md), and [`TC_API_CRUD_003`](../results/TC_API_CRUD_003_result.md).
 
@@ -43,4 +47,5 @@ The four successful detail responses returned the same `user` object, including 
 
 ## 4. Execution Method
 
-The supplied Postman pre-request and after-response scripts were reference material for the test data and checks. This run used PowerShell and carried the generated email and disposable password directly between requests; it did not execute Postman scripts.
+The supplied Postman pre-request and after-response scripts were reference material for the test data and checks.  
+This run used PowerShell and carried the generated email and disposable password directly between requests; it did not execute Postman scripts.

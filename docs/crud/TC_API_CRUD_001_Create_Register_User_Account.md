@@ -27,7 +27,9 @@
 
 ## 4. Test Data
 
-Before step 1, the Postman pre-request script clears any previous `registeredEmail` and `registeredPassword` values. It creates `user_test_` + `Date.now()` + `@example.com` and assigns that address to `uniqueEmail`. The request body uses `uniqueEmail` and `accountPassword`.
+Before step 1, the Postman pre-request script clears any previous `registeredEmail` and `registeredPassword` values.  
+It creates `user_test_` + `Date.now()` + `@example.com` and assigns that address to `uniqueEmail`.  
+The request body uses `uniqueEmail` and `accountPassword`.
 
 | Field | Value |
 |---|---|
@@ -64,13 +66,19 @@ The detail response does not expose the password or mobile number; therefore, pe
 
 ## 6. Postman Handoff
 
-The creation response script checks the HTTP status, JSON parsing, and the presence and values of `responseCode` and `message`. Its `Content-Type` assertion checks the response's media-type contract separately from this case's create-and-retrieve objective. The script stores `uniqueEmail` as `registeredEmail` and `accountPassword` as `registeredPassword` only when HTTP status is `200`, `responseCode` is `201`, and the message is `User created!`. Otherwise it clears both registered credential variables. The detail request is skipped when `registeredEmail` is unavailable.
+The creation response script checks the HTTP status, JSON parsing, and the presence and values of `responseCode` and `message`.  
+Its `Content-Type` assertion checks the response's media-type contract separately from this case's create-and-retrieve objective.  
+The script stores `uniqueEmail` as `registeredEmail` and `accountPassword` as `registeredPassword` only when HTTP status is `200`, `responseCode` is `201`, and the message is `User created!`.  
+Otherwise it clears both registered credential variables.  
+The detail request is skipped when `registeredEmail` is unavailable.
 
-The detail response script checks the HTTP status, JSON body, response code, and returned `user` object. It compares each of the 15 retrievable fields listed above with its expected value.
+The detail response script checks the HTTP status, JSON body, response code, and returned `user` object.  
+It compares each of the 15 retrievable fields listed above with its expected value.
 
 ## 7. Postconditions
 
-A disposable account exists when the creation handoff conditions are met. The account remains available to `TC_API_CRUD_002` and `TC_API_CRUD_003`.
+A disposable account exists when the creation handoff conditions are met.  
+The account remains available to `TC_API_CRUD_002` and `TC_API_CRUD_003`.
 
 `TC_API_CRUD_003` performs final cleanup of the disposable account.
 

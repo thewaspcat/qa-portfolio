@@ -14,7 +14,8 @@
 
 ## 2. Description
 
-The create-account endpoint returns a JSON response body with `Content-Type: text/html; charset=utf-8`. The declared media type does not describe the returned JSON representation.
+The create-account endpoint returns a JSON response body with `Content-Type: text/html; charset=utf-8`.  
+The declared media type does not describe the returned JSON representation.
 
 ## 3. Steps to Reproduce
 
@@ -27,8 +28,10 @@ The JSON response body is identified with the `application/json` media type. [RF
 
 ## 5. Actual Result
 
-The response body is valid JSON with `responseCode: 201` and `message: "User created!"`, but the response header is `Content-Type: text/html; charset=utf-8`. The Postman media-type assertion failed; the account was created and its stored details were retrievable.
+The response body is valid JSON with `responseCode: 201` and `message: "User created!"`, but the response header is `Content-Type: text/html; charset=utf-8`.  
+The Postman media-type assertion failed; the account was created and its stored details were retrievable.
 
 ## 6. Impact
 
-Clients that select a parser or enforce response contracts using `Content-Type` may treat the JSON response as HTML. Account creation itself succeeded in the recorded executions.
+Clients that select a parser or enforce response contracts using `Content-Type` may treat the JSON response as HTML.  
+Account creation itself succeeded in the recorded executions.
