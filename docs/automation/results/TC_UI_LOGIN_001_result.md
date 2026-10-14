@@ -10,7 +10,7 @@
 | Environment/build | Public Automation Exercise environment |
 | Browser | Playwright Chromium |
 | Operating system | Windows |
-| Evidence | `test-results/screenshots/docs_automation_tests_test_tc_ui_login_001.py_test_tc_ui_login_001_valid_credentials_chromium.png`. GitHub Actions uploads it as `playwright-evidence`. |
+| Evidence | [Authenticated login screenshot](../../manual/evidence/TC_UI_LOGIN_001_login.png) |
 
 ## 2. Actual result
 

@@ -11,7 +11,7 @@
 | Environment/build | Public Automation Exercise environment |
 | Browser | Playwright Chromium |
 | Operating system | Windows |
-| Evidence | `test-results/screenshots/docs_automation_tests_test_tc_ui_home_001.py_test_tc_ui_home_001_homepage_layout_chromium.png`; `test-results/screenshots/docs_automation_tests_test_tc_ui_home_001.py_test_tc_ui_home_001_featured_items_heading_chromium.png`. GitHub Actions uploads them as `playwright-evidence`. |
+| Evidence | [Homepage layout screenshot](../evidence/TC_UI_HOME_001/docs_automation_tests_test_tc_ui_home_001.py_test_tc_ui_home_001_homepage_layout_chromium.png); [Featured Items heading screenshot](../evidence/TC_UI_HOME_001/docs_automation_tests_test_tc_ui_home_001.py_test_tc_ui_home_001_featured_items_heading_chromium.png) |
 
 ## 2. Actual result
 
