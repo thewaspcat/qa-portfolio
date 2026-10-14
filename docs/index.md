@@ -10,8 +10,9 @@ details > summary {
 }
 </style>
 
+## 1. Portfolio Overview
 
-  Welcome to my Quality Assurance Portfolio.
+Welcome to my Quality Assurance Portfolio.
 
 
 This portfolio documents a traceable quality assurance process for [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website.
@@ -21,20 +22,20 @@ The portfolio showcases:
 
 * **Manual web UI testing:** Homepage, login, and navigation test cases with automation-readiness notes and a separate manual execution record for each.
 * **API testing:** Account API test cases for manual execution in Postman, each with an automation-readiness section.
-* **Defect reporting:** A documented finding with reproduction steps, expected and actual results, severity, and impact.
+* **Defect reporting:** Documented findings with reproduction steps, expected and actual results, and impact.
 * **Automation:** Web UI tests written in Python, run with pytest, and using Playwright for browser interaction, with links to the corresponding manual test cases.
 * **Git version control:** Portfolio artifacts maintained and published through a GitHub repository.
 * **Continuous Integration:** Automated test execution through GitHub Actions on pushes and pull requests.  GitHub Actions runs the suite with Chromium and uploads screenshot evidence captured after test execution.
 
 The test cases draw on ISO/IEC/IEEE 29119-3 and ISTQB® testing principles, and their structured format can be adapted for test management tools such as Jira with Xray or TestRail.
 
-## Software Under Test
+## 2. Software Under Test
 
 [Automation Exercise](https://www.automationexercise.com/) is the test environment for the featured work.
 The selected scope covers core homepage content, valid user authentication, main navigation, and account API.
 
 
-## Featured Test Coverage
+## 3. Featured Test Coverage
 
 * **Homepage:** Evaluates the presentation and availability of key page components against requirements.
 * **Authentication:** Validates access with approved credentials and continuity of the authenticated session.
@@ -44,7 +45,7 @@ The selected scope covers core homepage content, valid user authentication, main
 The [Traceability Matrix](automation/TRACEABILITY.md) records the available relationships between requirements, test cases, test data, automation, page objects, execution records, and defects.
 
 
-## Web UI Automation Approach
+## 4. Web UI Automation Approach
 
 The automated suite uses the Page Object Model to organize UI locators and interactions in dedicated page classes.  
 Tests verify expected outcomes with Playwright assertions.
@@ -57,7 +58,9 @@ A pytest hook captures a screenshot after each test body.
 GitHub Actions uploads the screenshots from the test-results directory as an artifact.
 
 
-## Supporting Artifacts
+## 5. Supporting Artifacts
+
+The <a href="manual/README.html">manual test documentation guide</a> explains the roles of specifications and execution records.
 
 <details>
 <summary>Manual Test Cases</summary>
@@ -74,6 +77,9 @@ GitHub Actions uploads the screenshots from the test-results directory as an art
   <li><a href="manual/results/TC_UI_HOME_001_result.html">TC_UI_HOME_001 — Manual execution result</a></li>
   <li><a href="manual/results/TC_UI_LOGIN_001_result.html">TC_UI_LOGIN_001 — Manual execution result</a></li>
   <li><a href="manual/results/TC_UI_NAV_001_result.html">TC_UI_NAV_001 — Manual execution result</a></li>
+  <li><a href="manual/results/TC_API_CRUD_001_result.html">TC_API_CRUD_001 — Account API execution result (passed)</a></li>
+  <li><a href="manual/results/TC_API_CRUD_002_result.html">TC_API_CRUD_002 — Account API execution result (passed)</a></li>
+  <li><a href="manual/results/TC_API_CRUD_003_result.html">TC_API_CRUD_003 — Account API execution result (passed)</a></li>
 </ul>
 </details>
 
@@ -90,6 +96,7 @@ GitHub Actions uploads the screenshots from the test-results directory as an art
 <summary>Defect Reporting</summary>
 <ul>
   <li><a href="manual/bugs/BR_TC_UI_HOME_001.html">BR_TC_UI_HOME_001 — Featured Items heading</a></li>
+  <li><a href="manual/bugs/BR_TC_API_CRUD_001_Content_Type.html">BR_TC_API_CRUD_001 — JSON response media type</a></li>
 </ul>
 </details>
 
@@ -99,6 +106,25 @@ GitHub Actions uploads the screenshots from the test-results directory as an art
   <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/tests/test_tc_ui_home_001.py">TC_UI_HOME_001 — Homepage checks</a></li>
   <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/tests/test_tc_ui_login_001.py">TC_UI_LOGIN_001 — Login checks</a></li>
   <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/docs/automation/tests/test_tc_ui_nav_001.py">TC_UI_NAV_001 — Navigation checks</a></li>
+</ul>
+</details>
+
+<details>
+<summary>Web UI Test Data and Page Objects</summary>
+<ul>
+  <li><a href="automation/data/test_homepage_data.json">Homepage test data</a></li>
+  <li><a href="automation/data/test_login_data.json">Login test data</a></li>
+  <li><a href="automation/data/test_navigation_data.json">Navigation test data</a></li>
+  <li><a href="automation/pages/home_page.py">Home page object</a></li>
+  <li><a href="automation/pages/login_page.py">Login page object</a></li>
+</ul>
+</details>
+
+<details>
+<summary>Account API Execution Evidence</summary>
+<ul>
+  <li><a href="manual/evidence/TC_API_CRUD_2026-10-14_postman.html">Postman execution screenshots</a></li>
+  <li><a href="manual/evidence/TC_API_CRUD_2026-10-14_responses.html">API response transcript</a></li>
 </ul>
 </details>
 
@@ -120,7 +146,7 @@ GitHub Actions uploads the screenshots from the test-results directory as an art
 </details>
 
 
-## Contact Details
+## 6. Contact Details
 
 For inquiries, feel free to reach out via:
 

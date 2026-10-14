@@ -1,6 +1,6 @@
 # QA Portfolio – created by Marta Czarnecka
 
-
+## 1. Portfolio Overview
 
 This repository contains my **QA portfolio**, demonstrating:
 
@@ -9,4 +9,4 @@ This repository contains my **QA portfolio**, demonstrating:
 
 The software under test is a public **demo e-commerce website**: [automationexercise.com](https://www.automationexercise.com/).  
 
-➡️ **View the selected test samples here:** [QA Portfolio](https://thewaspcat.github.io/qa-portfolio/)
+➡️ **View the selected test samples here:** [QA Portfolio](https://thewaspcat.github.io/qa-portfolio/) · [Portfolio source index](docs/index.md)

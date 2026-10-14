@@ -1,5 +1,7 @@
 # TC_API_CRUD_003 — Delete User Account
 
+## 1. Test Case Information
+
 | Field | Value |
 |---|---|
 | Test case ID | `TC_API_CRUD_003` |
@@ -10,20 +12,20 @@
 | Test level | Integration |
 | Test object / interface | REST API |
 
-## Environment
+## 2. Environment
 
 - System under test: [Automation Exercise API](https://automationexercise.com/api_list)
 - Execution tool: Postman
 - Base URL: `https://automationexercise.com`
 
-## Preconditions
+## 3. Preconditions
 
-- `TC_API_CRUD_001` has created a disposable account that remains available.
-- The account's `registeredEmail` and `registeredPassword` values are stored as Postman collection variables.
+- [`TC_API_CRUD_001`](TC_API_CRUD_001_Create_Register_User_Account.md) has created a disposable account that remains available.
+- The submitted email (`uniqueEmail`) and password (`accountPassword`) from `TC_API_CRUD_001` are available as the `registeredEmail` and `registeredPassword` Postman collection variables when its creation handoff conditions are met, even if another assertion fails.
 - The account can be retrieved with `GET /api/getUserDetailByEmail` before deletion.
-- This case also serves as cleanup when `TC_API_CRUD_002` cannot complete after account creation.
+- This case also serves as cleanup when [`TC_API_CRUD_002`](TC_API_CRUD_002_Duplicate_Prevented.md) cannot complete after account creation.
 
-## Test Data
+## 4. Test Data
 
 | Field | Value |
 |---|---|
@@ -32,7 +34,7 @@
 
 Both values refer to the account created by `TC_API_CRUD_001`. No separate account or hard-coded credentials are used.
 
-## Test Steps and Expected Results
+## 5. Test Steps and Expected Results
 
 | Step | Action | Expected result |
 |---|---|---|
@@ -40,11 +42,11 @@ Both values refer to the account created by `TC_API_CRUD_001`. No separate accou
 | 2 | Send `DELETE https://automationexercise.com/api/deleteAccount` with the Test Data fields as an `x-www-form-urlencoded` body. | HTTP status is `200`. The JSON body has `responseCode = 200` and `message = "Account deleted!"`. |
 | 3 | Repeat the GET request from step 1. | HTTP status is `200`. The JSON body has `responseCode = 404` and does not contain the deleted account's `user` object. |
 
-## Postconditions
+## 6. Postconditions
 
 The disposable account is no longer retrievable by email. If deletion does not succeed, the account remains a cleanup obligation for the test run.
 
-## Automation Readiness
+## 7. Automation Readiness
 
 - **Automation candidate:** Yes
 - **Current execution mode:** Manual execution in Postman
