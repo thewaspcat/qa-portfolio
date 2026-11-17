@@ -80,7 +80,7 @@ Execution records document actual results, statuses, execution context, and supp
   <li><a href="results/manual/TC_API_CRUD_002_result.html">TC_API_CRUD_002 — Duplicate-registration prevention execution result</a></li>
   <li><a href="results/manual/TC_API_CRUD_003_result.html">TC_API_CRUD_003 — Account deletion execution result</a></li>
 </ul>
-<p>For TC_API_CRUD_001, the functional outcome was <strong>PASS</strong>: account creation and retrieval succeeded. The separate Postman Content-Type contract assertion was <strong>FAIL</strong>, as documented in the <a href="defects/BR_TC_API_CRUD_001_Content_Type.html">API media-type defect report</a>.</p>
+
 </details>
 
 <details>
