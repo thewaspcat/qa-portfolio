@@ -34,7 +34,7 @@ jobs:
         run: uv run --no-sync playwright install --with-deps chromium
 
       - name: Run automated tests
-        working-directory: docs/automation
+        working-directory: automation
         run: uv run --no-sync pytest tests -q --output test-results
 
       - name: Upload automated test evidence
@@ -42,5 +42,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-evidence
-          path: docs/automation/test-results/
+          path: automation/test-results/
           if-no-files-found: warn

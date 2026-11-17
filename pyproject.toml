@@ -14,8 +14,8 @@ dependencies = [
 ]
 
 [tool.pytest.ini_options]
-testpaths = ["docs/automation/tests"]
-pythonpath = ["docs/automation"]
+testpaths = ["automation/tests"]
+pythonpath = ["automation"]
 addopts = "--strict-markers"
 
 [build-system]

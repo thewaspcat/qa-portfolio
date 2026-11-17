@@ -16,7 +16,7 @@ htmlcov/
 # Test reports / temporary files
 *.log
 *.tmp
-docs/automation/test-results/
+automation/test-results/
 
 # Environment variables / local secrets
 .env
