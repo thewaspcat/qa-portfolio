@@ -1,17 +1,19 @@
+import pytest
+from playwright.sync_api import Page, expect
+from pages.home_page import HomePage
 import re
 import json
 from pathlib import Path
 from typing import Any
 from urllib.parse import urljoin
 
-import pytest
-from playwright.sync_api import Page, expect
-
-from pages.home_page import HomePage
-
 
 def _internal_links(navigation_data: dict[str, Any]) -> list[dict[str, Any]]:
-    return [link for link in navigation_data["links"] if not link["external"]]
+    return [
+        link
+        for link in navigation_data["links"]
+        if not link["external"]
+    ]
 
 
 def _link_id(link_data: dict[str, Any]) -> str:
@@ -19,12 +21,32 @@ def _link_id(link_data: dict[str, Any]) -> str:
 
 
 def _load_navigation_data() -> dict[str, Any]:
-    data_path = Path(__file__).parents[1] / "data" / "test_navigation_data.json"
+    data_path = (
+        Path(__file__).parents[1]
+        / "data"
+        / "test_navigation_data.json"
+    )
     with data_path.open(encoding="utf-8") as file:
         return json.load(file)
 
 
 INTERNAL_NAVIGATION_LINKS = _internal_links(_load_navigation_data())
+
+
+GOOGLE_AD_REQUEST_PATTERN = re.compile(
+    r"^https?://(?:[^/]+\.)?"
+    r"(?:googlesyndication\.com|doubleclick\.net|googleadservices\.com)(?:/|$)"
+    r"|^https?://(?:www\.)?google\.com/pagead(?:/|$)",
+    re.IGNORECASE,
+)
+
+
+def _block_google_ads(page: Page) -> None:
+    """Block selected Google advertising requests during navigation tests."""
+    page.route(
+        GOOGLE_AD_REQUEST_PATTERN,
+        lambda route: route.abort(),
+    )
 
 
 def test_tc_ui_nav_001_navigation_order_and_attributes(
@@ -41,7 +63,10 @@ def test_tc_ui_nav_001_navigation_order_and_attributes(
 
     for link in links:
         expected_href = link["href"]
-        home_page.assert_navigation_link(link["name"], expected_href)
+        home_page.assert_navigation_link(
+            link["name"],
+            expected_href,
+        )
 
 
 @pytest.mark.parametrize(
@@ -55,9 +80,18 @@ def test_tc_ui_nav_001_internal_navigation(
     link_data: dict[str, Any],
 ) -> None:
     """TC_UI_NAV_001: verify each internal navigation destination."""
-    home_page.open()
+    _block_google_ads(page)
+
+    expected_url = urljoin(home_page.url, link_data["href"])
+
+    if link_data["name"] == "Home":
+        page.goto(urljoin(home_page.url, "/products"))
+    else:
+        home_page.open()
+
     home_page.open_navigation_link(link_data["name"])
-    expect(page).to_have_url(urljoin(home_page.url, link_data["href"]))
+
+    expect(page).to_have_url(expected_url)
 
 
 def test_tc_ui_nav_001_video_tutorials_same_tab(
@@ -66,15 +100,24 @@ def test_tc_ui_nav_001_video_tutorials_same_tab(
 ) -> None:
     """TC_UI_NAV_001: verify Video Tutorials opens in the current tab."""
     home_page.open()
+
     video_link = next(
-        link for link in navigation_data["links"] if link["external"]
+        link
+        for link in navigation_data["links"]
+        if link["external"]
     )
-    home_page.assert_navigation_link(video_link["name"], video_link["href"])
+
+    home_page.assert_navigation_link(
+        video_link["name"],
+        video_link["href"],
+    )
 
     home_page.open_navigation_link(video_link["name"])
+
     expect(home_page.page).to_have_url(
         re.compile(
             r"https://(?:www\.youtube\.com/c/AutomationExercise"
             r"|consent\.youtube\.com/.*AutomationExercise)"
         )
+    )
     )

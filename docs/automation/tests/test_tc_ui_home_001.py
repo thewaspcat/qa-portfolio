@@ -1,9 +1,6 @@
 from typing import Any
-
 import pytest
-
 from pages.home_page import HomePage
-
 
 def test_tc_ui_home_001_homepage_layout(
     home_page: HomePage,
