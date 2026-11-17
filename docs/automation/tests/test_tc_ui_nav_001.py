@@ -120,4 +120,3 @@ def test_tc_ui_nav_001_video_tutorials_same_tab(
             r"|consent\.youtube\.com/.*AutomationExercise)"
         )
     )
-    )

@@ -42,7 +42,7 @@ Internal `href` paths resolve against the origin of the Test URL.
 
 ## 5. Test Steps and Expected Results
 
-For steps 4–11, start each destination check from a fresh browser context at the homepage.
+Setup for steps 4–11: use a fresh browser context for each destination check. For step 4 (Home), open `/products` before selecting Home. For steps 5–11, open the homepage before selecting the destination link.
 
 | Step | Action | Expected result |
 |---|---|---|
