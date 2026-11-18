@@ -14,36 +14,35 @@ details > summary {
 
 Welcome to my Quality Assurance Portfolio.
 
-
 This portfolio documents a traceable quality assurance process for [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website.
-
 
 The portfolio showcases:
 
-* **Manual web UI testing:** Homepage, login, and navigation test cases with automation-readiness notes and a separate manual execution record for each.
-* **API testing:** Account API test cases for manual execution in Postman, each with an automation-readiness section.
+* **Manual web UI testing:** Test cases with automation-readiness notes and a separate manual execution record for each.   The test cases draw on ISO/IEC/IEEE 29119-3 and ISTQB® testing principles, and their structured format can be adapted for test management tools such as Jira with Xray or TestRail.
+* **API testing:** API test cases for manual execution in Postman, each with an automation-readiness section.
 * **Defect reporting:** Documented findings with reproduction steps, expected and actual results, and impact.
 * **Automation:** Web UI tests written in Python, run with pytest, and using Playwright for browser interaction, with links to the corresponding manual test cases.
 * **Git version control:** Portfolio artifacts maintained and published through a GitHub repository.
-* **Continuous Integration:** Automated test execution through GitHub Actions on pushes and pull requests.  GitHub Actions runs the suite with Chromium and uploads screenshot evidence captured after test execution.
+* **Continuous Integration:** Automated test execution through GitHub Actions on pushes and pull requests.  
 
-The test cases draw on ISO/IEC/IEEE 29119-3 and ISTQB® testing principles, and their structured format can be adapted for test management tools such as Jira with Xray or TestRail.
 
-### Featured Test Coverage
+## 2. Featured Test Coverage
 
 * **Homepage:** Verifies page loading and the visibility of key UI components.
 * **Authentication:** Verifies login with valid credentials and persistence of the authenticated session.
 * **Navigation:** Verifies the structure and behavior of the main menu across its configured destinations.
 * **Account API:** Specifies a create → duplicate-registration check → delete sequence, with account retrieval used to verify the resulting state.
 
-## 2. Requirements and Traceability
+
+## 3. Requirements and Traceability
 
 The [Requirements](requirements.md) define the expected behavior and acceptance criteria for the covered homepage, authentication, navigation, and account API functions.
 
 The [Traceability Matrix](TRACEABILITY.md) provides a central view of test coverage. For each requirement ID, it links to the corresponding test specification, execution records, documented defects, and available automation, including page objects and test data.
 Use the matrix to follow a test from its specification through execution results and supporting evidence.
 
-## 3. Test Design and Test Specifications
+
+## 4. Test Design and Test Specifications
 
 Each UI and API test specification defines the test objective, preconditions, test data, and expected results. It also documents automation readiness. The [Test Case Specifications](test-cases/README.md) overview explains how the UI and API cases are organised.
 
@@ -66,7 +65,8 @@ Each UI and API test specification defines the test objective, preconditions, te
 </ul>
 </details>
 
-## 4. Test Execution and Evidence
+
+## 5. Test Execution and Evidence
 
 Execution records document actual results, statuses, execution context, and supporting evidence.
 
@@ -100,7 +100,7 @@ Execution records document actual results, statuses, execution context, and supp
 </ul>
 </details>
 
-## 5. Defect Management
+## 6. Defect Management
 
 Each defect report documents the finding and links to its originating test case, execution record, and evidence.
 
@@ -112,7 +112,8 @@ Each defect report documents the finding and links to its originating test case,
 </ul>
 </details>
 
-## 6. Test Automation Implementation
+
+## 7. Test Automation Implementation
 
 The automated suite uses Python, pytest, and Playwright. Page objects organise UI locators and interactions, while tests verify expected outcomes with Playwright assertions.
 
@@ -148,22 +149,16 @@ A pytest hook captures a screenshot after each test body.
 </ul>
 </details>
 
-## 7. Continuous Integration
 
-The GitHub Actions workflow runs on pushes and pull requests. It sets up Python 3.13, installs dependencies with uv, installs Chromium, and runs the automated tests with pytest.
+## 8. Continuous Integration
 
-The login test is skipped when the required credential environment variables are unavailable. Screenshot evidence is captured after test bodies; tests skipped during setup do not produce screenshots through this hook.
+The [GitHub Actions workflow](https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/.github/workflows/tests.yml) runs on pushes and pull requests.It sets up Python 3.13, installs dependencies with uv, installs Chromium, and runs the automated tests with pytest.
 
-The workflow attempts to upload the test-results directory as an artifact even when test execution fails.
+GitHub Actions runs the suite with Chromium and uploads screenshot evidence captured after test execution.
+The login test is skipped when the required credential environment variables are unavailable.   Tests skipped during setup do not produce screenshots through this hook.
 
-<details>
-<summary>Continuous Integration Workflow</summary>
-<ul>
-  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/.github/workflows/tests.yml">GitHub Actions test workflow</a></li>
-</ul>
-</details>
 
-## 8. Contact Details
+## 9. Contact Details
 
 For inquiries, feel free to reach out via:
 
