@@ -29,8 +29,8 @@
 
 | Field | Value |
 |---|---|
-| email | `{{registeredEmail}}` |
-| password | `{{registeredPassword}}` |
+| email | `{% raw %}{{registeredEmail}}{% endraw %}` |
+| password | `{% raw %}{{registeredPassword}}{% endraw %}` |
 
 Both values refer to the account created by `TC_API_CRUD_001`.  
 No separate account or hard-coded credentials are used.
@@ -39,7 +39,7 @@ No separate account or hard-coded credentials are used.
 
 | Step | Action | Expected result |
 |---|---|---|
-| 1 | Send `GET https://automationexercise.com/api/getUserDetailByEmail` with query parameter `email={{registeredEmail}}`. | HTTP status is `200`. The JSON body has `responseCode = 200` and identifies the account to delete. |
+| 1 | Send `GET https://automationexercise.com/api/getUserDetailByEmail` with query parameter `email={% raw %}{{registeredEmail}}{% endraw %}`. | HTTP status is `200`. The JSON body has `responseCode = 200` and identifies the account to delete. |
 | 2 | Send `DELETE https://automationexercise.com/api/deleteAccount` with the Test Data fields as an `x-www-form-urlencoded` body. | HTTP status is `200`. The JSON body has `responseCode = 200` and `message = "Account deleted!"`. |
 | 3 | Repeat the GET request from step 1. | HTTP status is `200`. The JSON body has `responseCode = 404` and does not contain the deleted account's `user` object. |
 

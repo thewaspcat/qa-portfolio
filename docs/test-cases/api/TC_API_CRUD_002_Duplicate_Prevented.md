@@ -33,7 +33,7 @@ The baseline GET stores the complete returned `user` object as JSON in the `crud
 | Field | Value |
 |---|---|
 | name | Jane Smith |
-| email | `{{registeredEmail}}` |
+| email | `{% raw %}{{registeredEmail}}{% endraw %}` |
 | password | DifferentP@ssw0rd123 |
 | title | Mrs |
 | birth_date | 22 |
@@ -54,7 +54,7 @@ The baseline GET stores the complete returned `user` object as JSON in the `crud
 
 | Step | Action | Expected result |
 |---|---|---|
-| 1 | Send `GET https://automationexercise.com/api/getUserDetailByEmail` with query parameter `email={{registeredEmail}}`; retain the returned `user` object as the baseline. | HTTP status is `200`, the JSON body has `responseCode = 200`, and the returned `user.email` equals `registeredEmail`. A valid baseline is stored in `crud002BaselineUser`. |
+| 1 | Send `GET https://automationexercise.com/api/getUserDetailByEmail` with query parameter `email={% raw %}{{registeredEmail}}{% endraw %}`; retain the returned `user` object as the baseline. | HTTP status is `200`, the JSON body has `responseCode = 200`, and the returned `user.email` equals `registeredEmail`. A valid baseline is stored in `crud002BaselineUser`. |
 | 2 | Send `POST https://automationexercise.com/api/createAccount` with the Test Data fields as an `x-www-form-urlencoded` body. | HTTP status is `200`. The JSON body has `responseCode = 400` and `message = "Email already exists!"`. |
 | 3 | Repeat the GET request from step 1 and compare its `user` object with the saved baseline. | HTTP status is `200`, the JSON body has `responseCode = 200`, and the complete returned `user` object is deeply equal to `crud002BaselineUser`. |
 

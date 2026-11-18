@@ -34,8 +34,8 @@ The request body uses `uniqueEmail` and `accountPassword`.
 | Field | Value |
 |---|---|
 | name | John Doe |
-| email | `{{uniqueEmail}}` |
-| password | `{{accountPassword}}` |
+| email | `{% raw %}{{uniqueEmail}}{% endraw %}` |
+| password | `{% raw %}{{accountPassword}}{% endraw %}` |
 | title | Mr |
 | birth_date | 15 |
 | birth_month | 08 |
@@ -56,7 +56,7 @@ The request body uses `uniqueEmail` and `accountPassword`.
 | Step | Action | Expected result |
 |---|---|---|
 | 1 | Send `POST https://automationexercise.com/api/createAccount` with the Test Data fields as an `x-www-form-urlencoded` body. | HTTP status is `200`. The response body is valid JSON containing `responseCode = 201` and `message = "User created!"`. |
-| 2 | Send `GET https://automationexercise.com/api/getUserDetailByEmail` with query parameter `email={{registeredEmail}}`. | HTTP status is `200`. The JSON response body contains `responseCode = 200` and a `user` object containing the persisted account details. Returned values match the submitted data according to the API field mapping: `birth_date` → `birth_day`, `firstname` → `first_name`, and `lastname` → `last_name`. |
+| 2 | Send `GET https://automationexercise.com/api/getUserDetailByEmail` with query parameter `email={% raw %}{{registeredEmail}}{% endraw %}`. | HTTP status is `200`. The JSON response body contains `responseCode = 200` and a `user` object containing the persisted account details. Returned values match the submitted data according to the API field mapping: `birth_date` → `birth_day`, `firstname` → `first_name`, and `lastname` → `last_name`. |
 
 The retrieval assertion covers the following persisted fields:
 

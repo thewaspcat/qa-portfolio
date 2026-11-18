@@ -7,6 +7,9 @@
 | Bug ID | `BR_TC_API_CRUD_001` |
 | Test case | [`TC_API_CRUD_001`](../test-cases/api/TC_API_CRUD_001_Create_Register_User_Account.md) |
 | Execution record | [`TC_API_CRUD_001_result.md`](../results/manual/TC_API_CRUD_001_result.md) |
+| Severity | Medium |
+| Priority | Medium |
+| Status | Reproduced ([execution record](../results/manual/TC_API_CRUD_001_result.md)) |
 | Type | API response contract discrepancy |
 | Environment | Public Automation Exercise API |
 | Endpoint | `POST https://automationexercise.com/api/createAccount` |
