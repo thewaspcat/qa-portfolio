@@ -152,7 +152,7 @@ A pytest hook captures a screenshot after each test body.
 
 ## 8. Continuous Integration
 
-The [GitHub Actions workflow](https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/.github/workflows/tests.yml) runs on pushes and pull requests.It sets up Python 3.13, installs dependencies with uv, installs Chromium, and runs the automated tests with pytest.
+The [GitHub Actions workflow](https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/.github/workflows/tests.yml) runs on pushes and pull requests. It sets up Python 3.13, installs dependencies with uv, installs Chromium, and runs the automated tests with pytest.
 
 GitHub Actions runs the suite with Chromium and uploads screenshot evidence captured after test execution.
 The login test is skipped when the required credential environment variables are unavailable.   Tests skipped during setup do not produce screenshots through this hook.

@@ -6,7 +6,6 @@
 - **Title:** Login with valid credentials
 - **Objective:** Verify authentication and session persistence after reload.
 - **Priority:** High
-- **Severity:** Critical
 - **Module:** Login / Authentication
 
 ## 2. Environment & Dependencies

@@ -27,14 +27,14 @@
 ## 4. Test Data
 
 The second registration uses the `registeredEmail` from the creation response handoff and different account details.  
-The password shown here is a disposable test value; it is not used to authenticate the original account.  
+Set the `duplicateAttemptPassword` Postman collection variable to a disposable test password that differs from `accountPassword`.  
 The baseline GET stores the complete returned `user` object as JSON in the `crud002BaselineUser` collection variable.
 
 | Field | Value |
 |---|---|
 | name | Jane Smith |
 | email | `{% raw %}{{registeredEmail}}{% endraw %}` |
-| password | DifferentP@ssw0rd123 |
+| password | `{% raw %}{{duplicateAttemptPassword}}{% endraw %}` |
 | title | Mrs |
 | birth_date | 22 |
 | birth_month | 04 |

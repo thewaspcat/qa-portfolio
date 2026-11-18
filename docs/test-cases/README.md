@@ -9,7 +9,7 @@ The specifications define what to verify and the expected behavior. Execution ou
 ## 2. Directory Contents
 
 - `ui/` contains homepage, valid-login, and navigation specifications for manual execution and corresponding web UI automation.
-- `api/` contains account creation, duplicate-registration prevention, and account deletion specifications for manual execution in Postman.
+- `api/` contains account creation, duplicate-registration prevention, and account deletion specifications designed for manual API testing. Execution evidence includes Postman and PowerShell runs.
 
 ## 3. Specification Contents
 

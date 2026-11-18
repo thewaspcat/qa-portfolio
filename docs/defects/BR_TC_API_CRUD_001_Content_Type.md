@@ -1,4 +1,4 @@
-# Bug Report: Create Account Response Uses an Incorrect Media Type
+# POST /api/createAccount Returns an Incorrect Content-Type Header
 
 ## 1. Bug Information
 
@@ -13,7 +13,7 @@
 | Type | API response contract discrepancy |
 | Environment | Public Automation Exercise API |
 | Endpoint | `POST https://automationexercise.com/api/createAccount` |
-| Evidence | [Postman creation result](../evidence/api/TC_API_CRUD_001_create_results_postman.png); [API response transcript](../evidence/api/TC_API_CRUD_2026-10-14_responses.md), `001` create |
+| Evidence | [Postman creation result](../evidence/api/TC_API_CRUD_001_create_results_postman.png); [API response transcript](../evidence/api/TC_API_CRUD_2026-10-14_responses.md), [`001` create](../evidence/api/TC_API_CRUD_2026-10-14_responses.md#tc-api-crud-001-create) |
 
 ## 2. Description
 
@@ -27,14 +27,14 @@ The declared media type does not describe the returned JSON representation.
 
 ## 4. Expected Result
 
-The JSON response body is identified with the `application/json` media type. [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html#section-8.3) defines `Content-Type` as the representation's media type; [RFC 8259](https://www.rfc-editor.org/rfc/rfc8259.html#section-11) registers `application/json` for JSON text.
+The Content-Type response header should accurately identify the media type of the response representation. Since the response body contains JSON, the expected media type is application/json.
+[RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html#section-8.3) defines `Content-Type` as the representation's media type.
+[RFC 8259](https://www.rfc-editor.org/rfc/rfc8259.html#section-11) registers `application/json` for JSON text.
 
 ## 5. Actual Result
 
-The response body is valid JSON with `responseCode: 201` and `message: "User created!"`, but the response header is `Content-Type: text/html; charset=utf-8`.  
-The Postman media-type assertion failed; the account was created and its stored details were retrievable.
+The endpoint returns a JSON response body with the Content-Type header set to text/html; charset=utf-8.
 
 ## 6. Impact
 
-Clients that select a parser or enforce response contracts using `Content-Type` may treat the JSON response as HTML.  
-Account creation itself succeeded in the recorded executions.
+Clients relying on the Content-Type header to identify and process response representations may handle the response incorrectly. This discrepancy reduces API interoperability and compliance with HTTP representation metadata conventions.

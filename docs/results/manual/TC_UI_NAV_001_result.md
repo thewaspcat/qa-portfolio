@@ -18,7 +18,7 @@ Each destination check passed:
 
 | Link | Actual result | Status |
 |---|---|---|
-| Home | Remained on the homepage. | Passed |
+| Home | Started at /products, selected Home, and navigated to / | Passed |
 | Products | Reached `/products`. | Passed |
 | Cart | Reached `/view_cart`. | Passed |
 | Signup / Login | Reached `/login`. | Passed |

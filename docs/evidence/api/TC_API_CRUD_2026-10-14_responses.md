@@ -14,7 +14,7 @@ Execution records: [`TC_API_CRUD_001`](../../results/manual/TC_API_CRUD_001_resu
 
 | Case and step | Time (UTC) | Request | Response body |
 |---|---|---|---|
-| `001` create | 06:08:21.582 | `POST /api/createAccount` | `{"responseCode":201,"message":"User created!"}` |
+| <a name="tc-api-crud-001-create"></a>`001` create | 06:08:21.582 | `POST /api/createAccount` | `{"responseCode":201,"message":"User created!"}` |
 | `001` detail | 06:08:22.369 | `GET /api/getUserDetailByEmail?email=user_test_1791958100619%40example.com` | `responseCode: 200`; `user` shown below |
 | `002` baseline | 06:08:22.613 | Same GET | `responseCode: 200`; same `user` shown below |
 | `002` duplicate | 06:08:23.365 | `POST /api/createAccount` with the case 002 data | `{"responseCode":400,"message":"Email already exists!"}` |

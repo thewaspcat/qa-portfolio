@@ -6,8 +6,15 @@
 |---|---|
 | Test case | [TC_API_CRUD_001](../../test-cases/api/TC_API_CRUD_001_Create_Register_User_Account.md) |
 | Environment | Public Automation Exercise API |
-| Functional result | **Passed** — the account was created and all 15 retrievable details matched the submitted data. |
-| Contract observation | The JSON creation response was labelled `text/html; charset=utf-8`; the separate Postman media-type assertion failed. See [`BR_TC_API_CRUD_001`](../../defects/BR_TC_API_CRUD_001_Content_Type.md). |
+
+| Verification | Result |
+|---|---|
+| Account creation | **Passed** |
+| Persisted account data | **Passed** |
+| Content-Type validation | **Discrepancy identified** |
+| Overall functional test case | **Passed** |
+
+All 15 retrievable account fields matched the submitted values. Six of seven Postman assertions for account creation passed. The `Content-Type` assertion failed because the JSON response was labelled `text/html; charset=utf-8`. See [`BR_TC_API_CRUD_001`](../../defects/BR_TC_API_CRUD_001_Content_Type.md).
 
 ## 2. Postman execution
 

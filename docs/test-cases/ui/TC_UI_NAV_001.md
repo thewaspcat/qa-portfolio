@@ -6,7 +6,6 @@
 - **Title:** Homepage navigation menu
 - **Objective:** Verify navigation link order, labels, destinations, and behavior.
 - **Priority:** Medium
-- **Severity:** Major
 - **Module:** Homepage → Navigation Bar
 
 ## 2. Environment & Dependencies

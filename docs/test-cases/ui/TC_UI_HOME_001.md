@@ -6,7 +6,6 @@
 - **Title:** Homepage shell and key components
 - **Objective:** Verify that the homepage loads and displays its key UI components.
 - **Priority:** High
-- **Severity:** Medium
 - **Module:** Homepage
 
 ## 2. Environment & Dependencies
