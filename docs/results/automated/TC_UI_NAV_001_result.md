@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Test script | [`test_tc_ui_nav_001.py`](https://github.com/thewaspcat/qa-portfolio/blob/main/automation/tests/test_tc_ui_nav_001.py) |
+| Test script | [`test_tc_ui_nav_001.py`](https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/tests/test_tc_ui_nav_001.py) |
 | Manual test case | [`TC_UI_NAV_001`](../../test-cases/ui/TC_UI_NAV_001.md) |
 | Execution date | 2026-09-25 |
 | Environment/build | Public Automation Exercise environment |

@@ -124,28 +124,28 @@ A pytest hook captures a screenshot after each test body.
 <details>
 <summary>Automated Test Scripts</summary>
 <ul>
-  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/automation/tests/test_tc_ui_home_001.py">TC_UI_HOME_001 — Homepage checks</a></li>
-  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/automation/tests/test_tc_ui_login_001.py">TC_UI_LOGIN_001 — Login checks</a></li>
-  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/automation/tests/test_tc_ui_nav_001.py">TC_UI_NAV_001 — Navigation checks</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/tests/test_tc_ui_home_001.py">TC_UI_HOME_001 — Homepage checks</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/tests/test_tc_ui_login_001.py">TC_UI_LOGIN_001 — Login checks</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/tests/test_tc_ui_nav_001.py">TC_UI_NAV_001 — Navigation checks</a></li>
 </ul>
 </details>
 
 <details>
 <summary>Web UI Test Data and Page Objects</summary>
 <ul>
-  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/automation/data/test_homepage_data.json">Homepage test data</a></li>
-  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/automation/data/test_login_data.json">Login test data</a></li>
-  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/automation/data/test_navigation_data.json">Navigation test data</a></li>
-  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/automation/pages/home_page.py">Home page object</a></li>
-  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/automation/pages/login_page.py">Login page object</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/data/test_homepage_data.json">Homepage test data</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/data/test_login_data.json">Login test data</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/data/test_navigation_data.json">Navigation test data</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/pages/home_page.py">Home page object</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/pages/login_page.py">Login page object</a></li>
 </ul>
 </details>
 
 <details>
 <summary>Configuration and Fixtures</summary>
 <ul>
-  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/automation/conftest.py">Fixtures and screenshot evidence hook</a></li>
-  <li><a href="https://github.com/thewaspcat/qa-portfolio/blob/main/pyproject.toml">Project dependencies and pytest configuration</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/conftest.py">Fixtures and screenshot evidence hook</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/pyproject.toml">Project dependencies and pytest configuration</a></li>
 </ul>
 </details>
 

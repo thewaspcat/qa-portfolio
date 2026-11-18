@@ -51,9 +51,9 @@ The authenticated session remains active after reload.
 
 - **Automation Candidate:** Yes
 - **Framework:** pytest with Playwright
-- **Test Data Source:** [`test_login_data.json`](https://github.com/thewaspcat/qa-portfolio/blob/main/automation/data/test_login_data.json) with credentials supplied through environment variables
+- **Test Data Source:** [`test_login_data.json`](https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/data/test_login_data.json) with credentials supplied through environment variables
 - **Automation Priority:** High
-- **Script Reference:** [`test_tc_ui_login_001.py`](https://github.com/thewaspcat/qa-portfolio/blob/main/automation/tests/test_tc_ui_login_001.py)
+- **Script Reference:** [`test_tc_ui_login_001.py`](https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/tests/test_tc_ui_login_001.py)
 - **Automation Notes:**
-  - Uses [`LoginPage`](https://github.com/thewaspcat/qa-portfolio/blob/main/automation/pages/login_page.py) locators for authentication and session validation.
+  - Uses [`LoginPage`](https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/pages/login_page.py) locators for authentication and session validation.
   - Verifies the authenticated UI and session persistence after reload.

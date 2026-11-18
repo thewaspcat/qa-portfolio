@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Test script | [`test_tc_ui_home_001.py`](https://github.com/thewaspcat/qa-portfolio/blob/main/automation/tests/test_tc_ui_home_001.py) |
+| Test script | [`test_tc_ui_home_001.py`](https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/tests/test_tc_ui_home_001.py) |
 | Manual test case | [`TC_UI_HOME_001`](../../test-cases/ui/TC_UI_HOME_001.md) |
 | Defect | [`BR_TC_UI_HOME_001`](../../defects/BR_TC_UI_HOME_001.md) |
 | Execution date | 2026-09-25 |
