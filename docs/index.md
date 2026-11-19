@@ -1,4 +1,4 @@
-# QA Portfolio by Marta Czarnecka
+# QA Portfolio | Marta Czarnecka
 
 <style>
 .markdown-body h2 {
@@ -10,44 +10,64 @@ details > summary {
 }
 </style>
 
-## 1. Portfolio Overview
-
-Welcome to my Quality Assurance Portfolio.
-
-This portfolio documents a traceable quality assurance process for [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website.
-
-The portfolio showcases:
-
-* **Manual web UI testing:** Test cases with automation-readiness notes and a separate manual execution record for each.   The test cases draw on ISO/IEC/IEEE 29119-3 and ISTQB® testing principles, and their structured format can be adapted for test management tools such as Jira with Xray or TestRail.
-* **API testing:** API test cases for manual execution in Postman, each with an automation-readiness section.
-* **Defect reporting:** Documented findings with reproduction steps, expected and actual results, and impact.
-* **Automation:** Web UI tests written in Python, run with pytest, and using Playwright for browser interaction, with links to the corresponding manual test cases.
-* **Git version control:** Portfolio artifacts maintained and published through a GitHub repository.
-* **Continuous Integration:** Automated test execution through GitHub Actions on pushes and pull requests.  
+**MANUAL QA · REST API TESTING · TEST AUTOMATION · CONTINUOUS INTEGRATION**  
+**Python · pytest · Playwright · Postman · PowerShell · uv · Git · GitHub · GitHub Actions**
 
 
-## 2. Featured Test Coverage
+## Portfolio Overview
 
-* **Homepage:** Verifies page loading and the visibility of key UI components.
-* **Authentication:** Verifies login with valid credentials and persistence of the authenticated session.
-* **Navigation:** Verifies the structure and behavior of the main menu across its configured destinations.
-* **Account API:** Specifies a create → duplicate-registration check → delete sequence, with account retrieval used to verify the resulting state.
+This portfolio presents a structured QA process for [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website. 
+
+The QA process maintains traceability throughout all stages and includes following sections:
+
+1. Test Basis and Traceability Matrix
+2. Test Coverage
+3. Test Case Specifications and Test Cases
+4. Test Execution and Evidence
+5. Defect Management
+6. Test Automation
+7. Continuous Integration
 
 
-## 3. Requirements and Traceability
+## QA Process
 
-The [Requirements](requirements.md) define the expected behavior and acceptance criteria for the covered homepage, authentication, navigation, and account API functions.
+### 1. Test Basis and Traceability Matrix
 
-The [Traceability Matrix](TRACEABILITY.md) provides a central view of test coverage. For each requirement ID, it links to the corresponding test specification, execution records, documented defects, and available automation, including page objects and test data.
+<details markdown="1">
+<summary markdown="span">Test basis</summary>
+
+The [test basis](requirements.md) defines the rewuirements, expected behavior and acceptance criteria for the selected testing scope.
+</details>
+
+<details markdown="1">
+<summary markdown="span">Traceability Matrix</summary>
+
+The [Traceability Matrix](TRACEABILITY.md) provides a central view of test coverage.
+For each requirement ID, it links to the corresponding test specification, execution records, documented defects, and available automation, including page objects and test data.
 Use the matrix to follow a test from its specification through execution results and supporting evidence.
+</details>
 
 
-## 4. Test Design and Test Specifications
+### 2. Test Coverage
 
-Each UI and API test specification defines the test objective, preconditions, test data, and expected results. It also documents automation readiness. The [Test Case Specifications](test-cases/README.md) overview explains how the UI and API cases are organised.
+| Area | Test coverage | Execution |
+|---|---|---|
+| Homepage | Page loading, logo, key components, footer | Manual + Playwright |
+| Authentication | Valid login, authenticated state, session persistence | Manual + Playwright |
+| Navigation | Eight links, order, destinations, same-tab navigation | Manual + Playwright |
+| Account API | Account creation and persisted data | Postman |
+| Duplicate registration | Duplicate prevention and data integrity | Postman |
+| Account deletion | Deletion and post-deletion retrieval | Postman |
+
+
+### 3. Test Case Specifications and Test Cases
+
+The [Test Case Specifications](test-cases/README.md) overview explains how the UI and API cases are organised.
+
+Each UI and API test case defines the test objective, preconditions, test data, and expected results. It also documents automation readiness.
 
 <details>
-<summary>Web UI Test Case Specifications</summary>
+<summary>Web UI Test Cases</summary>
 <ul>
   <li><a href="test-cases/ui/TC_UI_HOME_001.html">TC_UI_HOME_001 — Homepage shell and key components</a></li>
   <li><a href="test-cases/ui/TC_UI_LOGIN_001.html">TC_UI_LOGIN_001 — Valid user login</a></li>
@@ -56,7 +76,7 @@ Each UI and API test specification defines the test objective, preconditions, te
 </details>
 
 <details>
-<summary>Account API Test Case Specifications</summary>
+<summary>Account API Test Cases</summary>
 <p>These specifications describe manual execution in Postman and include automation-readiness information.</p>
 <ul>
   <li><a href="test-cases/api/TC_API_CRUD_001_Create_Register_User_Account.html">TC_API_CRUD_001 — Create/Register User Account</a></li>
@@ -66,7 +86,7 @@ Each UI and API test specification defines the test objective, preconditions, te
 </details>
 
 
-## 5. Test Execution and Evidence
+### 4. Text Execution 
 
 Execution records document actual results, statuses, execution context, and supporting evidence.
 
@@ -76,31 +96,22 @@ Execution records document actual results, statuses, execution context, and supp
   <li><a href="results/manual/TC_UI_HOME_001_result.html">TC_UI_HOME_001 — Homepage execution result</a></li>
   <li><a href="results/manual/TC_UI_LOGIN_001_result.html">TC_UI_LOGIN_001 — Login execution result</a></li>
   <li><a href="results/manual/TC_UI_NAV_001_result.html">TC_UI_NAV_001 — Navigation execution result</a></li>
-  <li><a href="results/manual/TC_API_CRUD_001_result.html">TC_API_CRUD_001 — Account creation execution result</a></li>
+</ul>
+
+</details>
+
+<details>
+<summary>REST API Execution Records</summary>
+<ul>
+ <li><a href="results/manual/TC_API_CRUD_001_result.html">TC_API_CRUD_001 — Account creation execution result</a></li>
   <li><a href="results/manual/TC_API_CRUD_002_result.html">TC_API_CRUD_002 — Duplicate-registration prevention execution result</a></li>
   <li><a href="results/manual/TC_API_CRUD_003_result.html">TC_API_CRUD_003 — Account deletion execution result</a></li>
-</ul>
-
-</details>
-
-<details>
-<summary>Automated Execution Records</summary>
-<ul>
-  <li><a href="results/automated/TC_UI_HOME_001_result.html">TC_UI_HOME_001 — Homepage execution result</a></li>
-  <li><a href="results/automated/TC_UI_LOGIN_001_result.html">TC_UI_LOGIN_001 — Login execution result</a></li>
-  <li><a href="results/automated/TC_UI_NAV_001_result.html">TC_UI_NAV_001 — Navigation execution result</a></li>
-</ul>
-</details>
-
-<details>
-<summary>Account API Execution Evidence</summary>
-<ul>
   <li><a href="evidence/api/TC_API_CRUD_2026-10-14_postman.html">Postman execution screenshots</a></li>
   <li><a href="evidence/api/TC_API_CRUD_2026-10-14_responses.html">PowerShell API response transcript</a></li>
 </ul>
 </details>
 
-## 6. Defect Management
+### 5. Defect Management
 
 Each defect report documents the finding and links to its originating test case, execution record, and evidence.
 
@@ -113,20 +124,19 @@ Each defect report documents the finding and links to its originating test case,
 </details>
 
 
-## 7. Test Automation Implementation
+### 6. Test Automation
 
 The automated suite uses Python, pytest, and Playwright. Page objects organise UI locators and interactions, while tests verify expected outcomes with Playwright assertions.
 
 JSON files provide URLs and expected values. Pytest parameterization runs the internal navigation check for each configured link. Reusable fixtures load test data, provide page objects, obtain login credentials from environment variables, and clean up authenticated sessions.
 
-A pytest hook captures a screenshot after each test body.
+A pytest hook captures a screenshot after each test body, also when a test has failed.
 
 <details>
-<summary>Automated Test Scripts</summary>
+<summary>Configuration and Fixtures</summary>
 <ul>
-  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/tests/test_tc_ui_home_001.py">TC_UI_HOME_001 — Homepage checks</a></li>
-  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/tests/test_tc_ui_login_001.py">TC_UI_LOGIN_001 — Login checks</a></li>
-  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/tests/test_tc_ui_nav_001.py">TC_UI_NAV_001 — Navigation checks</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/conftest.py">Fixtures and screenshot evidence hook</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/pyproject.toml">Project dependencies and pytest configuration</a></li>
 </ul>
 </details>
 
@@ -142,25 +152,33 @@ A pytest hook captures a screenshot after each test body.
 </details>
 
 <details>
-<summary>Configuration and Fixtures</summary>
+<summary>Automated Test Scripts</summary>
 <ul>
-  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/conftest.py">Fixtures and screenshot evidence hook</a></li>
-  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/pyproject.toml">Project dependencies and pytest configuration</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/tests/test_tc_ui_home_001.py">TC_UI_HOME_001 — Homepage checks</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/tests/test_tc_ui_login_001.py">TC_UI_LOGIN_001 — Login checks</a></li>
+  <li><a href="https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/tests/test_tc_ui_nav_001.py">TC_UI_NAV_001 — Navigation checks</a></li>
 </ul>
 </details>
 
+<details>
+<summary>Automated Execution Records</summary>
+<ul>
+  <li><a href="results/automated/TC_UI_HOME_001_result.html">TC_UI_HOME_001 — Homepage execution result</a></li>
+  <li><a href="results/automated/TC_UI_LOGIN_001_result.html">TC_UI_LOGIN_001 — Login execution result</a></li>
+  <li><a href="results/automated/TC_UI_NAV_001_result.html">TC_UI_NAV_001 — Navigation execution result</a></li>
+</ul>
+</details>
 
-## 8. Continuous Integration
+### 7. Continuous Integration
 
 The [GitHub Actions workflow](https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/.github/workflows/tests.yml) runs on pushes and pull requests. It sets up Python 3.13, installs dependencies with uv, installs Chromium, and runs the automated tests with pytest.
 
 GitHub Actions runs the suite with Chromium and uploads screenshot evidence captured after test execution.
-The login test is skipped when the required credential environment variables are unavailable.   Tests skipped during setup do not produce screenshots through this hook.
+The login test is skipped when the required credential environment variables are unavailable. Tests skipped during setup do not produce screenshots through this hook.                      
+           
 
 
-## 9. Contact Details
-
-For inquiries, feel free to reach out via:
+## Contact Details
 
 * **LinkedIn:** [Marta Czarnecka](https://www.linkedin.com/in/marta-czarnecka-)
 * **Email:** [martaczarneckaqa@gmail.com](mailto:martaczarneckaqa@gmail.com)
