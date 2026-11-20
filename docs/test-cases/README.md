@@ -26,6 +26,6 @@ The API specifications also describe the account data passed between dependent c
 
 ## 4. Related Documentation
 
-[Execution result records](../index.md#4-test-execution-and-evidence) contain actual results, statuses, execution context, and evidence links.
+[Execution result records](../index.md#4-text-execution) contain actual results, statuses, execution context, and evidence links.
 
 The [Traceability Matrix](../TRACEABILITY.md) maintains the relationships between requirements and portfolio artifacts.

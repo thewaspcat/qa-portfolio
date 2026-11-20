@@ -16,7 +16,6 @@
 
 - System under test: [Automation Exercise API](https://automationexercise.com/api_list)
 - Specification tool: Postman
-- Recorded execution evidence: [PowerShell execution](../../results/manual/TC_API_CRUD_003_result.md#2-powershell-execution)
 - Base URL: `https://automationexercise.com`
 
 ## 3. Preconditions
