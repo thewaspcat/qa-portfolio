@@ -6,10 +6,10 @@
 |---|---|
 | Bug ID | `BR_TC_UI_HOME_001` |
 | Test case | [`TC_UI_HOME_001`](../test-cases/ui/TC_UI_HOME_001.md) |
-| Execution record | [`TC_UI_HOME_001_result.md`](../results/manual/TC_UI_HOME_001_result.md) |
+| Execution record | [`TC_UI_HOME_001_result.md`](../results/ui/TC_UI_HOME_001_result.md) |
 | Severity | Low |
 | Priority | Low |
-| Status | Reproduced ([execution record](../results/manual/TC_UI_HOME_001_result.md)) |
+| Status | Reproduced ([execution record](../results/ui/TC_UI_HOME_001_result.md)) |
 | Evidence | [Homepage screenshot](../evidence/ui/TC_UI_HOME_001_homepage.png) |
 
 ## 2. Description

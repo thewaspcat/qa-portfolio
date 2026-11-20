@@ -6,14 +6,14 @@
 |---|---|
 | Bug ID | `BR_TC_API_CRUD_001` |
 | Test case | [`TC_API_CRUD_001`](../test-cases/api/TC_API_CRUD_001_Create_Register_User_Account.md) |
-| Execution record | [`TC_API_CRUD_001_result.md`](../results/manual/TC_API_CRUD_001_result.md) |
+| Execution record | [`TC_API_CRUD_001_result.md`](../results/api/TC_API_CRUD_001_result.md) |
 | Severity | Medium |
 | Priority | Medium |
-| Status | Reproduced ([execution record](../results/manual/TC_API_CRUD_001_result.md)) |
+| Status | Reproduced ([execution record](../results/api/TC_API_CRUD_001_result.md)) |
 | Type | API response contract discrepancy |
 | Environment | Public Automation Exercise API |
 | Endpoint | `POST https://automationexercise.com/api/createAccount` |
-| Evidence | [Postman creation result](../evidence/api/TC_API_CRUD_001_create_results_postman.png); [API response transcript](../evidence/api/TC_API_CRUD_2026-10-14_responses.md), [`001` create](../evidence/api/TC_API_CRUD_2026-10-14_responses.md#tc-api-crud-001-create) |
+| Evidence | [Postman creation result](../evidence/api/TC_API_CRUD_001_create_results_postman.png) |
 
 ## 2. Description
 

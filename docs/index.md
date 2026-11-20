@@ -93,9 +93,9 @@ Execution records document actual results, statuses, execution context, and supp
 <details>
 <summary>Manual Execution Records</summary>
 <ul>
-  <li><a href="results/manual/TC_UI_HOME_001_result.html">TC_UI_HOME_001 — Homepage execution result</a></li>
-  <li><a href="results/manual/TC_UI_LOGIN_001_result.html">TC_UI_LOGIN_001 — Login execution result</a></li>
-  <li><a href="results/manual/TC_UI_NAV_001_result.html">TC_UI_NAV_001 — Navigation execution result</a></li>
+  <li><a href="results/ui/TC_UI_HOME_001_result.html">TC_UI_HOME_001 — Homepage execution result</a></li>
+  <li><a href="results/ui/TC_UI_LOGIN_001_result.html">TC_UI_LOGIN_001 — Login execution result</a></li>
+  <li><a href="results/ui/TC_UI_NAV_001_result.html">TC_UI_NAV_001 — Navigation execution result</a></li>
 </ul>
 
 </details>
@@ -103,11 +103,11 @@ Execution records document actual results, statuses, execution context, and supp
 <details>
 <summary>REST API Execution Records</summary>
 <ul>
- <li><a href="results/manual/TC_API_CRUD_001_result.html">TC_API_CRUD_001 — Account creation execution result</a></li>
-  <li><a href="results/manual/TC_API_CRUD_002_result.html">TC_API_CRUD_002 — Duplicate-registration prevention execution result</a></li>
-  <li><a href="results/manual/TC_API_CRUD_003_result.html">TC_API_CRUD_003 — Account deletion execution result</a></li>
-  <li><a href="evidence/api/TC_API_CRUD_2026-10-14_postman.html">Postman execution screenshots</a></li>
-  <li><a href="evidence/api/TC_API_CRUD_2026-10-14_responses.html">PowerShell API response transcript</a></li>
+ <li><a href="results/api/TC_API_CRUD_001_result.html">TC_API_CRUD_001 — Account creation execution result</a></li>
+  <li><a href="results/api/TC_API_CRUD_002_result.html">TC_API_CRUD_002 — Duplicate-registration prevention execution result</a></li>
+  <li><a href="results/api/TC_API_CRUD_003_result.html">TC_API_CRUD_003 — Account deletion execution result</a></li>
+  <li><a href="results/api/TC_API_CRUD_001_result.html#2-postman-execution">Account creation Postman evidence</a></li>
+  <li><a href="results/api/TC_API_CRUD_002_result.html#2-postman-execution">Duplicate-registration Postman evidence</a></li>
 </ul>
 </details>
 
@@ -163,9 +163,9 @@ A pytest hook captures a screenshot after each test body, also when a test has f
 <details>
 <summary>Automated Execution Records</summary>
 <ul>
-  <li><a href="results/automated/TC_UI_HOME_001_result.html">TC_UI_HOME_001 — Homepage execution result</a></li>
-  <li><a href="results/automated/TC_UI_LOGIN_001_result.html">TC_UI_LOGIN_001 — Login execution result</a></li>
-  <li><a href="results/automated/TC_UI_NAV_001_result.html">TC_UI_NAV_001 — Navigation execution result</a></li>
+  <li><a href="../automation/results/TC_UI_HOME_001_result.md">TC_UI_HOME_001 — Homepage execution result</a></li>
+  <li><a href="../automation/results/TC_UI_LOGIN_001_result.md">TC_UI_LOGIN_001 — Login execution result</a></li>
+  <li><a href="../automation/results/TC_UI_NAV_001_result.md">TC_UI_NAV_001 — Navigation execution result</a></li>
 </ul>
 </details>
 
