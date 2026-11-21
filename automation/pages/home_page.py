@@ -34,7 +34,7 @@ class HomePage:
 
     def assert_navigation_order(self, expected_names: list[str]) -> None:
         for index, expected_name in enumerate(expected_names):
-            expect(self.navigation_links.nth(index)).to_contain_text(expected_name)
+            expect(self.navigation_links.nth(index)).to_have_text(expected_name)
 
     def navigation_link(self, name: str) -> Locator:
         return self.navigation_links.filter(

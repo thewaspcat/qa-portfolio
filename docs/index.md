@@ -18,7 +18,7 @@ details > summary {
 
 This portfolio presents a structured QA process for [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website. 
 
-The QA process maintains traceability throughout all stages and includes following sections:
+The QA process maintains traceability throughout all stages and includes the following sections:
 
 1. Test Basis and Traceability Matrix
 2. Test Coverage
@@ -36,7 +36,7 @@ The QA process maintains traceability throughout all stages and includes followi
 <details markdown="1">
 <summary markdown="span">Test basis</summary>
 
-The [test basis](requirements.md) defines the rewuirements, expected behavior and acceptance criteria for the selected testing scope.
+The [test basis](requirements.md) defines the requirements, expected behavior and acceptance criteria for the selected testing scope.
 </details>
 
 <details markdown="1">
@@ -86,7 +86,7 @@ Each UI and API test case defines the test objective, preconditions, test data, 
 </details>
 
 
-### 4. Text Execution 
+### 4. Test Execution
 
 Execution records document actual results, statuses, execution context, and supporting evidence.
 
@@ -108,6 +108,7 @@ Execution records document actual results, statuses, execution context, and supp
   <li><a href="results/api/TC_API_CRUD_003_result.html">TC_API_CRUD_003 — Account deletion execution result</a></li>
   <li><a href="results/api/TC_API_CRUD_001_result.html#2-postman-execution">Account creation Postman evidence</a></li>
   <li><a href="results/api/TC_API_CRUD_002_result.html#2-postman-execution">Duplicate-registration Postman evidence</a></li>
+  <li><a href="results/api/TC_API_CRUD_003_result.html#2-postman-execution">Account deletion Postman evidence</a></li>
 </ul>
 </details>
 

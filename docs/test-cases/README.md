@@ -9,7 +9,7 @@ The specifications define what to verify and the expected behavior. Execution ou
 ## 2. Directory Contents
 
 - `ui/` contains homepage, valid-login, and navigation specifications for manual execution and corresponding web UI automation.
-- `api/` contains account creation, duplicate-registration prevention, and account deletion specifications designed for manual API testing. Execution evidence includes Postman and PowerShell runs.
+- `api/` contains account creation, duplicate-registration prevention, and account deletion specifications designed for manual API testing. Execution evidence includes Postman runs.
 
 ## 3. Specification Contents
 
@@ -26,6 +26,6 @@ The API specifications also describe the account data passed between dependent c
 
 ## 4. Related Documentation
 
-[Execution result records](../index.md#4-text-execution) contain actual results, statuses, execution context, and evidence links.
+[Execution result records](../index.md#4-test-execution) contain actual results, statuses, execution context, and evidence links.
 
 The [Traceability Matrix](../TRACEABILITY.md) maintains the relationships between requirements and portfolio artifacts.

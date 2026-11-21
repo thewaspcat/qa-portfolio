@@ -22,7 +22,7 @@ All 15 retrievable account fields matched the submitted values. Six of seven Pos
 |---|---|
 | Test account | `user_test_1791973321842@example.com` |
 | Retrieved user ID | `3040585` |
-| Execution time | Not captured in the Postman evidence |
+| Execution date | 2026-10-14 |
 | Evidence | [Create response](../../evidence/api/TC_API_CRUD_001_create_response_postman.png) · [Create test results](../../evidence/api/TC_API_CRUD_001_create_results_postman.png) · [Account-detail response](../../evidence/api/TC_API_CRUD_001_detail_response_postman.png) · [Account-detail test results](../../evidence/api/TC_API_CRUD_001_detail_results_postman.png) |
 
 | Step | Actual result | Functional outcome |

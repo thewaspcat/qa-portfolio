@@ -14,8 +14,8 @@
 |---|---|
 | Test account | `user_test_1791973321842@example.com` |
 | Retrieved user ID | `3040585` |
-| Execution time | Not captured in the Postman evidence |
-| Evidence | [Baseline script](../../evidence/api/TC_API_CRUD_002_baseline_script_postman.png) · [Baseline test results](../../evidence/api/TC_API_CRUD_002_baseline_results_postman.png) · [Duplicate-registration response](../../evidence/api/TC_API_CRUD_002_duplicate_response_postman.png) · [Final retrieval response](../../evidence/api/TC_API_CRUD_002_final_response_postman.png) |
+| Execution date | 2026-10-14 |
+| Evidence | [Baseline script](../../evidence/api/TC_API_CRUD_002_baseline_script_postman.png) · [Baseline test results](../../evidence/api/TC_API_CRUD_002_baseline_results_postman.png) · [Final retrieval response](../../evidence/api/TC_API_CRUD_002_final_response_postman.png) |
 
 | Step | Actual result | Outcome |
 |---|---|---|
