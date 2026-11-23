@@ -36,7 +36,7 @@ The QA process maintains traceability throughout all stages and includes the fol
 <details markdown="1">
 <summary markdown="span">Test basis</summary>
 
-The [test basis](requirements.md) defines the requirements, expected behavior and acceptance criteria for the selected testing scope.
+The [Test Basis](requirements.md) defines the requirements, expected behavior and acceptance criteria for the selected testing scope.
 </details>
 
 <details markdown="1">

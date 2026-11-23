@@ -2,15 +2,13 @@
 
 This document defines the expected behavior and acceptance criteria for the homepage, authentication, navigation, and account API functions covered by this portfolio. The existing requirement IDs are retained.
 
-Each entry identifies its source or specification basis. Verification relationships are maintained in the [Traceability Matrix](TRACEABILITY.md).
+Verification relationships are maintained in the [Traceability Matrix](TRACEABILITY.md).
 
 ## REQ-WEB-HOME-004
 
 **Title:** Homepage shell and key components
 
 **Requirement:** The homepage shall load with the expected identity and display its navigation, product sections, and footer.
-
-**Source or basis:** [Homepage specification, test data and expected results](test-cases/ui/TC_UI_HOME_001.md#4-test-data).
 
 **Acceptance criteria:**
 
@@ -27,8 +25,6 @@ Each entry identifies its source or specification basis. Verification relationsh
 
 **Requirement:** A registered user shall be able to authenticate with valid credentials and remain authenticated after a page reload.
 
-**Source or basis:** [Automation Exercise Test Case 2](https://automationexercise.com/test_cases) describes valid login and the authenticated indicator. The [login specification](test-cases/ui/TC_UI_LOGIN_001.md#5-test-steps-and-expected-results) defines the input, Logout control, and reload-persistence criteria.
-
 **Acceptance criteria:**
 
 1. The login page is available at `https://www.automationexercise.com/login` and displays `Login to your account`.
@@ -41,8 +37,6 @@ Each entry identifies its source or specification basis. Verification relationsh
 **Title:** Main navigation structure and destinations
 
 **Requirement:** The navigation menu shall present the specified links in order and allow a logged-out user to reach their configured destinations.
-
-**Source or basis:** [Navigation specification, link data and expected results](test-cases/ui/TC_UI_NAV_001.md#4-test-data).
 
 **Acceptance criteria:**
 
@@ -68,8 +62,6 @@ Each entry identifies its source or specification basis. Verification relationsh
 
 **Requirement:** The account API shall create an account from valid registration data using an unused email address and allow its persisted details to be retrieved by that address.
 
-**Source or basis:** [Automation Exercise APIs 11 and 14](https://automationexercise.com/api_list) document the creation and retrieval operations and application response codes. The [account-creation specification](test-cases/api/TC_API_CRUD_001_Create_Register_User_Account.md#5-test-steps-and-expected-results) defines HTTP status, field comparisons, and request encoding.
-
 **Acceptance criteria:**
 
 1. A valid form-encoded request to `POST /api/createAccount` returns HTTP `200` with a JSON body containing `responseCode: 201` and `message: "User created!"`.
@@ -84,8 +76,6 @@ The persisted-field criteria cover the 15 fields retrievable through this interf
 
 **Requirement:** Registration with an existing account's email shall be rejected, and the existing account's retrievable details shall remain unchanged.
 
-**Source or basis:** [Duplicate-registration specification, baseline and expected results](test-cases/api/TC_API_CRUD_002_Duplicate_Prevented.md#5-test-steps-and-expected-results).
-
 **Acceptance criteria:**
 
 1. Before the duplicate request, retrieval by email returns HTTP `200`, a JSON `responseCode` of `200`, and a `user` object whose email matches the existing account.
@@ -97,8 +87,6 @@ The persisted-field criteria cover the 15 fields retrievable through this interf
 **Title:** Account deletion
 
 **Requirement:** The account API shall delete an existing account when supplied with its valid email and password, after which the account shall no longer be retrievable by email.
-
-**Source or basis:** [Automation Exercise APIs 12 and 14](https://automationexercise.com/api_list) document deletion and retrieval. The [account-deletion specification](test-cases/api/TC_API_CRUD_003_Delete_User_Account.md#5-test-steps-and-expected-results) defines the before-and-after retrieval checks and HTTP status expectations.
 
 **Acceptance criteria:**
 
