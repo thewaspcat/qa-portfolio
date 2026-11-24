@@ -11,7 +11,7 @@ details > summary {
 </style>
 
 **MANUAL QA · REST API TESTING · TEST AUTOMATION · CONTINUOUS INTEGRATION**  
-**Python · pytest · Playwright · Postman · PowerShell · uv · Git · GitHub · GitHub Actions**
+**Python · JavaScript · pytest · Playwright · Postman · PowerShell · uv · Git · GitHub · GitHub Actions**
 
 
 ## Portfolio Overview
@@ -164,9 +164,9 @@ A pytest hook captures a screenshot after each test body, also when a test has f
 <details>
 <summary>Automated Execution Records</summary>
 <ul>
-  <li><a href="../automation/results/TC_UI_HOME_001_result.md">TC_UI_HOME_001 — Homepage execution result</a></li>
-  <li><a href="../automation/results/TC_UI_LOGIN_001_result.md">TC_UI_LOGIN_001 — Login execution result</a></li>
-  <li><a href="../automation/results/TC_UI_NAV_001_result.md">TC_UI_NAV_001 — Navigation execution result</a></li>
+  <li><a href="https://thewaspcat.github.io/qa-portfolio/results/automated/TC_UI_HOME_001_result.html">TC_UI_HOME_001 — Homepage execution result</a></li>
+  <li><a href="https://thewaspcat.github.io/qa-portfolio/results/automated/TC_UI_LOGIN_001_result.html">TC_UI_LOGIN_001 — Login execution result</a></li>
+  <li><a href="https://thewaspcat.github.io/qa-portfolio/results/automated/TC_UI_NAV_001_result.html">TC_UI_NAV_001 — Navigation execution result</a></li>
 </ul>
 </details>
 

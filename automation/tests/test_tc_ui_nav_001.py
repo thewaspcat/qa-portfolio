@@ -33,22 +33,6 @@ def _load_navigation_data() -> dict[str, Any]:
 INTERNAL_NAVIGATION_LINKS = _internal_links(_load_navigation_data())
 
 
-GOOGLE_AD_REQUEST_PATTERN = re.compile(
-    r"^https?://(?:[^/]+\.)?"
-    r"(?:googlesyndication\.com|doubleclick\.net|googleadservices\.com)(?:/|$)"
-    r"|^https?://(?:www\.)?google\.com/pagead(?:/|$)",
-    re.IGNORECASE,
-)
-
-
-def _block_google_ads(page: Page) -> None:
-    """Block selected Google advertising requests during navigation tests."""
-    page.route(
-        GOOGLE_AD_REQUEST_PATTERN,
-        lambda route: route.abort(),
-    )
-
-
 def test_tc_ui_nav_001_navigation_order_and_attributes(
     home_page: HomePage,
     navigation_data: dict[str, Any],
@@ -80,8 +64,6 @@ def test_tc_ui_nav_001_internal_navigation(
     link_data: dict[str, Any],
 ) -> None:
     """TC_UI_NAV_001: verify each internal navigation destination."""
-    _block_google_ads(page)
-
     expected_url = urljoin(home_page.url, link_data["href"])
 
     if link_data["name"] == "Home":

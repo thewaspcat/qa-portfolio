@@ -37,9 +37,24 @@ def navigation_data() -> dict[str, Any]:
 
 
 @pytest.fixture
-def home_page(page: Page, homepage_data: dict[str, Any]) -> HomePage:
-    """Provide a HomePage configured with the test homepage URL."""
-    return HomePage(page, homepage_data["home_url"])
+def page_without_google_ads(page: Page) -> Page:
+    """Block external Google ad requests that can trigger a vignette interstitial."""
+    page.route(
+        re.compile(
+            r"^https?://(?:[a-z0-9-]+\.)*"
+            r"(?:googlesyndication\.com|doubleclick\.net|googleadservices\.com)(?:[/?#]|$)"
+            r"|^https?://(?:www\.)?google\.com/pagead(?:[/?#]|$)",
+            re.IGNORECASE,
+        ),
+        lambda route: route.abort(),
+    )
+    return page
+
+
+@pytest.fixture
+def home_page(page_without_google_ads: Page, homepage_data: dict[str, Any]) -> HomePage:
+    """Provide the test homepage with the external ad route already blocked."""
+    return HomePage(page_without_google_ads, homepage_data["home_url"])
 
 
 @pytest.fixture

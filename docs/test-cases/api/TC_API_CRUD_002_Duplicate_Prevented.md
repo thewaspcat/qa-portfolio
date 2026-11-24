@@ -27,7 +27,8 @@
 ## 4. Test Data
 
 The second registration uses the `registeredEmail` from the creation response handoff and different account details.  
-Set the `duplicateAttemptPassword` Postman collection variable to a disposable test password that differs from `accountPassword`.  
+Before the duplicate request, generate a fresh disposable password distinct from `accountPassword` and store it in the local value of the `duplicateAttemptPassword` Postman collection variable. The request body references that variable.
+
 The baseline GET stores the complete returned `user` object as JSON in the `crud002BaselineUser` collection variable.
 
 | Field | Value |

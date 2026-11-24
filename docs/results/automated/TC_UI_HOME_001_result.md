@@ -5,13 +5,13 @@
 | Field | Value |
 |---|---|
 | Test script | [`test_tc_ui_home_001.py`](https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/automation/tests/test_tc_ui_home_001.py) |
-| Manual test case | [`TC_UI_HOME_001`](../../docs/test-cases/ui/TC_UI_HOME_001.md) |
-| Defect | [`BR_TC_UI_HOME_001`](../../docs/defects/BR_TC_UI_HOME_001.md) |
+| Manual test case | [`TC_UI_HOME_001`](../../test-cases/ui/TC_UI_HOME_001.md) |
+| Defect | [`BR_TC_UI_HOME_001`](../../defects/BR_TC_UI_HOME_001.md) |
 | Execution date | 2026-09-25 |
 | Environment/build | Public Automation Exercise environment |
 | Browser | Playwright Chromium |
 | Operating system | Windows |
-| Evidence | [Homepage layout screenshot](../../docs/evidence/ui/TC_UI_HOME_001/docs_automation_tests_test_tc_ui_home_001.py_test_tc_ui_home_001_homepage_layout_chromium.png); [Featured Items heading screenshot](../../docs/evidence/ui/TC_UI_HOME_001/docs_automation_tests_test_tc_ui_home_001.py_test_tc_ui_home_001_featured_items_heading_chromium.png) |
+| Evidence | [Homepage layout screenshot](../../evidence/ui/TC_UI_HOME_001/docs_automation_tests_test_tc_ui_home_001.py_test_tc_ui_home_001_homepage_layout_chromium.png); [Featured Items heading screenshot](../../evidence/ui/TC_UI_HOME_001/docs_automation_tests_test_tc_ui_home_001.py_test_tc_ui_home_001_featured_items_heading_chromium.png) |
 
 ## 2. Actual result
 

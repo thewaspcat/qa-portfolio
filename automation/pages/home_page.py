@@ -33,8 +33,16 @@ class HomePage:
         expect(self.navigation).to_be_visible()
 
     def assert_navigation_order(self, expected_names: list[str]) -> None:
-        for index, expected_name in enumerate(expected_names):
-            expect(self.navigation_links.nth(index)).to_have_text(expected_name)
+        link_texts = self.navigation_links.evaluate_all(
+            """links => links.map(link => {
+                const label = link.cloneNode(true);
+                // The Products icon stores its glyph as text in the link.
+                label.querySelector(":scope > i.material-icons.card_travel")?.remove();
+                return label.textContent;
+            })"""
+        )
+        actual_names = [" ".join(text.split()) for text in link_texts]
+        assert actual_names == expected_names
 
     def navigation_link(self, name: str) -> Locator:
         return self.navigation_links.filter(

@@ -21,7 +21,7 @@
 ## 3. Preconditions
 
 - The API is reachable.
-- Set the `baseUrl` Postman collection variable to `https://automationexercise.com` and `accountPassword` to a disposable test password.
+- Set the `baseUrl` Postman collection variable to `https://automationexercise.com`.
 - The pre-request script generates a unique `uniqueEmail` collection variable that does not identify an existing account.
 - The test is executed as part of the account API sequence `TC_API_CRUD_001` → [`TC_API_CRUD_002`](TC_API_CRUD_002_Duplicate_Prevented.md) → [`TC_API_CRUD_003`](TC_API_CRUD_003_Delete_User_Account.md).
 
@@ -29,7 +29,7 @@
 
 Before step 1, the Postman pre-request script clears any previous `registeredEmail` and `registeredPassword` values.  
 It creates `user_test_` + `Date.now()` + `@example.com` and assigns that address to `uniqueEmail`.  
-The request body uses `uniqueEmail` and `accountPassword`.
+Before the run, generate a fresh disposable password and store it in the local value of the `accountPassword` Postman collection variable. The request body references `uniqueEmail` and `accountPassword`. Keep the resolved password out of published screenshots, logs, and execution records.
 
 | Field | Value |
 |---|---|
