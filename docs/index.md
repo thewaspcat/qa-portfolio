@@ -10,106 +10,82 @@ details > summary {
 }
 </style>
 
-**MANUAL QA · REST API TESTING · TEST AUTOMATION · CONTINUOUS INTEGRATION**  
-**Python · JavaScript · pytest · Playwright · Postman · PowerShell · uv · Git · GitHub · GitHub Actions**
+**Scope**: Manual Testing · REST API Testing · Test Automation · Continuous Integration  
+**Technology stack**: Python · JavaScript · Markdown · pytest · Playwright · Postman · PowerShell · uv · Git · GitHub · GitHub Actions
+
+**<details><summary>Contact Details</summary>**
 
 
-## Portfolio Overview
+* **LinkedIn:** [Marta Czarnecka](https://www.linkedin.com/in/marta-czarnecka-)
+* **Email:** [martaczarneckaqa@gmail.com](mailto:martaczarneckaqa@gmail.com)</details>
 
-This portfolio presents a structured QA process for [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website. 
+**<details><summary>Credentials</summary>**
+ISTQB certification</details>
 
-The QA process maintains traceability throughout all stages and includes the following sections:
+## Project Overview
 
-1. Test Basis and Traceability Matrix
-2. Test Coverage
-3. Test Case Specifications and Test Cases
-4. Test Execution and Evidence
-5. Defect Management
-6. Test Automation
-7. Continuous Integration
+This project presents a structured QA process applied to [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website.   
+The portfolio showcases a traceable workflow from requirements analysis and test design through manual execution, defect reporting, test automation and continuous integration.  
 
+The [GitHub repository](https://github.com/thewaspcat/qa-portfolio) comprises three web UI areas (homepage functionality, user authentication, main navigation) and three account management API scenarios, alongside their associated requirements, test data, execution records, automation artifacts and CI architecture. 
 
-## QA Process
+## QA stages and deliverables
 
-### 1. Test Basis and Traceability Matrix
+- **Requirements analysis:** Defined testable requirements, acceptance criteria and coverage for the selected application functionality.<details><summary>Deliverables</summary>
 
-<details markdown="1">
-<summary markdown="span">Test basis</summary>
+  * [Test Basis](requirements.md)
+  * [QA Coverage](qa_coverage.md)
+ 
+</details> 
 
-The [Test Basis](requirements.md) defines the requirements, expected behavior and acceptance criteria for the selected testing scope.
+- **Test design:** Created structured test specifications and test cases, including preconditions, test data, execution steps, expected results and automation readiness.
+  <details><summary>Deliverables</summary>
+
+  * [Test Case Specifications](test-cases/README.md)  
+  * <details><summary>Web UI Test Cases</summary>
+    <ul>
+    <li><a href="test-cases/ui/TC_UI_HOME_001.html">TC_UI_HOME_001 — Homepage shell and key components</a></li>
+    <li><a href="test-cases/ui/TC_UI_LOGIN_001.html">TC_UI_LOGIN_001 — Valid user login</a></li>
+    <li><a href="test-cases/ui/TC_UI_NAV_001.html">TC_UI_NAV_001 — Main navigation</a></li>
+    </ul>
+    </details>  
+  * <details><summary>Account API Test Cases</summary>
+    <ul>
+    <li><a href="test-cases/api/TC_API_CRUD_001_Create_Register_User_Account.html">TC_API_CRUD_001 — Create/Register User Account</a></li>
+    <li><a href="test-cases/api/TC_API_CRUD_002_Duplicate_Prevented.html">TC_API_CRUD_002 — Duplicate User Account Creation Prevented</a></li>
+    <li><a href="test-cases/api/TC_API_CRUD_003_Delete_User_Account.html">TC_API_CRUD_003 — Delete User Account</a></li>
+    </ul>
+  </details>
 </details>
 
-<details markdown="1">
-<summary markdown="span">Traceability Matrix</summary>
+- **Traceability:** Created a traceability matrix which provides a central view of relationships between requirements, manual test cases, automated tests, page objects, test data, execution records, and defects.  
 
-The [Traceability Matrix](TRACEABILITY.md) provides a central view of test coverage.
-For each requirement ID, it links to the corresponding test specification, execution records, documented defects, and available automation, including page objects and test data.
-Use the matrix to follow a test from its specification through execution results and supporting evidence.
+  <details><summary>Deliverables</summary>  
+  * [Traceability Matrix](TRACEABILITY.md)  
 </details>
 
-
-### 2. Test Coverage
-
-| Area | Test coverage | Execution |
-|---|---|---|
-| Homepage | Page loading, logo, key components, footer | Manual + Playwright |
-| Authentication | Valid login, authenticated state, session persistence | Manual + Playwright |
-| Navigation | Eight links, order, destinations, same-tab navigation | Manual + Playwright |
-| Account API | Account creation and persisted data | Postman |
-| Duplicate registration | Duplicate prevention and data integrity | Postman |
-| Account deletion | Deletion and post-deletion retrieval | Postman |
-
-
-### 3. Test Case Specifications and Test Cases
-
-The [Test Case Specifications](test-cases/README.md) overview explains how the UI and API cases are organised.
-
-Each UI and API test case defines the test objective, preconditions, test data, and expected results. It also documents automation readiness.
-
-<details>
-<summary>Web UI Test Cases</summary>
-<ul>
-  <li><a href="test-cases/ui/TC_UI_HOME_001.html">TC_UI_HOME_001 — Homepage shell and key components</a></li>
-  <li><a href="test-cases/ui/TC_UI_LOGIN_001.html">TC_UI_LOGIN_001 — Valid user login</a></li>
-  <li><a href="test-cases/ui/TC_UI_NAV_001.html">TC_UI_NAV_001 — Main navigation</a></li>
-</ul>
-</details>
-
-<details>
-<summary>Account API Test Cases</summary>
-<p>These specifications describe manual execution in Postman and include automation-readiness information.</p>
-<ul>
-  <li><a href="test-cases/api/TC_API_CRUD_001_Create_Register_User_Account.html">TC_API_CRUD_001 — Create/Register User Account</a></li>
-  <li><a href="test-cases/api/TC_API_CRUD_002_Duplicate_Prevented.html">TC_API_CRUD_002 — Duplicate User Account Creation Prevented</a></li>
-  <li><a href="test-cases/api/TC_API_CRUD_003_Delete_User_Account.html">TC_API_CRUD_003 — Delete User Account</a></li>
-</ul>
-</details>
-
-
-### 4. Test Execution
-
+- **Manual test execution** Executed web UI test cases, and REST API tests using Postman.   
 Execution records document actual results, statuses, execution context, and supporting evidence.
+  <details><summary>Deliverables</summary> 
 
-<details>
-<summary>Manual Execution Records</summary>
-<ul>
-  <li><a href="results/ui/TC_UI_HOME_001_result.html">TC_UI_HOME_001 — Homepage execution result</a></li>
-  <li><a href="results/ui/TC_UI_LOGIN_001_result.html">TC_UI_LOGIN_001 — Login execution result</a></li>
-  <li><a href="results/ui/TC_UI_NAV_001_result.html">TC_UI_NAV_001 — Navigation execution result</a></li>
-</ul>
+  * <details><summary>Manual Execution Records</summary>
+    <ul>
+    <li><a href="results/ui/TC_UI_HOME_001_result.html">TC_UI_HOME_001 — Homepage execution result</a></li>
+    <li><a href="results/ui/TC_UI_LOGIN_001_result.html">TC_UI_LOGIN_001 — Login execution result</a></li>
+    <li><a href="results/ui/TC_UI_NAV_001_result.html">TC_UI_NAV_001 — Navigation execution result</a></li>
+    </ul>
+  </details>  
 
+  * <details><summary>REST API Execution Records</summary>
+    <ul>
+    <li><a href="results/api/TC_API_CRUD_001_result.html">TC_API_CRUD_001 — Account creation execution result</a></li>
+    <li><a href="results/api/TC_API_CRUD_002_result.html">TC_API_CRUD_002 — Duplicate-registration prevention execution result</a></li>
+    <li><a href="results/api/TC_API_CRUD_003_result.html">TC_API_CRUD_003 — Account deletion execution result</a></li>
+    <li><a href="results/api/TC_API_CRUD_001_result.html#2-postman-execution">Account creation Postman evidence</a></li>
+    <li><a href="results/api/TC_API_CRUD_002_result.html#2-postman-execution">Duplicate-registration Postman evidence</a></li>
+    <li><a href="results/api/TC_API_CRUD_003_result.html#2-postman-execution">Account deletion Postman evidence</a></li>
+    </ul>
 </details>
-
-<details>
-<summary>REST API Execution Records</summary>
-<ul>
- <li><a href="results/api/TC_API_CRUD_001_result.html">TC_API_CRUD_001 — Account creation execution result</a></li>
-  <li><a href="results/api/TC_API_CRUD_002_result.html">TC_API_CRUD_002 — Duplicate-registration prevention execution result</a></li>
-  <li><a href="results/api/TC_API_CRUD_003_result.html">TC_API_CRUD_003 — Account deletion execution result</a></li>
-  <li><a href="results/api/TC_API_CRUD_001_result.html#2-postman-execution">Account creation Postman evidence</a></li>
-  <li><a href="results/api/TC_API_CRUD_002_result.html#2-postman-execution">Duplicate-registration Postman evidence</a></li>
-  <li><a href="results/api/TC_API_CRUD_003_result.html#2-postman-execution">Account deletion Postman evidence</a></li>
-</ul>
 </details>
 
 ### 5. Defect Management

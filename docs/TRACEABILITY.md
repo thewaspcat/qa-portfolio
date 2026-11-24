@@ -1,6 +1,5 @@
 # Traceability Matrix
 
-## 1. Requirement Traceability
 
 This matrix is the single source of truth for relationships between requirements, manual test cases, automated tests, page objects, test data, execution records, and defects.
 
