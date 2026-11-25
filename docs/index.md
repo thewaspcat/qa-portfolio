@@ -34,8 +34,7 @@ The [GitHub repository](https://github.com/thewaspcat/qa-portfolio) comprises th
 
 ## QA stages and deliverables
 
-### 1. Requirements analysis
-
+#### 1. Requirements analysis:
 Defined testable requirements, acceptance criteria and coverage for the selected application functionality.
 
 <details>
@@ -44,10 +43,9 @@ Defined testable requirements, acceptance criteria and coverage for the selected
     <li><a href="requirements.html">Test Basis</a></li>
     <li><a href="qa_coverage.html">QA Coverage</a></li>
   </ul>
-</details>
+</details>  
 
-### 2. Test design
-
+#### 2. Test design: 
 Created structured test specifications and test cases, including preconditions, test data, execution steps, expected results and automation readiness.
 
 <details>
@@ -75,9 +73,9 @@ Created structured test specifications and test cases, including preconditions, 
       </details>
     </li>
   </ul>
-</details>
+</details>    
 
-### 3. Traceability
+#### 3. Traceability
 
 Created a traceability matrix which provides a central view of relationships between requirements, manual test cases, automated tests, page objects, test data, execution records, and defects.
 
@@ -88,7 +86,7 @@ Created a traceability matrix which provides a central view of relationships bet
   </ul>
 </details>
 
-### 4. Manual test execution
+#### 4. Manual test execution
 
 Executed web UI test cases, and REST API tests using Postman.   
 Execution records document actual results, statuses, execution context, and supporting evidence.
@@ -122,7 +120,7 @@ Execution records document actual results, statuses, execution context, and supp
   </ul>
 </details>
 
-### 5. Defect Management
+#### 5. Defect Management
 
 Each defect report documents the finding and links to its originating test case, execution record, and evidence.
 
@@ -135,7 +133,7 @@ Each defect report documents the finding and links to its originating test case,
 </details>
 
 
-### 6. Test Automation
+#### 6. Test Automation
 
 The automated suite uses Python, pytest, and Playwright. Page objects organise UI locators and interactions, while tests verify expected outcomes with Playwright assertions.
 
@@ -180,7 +178,7 @@ A pytest hook captures a screenshot after each test body, also when a test has f
 </ul>
 </details>
 
-### 7. Continuous Integration
+#### 7. Continuous Integration
 
 The [GitHub Actions workflow](https://raw.githubusercontent.com/thewaspcat/qa-portfolio/refs/heads/main/.github/workflows/tests.yml) runs on pushes and pull requests. It sets up Python 3.13, installs dependencies with uv, installs Chromium, and runs the automated tests with pytest.
 
