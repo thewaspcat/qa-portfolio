@@ -13,29 +13,27 @@ details > summary {
 **Scope**: Manual Testing · REST API Testing · Test Automation · Continuous Integration  
 **Technology stack**: Python · JavaScript · Markdown · pytest · Playwright · Postman · PowerShell · uv · Git · GitHub · GitHub Actions
 
-**<details><summary>Contact Details</summary>**
+<details><summary>Contact Details</summary>
 
+* LinkedIn: [Marta Czarnecka](https://www.linkedin.com/in/marta-czarnecka-)
+* Email: [martaczarneckaqa@gmail.com](mailto:martaczarneckaqa@gmail.com)</details>
 
-* **LinkedIn:** [Marta Czarnecka](https://www.linkedin.com/in/marta-czarnecka-)
-* **Email:** [martaczarneckaqa@gmail.com](mailto:martaczarneckaqa@gmail.com)</details>
-
-**<details><summary>Credentials</summary>**
+<details><summary>Credentials</summary>
 ISTQB certification</details>
 
 ## Project Overview
 
 This project presents a structured QA process applied to [Automation Exercise](https://www.automationexercise.com/), a public demo e-commerce website.   
 The portfolio showcases a traceable workflow from requirements analysis and test design through manual execution, defect reporting, test automation and continuous integration.  
-
 The [GitHub repository](https://github.com/thewaspcat/qa-portfolio) comprises three web UI areas (homepage functionality, user authentication, main navigation) and three account management API scenarios, alongside their associated requirements, test data, execution records, automation artifacts and CI architecture. 
 
 ## QA stages and deliverables
 
-- **Requirements analysis:** Defined testable requirements, acceptance criteria and coverage for the selected application functionality.<details><summary>Deliverables</summary>
+- **Requirements analysis:** Defined testable requirements, acceptance criteria and coverage for the selected application functionality.  
+  <details><summary>Deliverables</summary>
 
   * [Test Basis](requirements.md)
   * [QA Coverage](qa_coverage.md)
- 
 </details> 
 
 - **Test design:** Created structured test specifications and test cases, including preconditions, test data, execution steps, expected results and automation readiness.
